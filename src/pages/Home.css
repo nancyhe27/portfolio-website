@@ -1,0 +1,13 @@
+.home {
+  width: 100%;
+}
+
+.home section {
+  padding: 60px 0;
+}
+
+@media (max-width: 768px) {
+  .home section {
+    padding: 40px 0;
+  }
+} 
