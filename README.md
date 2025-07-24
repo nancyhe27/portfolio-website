@@ -1,6 +1,6 @@
 # Grace Portfolio Clone
 
-A React-based portfolio website that replicates the structure and functionality of https://www.gracesportfolio.com/
+A React-based portfolio website.
 
 ## Features
 
