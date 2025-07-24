@@ -46,6 +46,23 @@ function About() {
             ))}
           </div>
         </div>
+        
+        <div className="contact-section">
+          <div className="contact-info">
+            <div className="contact-item">
+              <span className="contact-label">Email</span>
+              <a href="mailto:nancy.he.rice@google.com" className="contact-link">
+                nancy.he.rice@google.com
+              </a>
+            </div>
+            <div className="contact-item">
+              <span className="contact-label">LinkedIn</span>
+              <a href="https://linkedin.com/in/nancy-he" target="_blank" rel="noopener noreferrer" className="contact-link">
+                LinkedIn Profile
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

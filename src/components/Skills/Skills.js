@@ -1,43 +1,23 @@
 import React from 'react';
 import './Skills.css';
-import { portfolioData } from '../../data/portfolio-data';
 
 function Skills() {
-  const { skills } = portfolioData;
+  const skillsData = {
+    "Programming Languages": "Python, Java, JavaScript, TypeScript, HTML/CSS, SQL",
+    "Frameworks & Tools": "React, Node.js, Express.js, Firebase, GitHub, Tailwind CSS, Figma, Adobe Creative Suite (Illustrator, Photoshop, InDesign), Procreate, Canva",
+    "Specialties": "Full-Stack Development, REST API & Database Design, Responsive UI Engineering, UX-Driven Frontend Design, Cloud Deployment & Git Collaboration"
+  };
 
   return (
     <section id="skills" className="skills">
-      <div className="container">
-        <div className="skills-header">
-          <h2>skills</h2>
-          <p className="skills-subtitle">in order of relevance / proficiency</p>
-        </div>
-        <div className="skills-content">
-          <div className="skills-column">
-            <h3>Methods</h3>
-            <ul>
-              {skills.methods.map((method, index) => (
-                <li key={index}>{method}</li>
-              ))}
-            </ul>
+      <h2 className="section-heading">SKILLS</h2>
+      <div className="skills-categories">
+        {Object.entries(skillsData).map(([category, skills]) => (
+          <div key={category} className="skills-category">
+            <h3>{category}</h3>
+            <p className="skills-text">{skills}</p>
           </div>
-          <div className="skills-column">
-            <h3>Tools</h3>
-            <ul>
-              {skills.tools.map((tool, index) => (
-                <li key={index}>{tool}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="skills-column">
-            <h3>Technical</h3>
-            <ul>
-              {skills.technical.map((tech, index) => (
-                <li key={index}>{tech}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

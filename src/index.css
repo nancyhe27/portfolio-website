@@ -196,4 +196,494 @@ nav, .navigation, .nav-container {
     padding: 8px 16px;
     font-size: 12px;
   }
+}
+
+/* Hero Section Container */
+.hero, .hero-section, .hero-container {
+  padding: 120px 80px 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: var(--container-lg);
+  margin: 0 auto;
+  min-height: 60vh;
+}
+
+/* Hero Content Area */
+.hero-content, .hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Main Hero Heading */
+.hero h1, .hero-heading, .hero-content h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin: 0 0 24px 0;
+  font-weight: normal;
+}
+
+/* Hero Paragraphs */
+.hero p, .hero-content p, .hero-description {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+  font-weight: 400;
+}
+
+.hero p:last-child, .hero-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Hero Image Area */
+.hero-image, .hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero-image img, .hero-visual img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-round);
+  max-height: 400px;
+}
+
+/* Placeholder for avatar if no image */
+.avatar-placeholder {
+  width: 300px;
+  height: 300px;
+  background: var(--border-color);
+  border-radius: var(--radius-round);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+}
+
+/* Responsive Hero Section */
+@media (max-width: 768px) {
+  .hero, .hero-section, .hero-container {
+    padding: 100px 40px 64px;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+  
+  .hero h1, .hero-heading, .hero-content h1 {
+    font-size: 27px; /* 75% of desktop */
+  }
+  
+  .hero p, .hero-content p, .hero-description {
+    font-size: var(--text-base);
+  }
+  
+  .hero-image, .hero-visual {
+    order: -1; /* Image first on mobile */
+  }
+}
+
+@media (max-width: 375px) {
+  .hero, .hero-section, .hero-container {
+    padding: 80px 16px 64px;
+  }
+  
+  .hero h1, .hero-heading, .hero-content h1 {
+    font-size: var(--text-2xl); /* 36px */
+  }
+  
+  .avatar-placeholder {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Work Section Container */
+.work-section, .work, .projects-section {
+  padding: 64px 80px;
+  max-width: var(--container-lg);
+  margin: 0 auto;
+}
+
+/* Section Heading */
+.section-heading, .work-heading, .projects-heading {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+  margin: 0 0 40px 0;
+  text-align: left;
+  font-weight: normal;
+}
+
+/* Project Grid */
+.project-grid, .projects-grid, .work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Individual Project Cards */
+.project-card, .work-card, .project-item {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-subtle);
+  padding: 24px;
+  background: var(--bg-primary);
+  transition: border-left 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card:hover, .work-card:hover, .project-item:hover {
+  border-left: 3px solid var(--accent-color);
+  box-shadow: 0 2px 8px rgba(74, 47, 28, 0.1);
+}
+
+/* Project Card Titles */
+.project-card h3, .work-card h3, .project-title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin: 0 0 16px 0;
+  font-weight: normal;
+}
+
+/* Project Card Subtitles */
+.project-card p, .work-card p, .project-subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+  font-weight: 400;
+}
+
+.project-card p:last-child, .work-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Project Image Placeholder */
+.project-image, .work-image, .project-visual {
+  width: 100%;
+  height: 200px;
+  background: var(--border-color);
+  border-radius: var(--radius-subtle);
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+}
+
+/* Responsive Project Grid */
+@media (max-width: 768px) {
+  .work-section, .work, .projects-section {
+    padding: 64px 40px;
+  }
+  
+  .section-heading, .work-heading, .projects-heading {
+    font-size: 18px; /* 75% of desktop */
+  }
+  
+  .project-grid, .projects-grid, .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .project-card h3, .work-card h3, .project-title {
+    font-size: 18px; /* 75% of desktop */
+  }
+}
+
+@media (max-width: 375px) {
+  .work-section, .work, .projects-section {
+    padding: 64px 16px;
+  }
+  
+  .section-heading, .work-heading, .projects-heading {
+    font-size: var(--text-xl); /* 24px mobile */
+  }
+  
+  .project-grid, .projects-grid, .work-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .project-card h3, .work-card h3, .project-title {
+    font-size: 20px; /* Mobile specific size */
+  }
+  
+  .project-image, .work-image, .project-visual {
+    height: 150px;
+  }
+}
+
+/* Skills Section Container */
+.skills-section, .skills, .skills-container {
+  padding: 64px 80px;
+  max-width: var(--container-lg);
+  margin: 0 auto;
+}
+
+/* Skills Categories Grid */
+.skills-categories, .skills-grid, .skills-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Individual Skill Category */
+.skills-category, .skill-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skill Category Headers */
+.skills-category h3, .skill-group h3, .skill-category-title {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+  font-weight: 400;
+}
+
+/* Skills Lists */
+.skills-list, .skill-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Individual Skill Items */
+.skills-list li, .skill-item {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Alternative: Comma-separated skills */
+.skills-text {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Responsive Skills Section */
+@media (max-width: 768px) {
+  .skills-section, .skills, .skills-container {
+    padding: 64px 40px;
+  }
+  
+  .skills-categories, .skills-grid, .skills-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 375px) {
+  .skills-section, .skills, .skills-container {
+    padding: 64px 16px;
+  }
+  
+  .skills-categories, .skills-grid, .skills-content {
+    gap: 24px;
+  }
+}
+
+/* Contact Section Container */
+.contact-section, .contact, .footer {
+  padding: 64px 80px;
+  max-width: var(--container-lg);
+  margin: 0 auto;
+}
+
+/* Contact Information Container */
+.contact-info, .contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+}
+
+/* Individual Contact Items */
+.contact-item, .contact-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Contact Labels */
+.contact-label, .contact-type {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  min-width: 80px;
+  font-weight: 400;
+}
+
+/* Contact Links */
+.contact-link, .contact-email, .contact-linkedin {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--accent-color);
+  text-decoration: none;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+  font-weight: 400;
+}
+
+.contact-link:hover, .contact-email:hover, .contact-linkedin:hover {
+  color: var(--text-primary);
+}
+
+/* Plain Contact Text (non-links) */
+.contact-text {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Responsive Contact Section */
+@media (max-width: 768px) {
+  .contact-section, .contact, .footer {
+    padding: 64px 40px;
+  }
+  
+  .contact-item, .contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .contact-label, .contact-type {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact-section, .contact, .footer {
+    padding: 64px 16px;
+  }
+}
+
+/* Universal Smooth Transitions */
+*, *::before, *::after {
+  transition: all 0.2s ease;
+}
+
+/* Remove transitions for reduced motion users */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+  }
+}
+
+/* Global Focus States */
+*:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  border-radius: var(--radius-focus);
+}
+
+/* Remove default focus for mouse users */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Ensure focus is visible for keyboard users */
+*:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  border-radius: var(--radius-focus);
+}
+
+/* Specific focus states for buttons */
+button:focus-visible,
+.resume-btn:focus-visible,
+.cta-button:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Specific focus states for links */
+a:focus-visible,
+.nav-link:focus-visible,
+.contact-link:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  border-radius: var(--radius-focus);
+}
+
+/* Focus states for project cards */
+.project-card:focus-visible,
+.work-card:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  border-left: 3px solid var(--accent-color);
+  box-shadow: 0 2px 8px rgba(74, 47, 28, 0.1);
+}
+
+/* Improve button and interactive element styling */
+button, .btn, [role="button"] {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Ensure sufficient color contrast */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --border-color: #666666;
+  }
+}
+
+/* Ensure links are underlined in high contrast mode */
+@media (forced-colors: active) {
+  a {
+    text-decoration: underline;
+  }
 } 

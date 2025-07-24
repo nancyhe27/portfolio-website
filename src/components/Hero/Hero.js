@@ -1,22 +1,18 @@
 import React from 'react';
 import './Hero.css';
-import { portfolioData } from '../../data/portfolio-data';
 
 function Hero() {
-  const { hero } = portfolioData;
-
   return (
     <section className="hero">
-      <div className="container">
-        <div className="hero-content">
-          <div className="hero-text">
-            <p>{hero.text}</p>
-          </div>
-          <div className="hero-image">
-            <div className="placeholder-image">
-              <span>Animated Self-Portrait GIF</span>
-            </div>
-          </div>
+      <div className="hero-content">
+        <h1>I'm Nancy,</h1>
+        <p>A Programmer, Designer, and Full-Stack Builder</p>
+        <p>Computer Science and Asian Studies junior @ Rice University</p>
+        <p>Creates thoughtful, end-to-end products that blend clean code with intuitive design.</p>
+      </div>
+      <div className="hero-image">
+        <div className="avatar-placeholder">
+          <span>Nancy's Avatar</span>
         </div>
       </div>
     </section>
