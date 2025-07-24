@@ -1,22 +1,68 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Varela&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+ /* Typography Variables */
+ --font-display: 'Fredericka the Great', cursive;
+ --font-body: 'Varela', sans-serif;
+ 
+ --text-xs: 12px;
+ --text-sm: 14px;
+ --text-base: 16px;
+ --text-lg: 18px;
+ --text-xl: 24px;
+ --text-2xl: 36px;
+ --text-3xl: 54px;
+ 
+ /* Color Variables */
+ --bg-primary: #FFFFFF;
+ --brown-dark: #4a2f1c;
+ --brown-medium: #8b6f58;
+ --brown-light: #ddd2c4;
+ --sage-green: #8b9471;
+ 
+ /* Semantic Color Variables */
+ --text-primary: var(--brown-dark);
+ --text-secondary: var(--brown-medium);
+ --border-color: var(--brown-light);
+ --accent-color: var(--sage-green);
+ 
+ /* Spacing Variables */
+ --space-sm: 16px;
+ --space-md: 24px;
+ --space-lg: 40px;
+ --space-xl: 64px;
+ 
+ /* Border Radius Variables */
+ --radius-subtle: 8px;
+ --radius-round: 50%;
+ --radius-focus: 4px;
+ 
+ /* Container Variables */
+ --container-lg: 1200px;
+ --container-md: 768px;
+ --container-sm: 375px;
+}
+
+/* Base Body Styles */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #ffffff;
-  color: #000000;
-  line-height: 1.6;
+ font-family: var(--font-body);
+ background: var(--bg-primary);
+ color: var(--text-primary);
+ line-height: 1.5;
+ font-size: var(--text-base);
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  color: #000000;
+  color: var(--text-primary);
   text-decoration: none;
 }
 
@@ -25,13 +71,129 @@ a:hover {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: var(--container-lg);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--space-md);
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 15px;
+    padding: 0 var(--space-sm);
+  }
+}
+
+/* Navigation Container */
+nav, .navigation, .nav-container {
+  height: 80px;
+  padding: 0 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-primary);
+  position: relative;
+  z-index: 100;
+}
+
+/* Brand Logo Styling */
+.nav-brand, .brand-logo, .logo {
+  font-family: var(--font-display);
+  font-size: 32px;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+/* Navigation Links Container */
+.nav-links, .nav-menu, .navigation-menu {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual Navigation Links */
+.nav-link, .nav-item a, .menu-link {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  text-decoration: none;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+  font-weight: 400;
+}
+
+.nav-link:hover, .nav-item a:hover, .menu-link:hover {
+  color: var(--accent-color);
+}
+
+.nav-link.current, .nav-link.active, .nav-item a.current {
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 2px;
+}
+
+/* Resume Button */
+.resume-btn, .cta-button, .nav-cta {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  padding: 12px 24px;
+  border-radius: var(--radius-subtle);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  margin-left: 32px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.resume-btn:hover, .cta-button:hover, .nav-cta:hover {
+  background: var(--accent-color);
+}
+
+.resume-btn:active, .cta-button:active, .nav-cta:active {
+  background: #7a8765;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  nav, .navigation, .nav-container {
+    padding: 0 40px;
+  }
+  
+  .nav-brand, .brand-logo, .logo {
+    font-size: 28px;
+  }
+  
+  .nav-links, .nav-menu {
+    gap: 24px;
+  }
+  
+  .resume-btn, .cta-button, .nav-cta {
+    margin-left: 24px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  nav, .navigation, .nav-container {
+    padding: 0 16px;
+  }
+  
+  .nav-links, .nav-menu {
+    gap: 16px;
+  }
+  
+  .resume-btn, .cta-button, .nav-cta {
+    margin-left: 16px;
+    padding: 8px 16px;
+    font-size: 12px;
   }
 } 

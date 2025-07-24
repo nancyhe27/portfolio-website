@@ -4,7 +4,7 @@ import PolaroidGallery from '../PolaroidGallery/PolaroidGallery';
 
 function Work() {
   return (
-    <section className="work">
+    <section id="work" className="work">
       <div className="container">
         <div className="work-header">
           <h2>work</h2>

@@ -6,7 +6,7 @@ function About() {
   const { about } = portfolioData;
 
   return (
-    <section className="about">
+    <section id="about" className="about">
       <div className="container">
         <div className="about-header">
           <h2>about</h2>

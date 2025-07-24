@@ -6,7 +6,7 @@ function Skills() {
   const { skills } = portfolioData;
 
   return (
-    <section className="skills">
+    <section id="skills" className="skills">
       <div className="container">
         <div className="skills-header">
           <h2>skills</h2>
