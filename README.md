@@ -1,4 +1,4 @@
-# Grace Portfolio Clone
+# Portfolio
 
 A React-based portfolio website.
 
