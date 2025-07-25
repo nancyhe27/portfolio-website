@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation/Navigation';
 import Hero from '../components/Hero/Hero';
 import Work from '../components/Work/Work';
 import Skills from '../components/Skills/Skills';
-import About from '../components/About/About';
+// import About from '../components/About/About'; // COMMENTED OUT: About section temporarily removed
 
 function Home() {
   return (
@@ -13,7 +13,7 @@ function Home() {
       <Hero />
       <Work />
       <Skills />
-      <About />
+      {/* <About /> */} {/* COMMENTED OUT: About section temporarily removed */}
     </div>
   );
 }

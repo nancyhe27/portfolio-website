@@ -35,6 +35,7 @@ function Navigation() {
         >
           skills
         </a>
+        {/* COMMENTED OUT: About navigation link temporarily removed
         <a 
           href="#about" 
           className="nav-link"
@@ -45,6 +46,7 @@ function Navigation() {
         >
           about
         </a>
+        */}
         <a 
           href="/resume.pdf" 
           className="resume-btn"
