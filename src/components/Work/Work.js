@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Work.css';
 import { portfolioData } from '../../data/portfolio-data';
 
@@ -11,7 +12,8 @@ function Work() {
     {
       id: 1,
       title: "RideSystems 2025",
-      subtitle: "Ideation, UI/UX, User Research"
+      subtitle: "Ideation, UI/UX, User Research",
+      route: "/project-01"
     }
   ];
   
@@ -22,17 +24,23 @@ function Work() {
       <h2 className="section-heading">WORK</h2>
       <div className="project-grid">
         {displayProjects.map((project) => (
-          <div key={project.id} className="project-card">
-            <h3>{project.title || 'Project Title'}</h3>
-            <p>{project.subtitle || 'Project Description'}</p>
-            <div className="project-image">
-              <span>Project Image</span>
+          <Link 
+            key={project.id} 
+            to={project.route || `/project-0${project.id}`}
+            className="project-card-link"
+          >
+            <div className="project-card">
+              <h3>{project.title || 'Project Title'}</h3>
+              <p>{project.subtitle || 'Project Description'}</p>
+              <div className="project-image">
+                <span>Project Image</span>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
   );
 }
 
-export default Work; 
+export default Work;

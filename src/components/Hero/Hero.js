@@ -14,7 +14,7 @@ function Hero() {
   const image = hero?.image || 'portfolio-hero.png';
 
   return (
-    <section className="hero">
+    <section id="hero" className="hero">
       <div className="hero-content">
         <h1>I'm {name},</h1>
         <p>{title}</p>
