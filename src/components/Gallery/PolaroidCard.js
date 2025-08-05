@@ -11,19 +11,22 @@ function PolaroidCard({ project }) {
 
   return (
     <div className="polaroid-card" onClick={handleClick}>
+      {/* Caption ABOVE the image */}
+      <div className="polaroid-caption">
+        <h3>{project.title}</h3>
+        <p>{project.subtitle}</p>
+      </div>
+      
+      {/* Image below the caption */}
       <div className="polaroid-frame">
         <div className="polaroid-image">
           <div className="placeholder-thumb">
             <span>{project.title}</span>
           </div>
         </div>
-        <div className="polaroid-caption">
-          <h3>{project.title}</h3>
-          <p>{project.subtitle}</p>
-        </div>
       </div>
     </div>
   );
 }
 
-export default PolaroidCard; 
+export default PolaroidCard;

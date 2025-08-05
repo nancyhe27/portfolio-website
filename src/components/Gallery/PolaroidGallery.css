@@ -1,0 +1,24 @@
+
+.polaroid-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Increased from 280px to 350px */
+    gap: 40px;
+    max-width: 1200px; /* Increased from 1000px to accommodate larger cards */
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .polaroid-gallery {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Increased from 250px to 320px */
+      gap: 30px;
+      padding: 0 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .polaroid-gallery {
+      grid-template-columns: 1fr; /* Single column on small screens */
+      gap: 25px;
+    }
+  }

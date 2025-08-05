@@ -1,0 +1,103 @@
+.polaroid-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    transform: rotate(0deg); /* Straight cards, no tilt */
+    border: none;
+    background: none;
+    padding: 0;
+  }
+  
+  .polaroid-card:nth-child(even) {
+    transform: rotate(0deg); /* All cards straight */
+  }
+  
+  /* Title and subtitle ABOVE the card */
+  .polaroid-caption {
+    text-align: left; /* Left aligned */
+    margin-bottom: 16px; /* Space between text and image */
+  }
+  
+  .polaroid-caption h3 {
+    font-family: var(--font-display); /* Header font */
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0 0 8px 0;
+    color: var(--brown-dark); /* Dark brown */
+    transition: color 0.2s ease;
+  }
+  
+  .polaroid-card:hover .polaroid-caption h3 {
+    color: var(--accent-color);
+  }
+  
+  .polaroid-caption p {
+    font-family: var(--font-body); /* Regular text font */
+    font-size: 14px;
+    color: var(--brown-medium); /* Regular text brown */
+    margin: 0;
+    transition: color 0.2s ease;
+  }
+  
+  .polaroid-card:hover .polaroid-caption p {
+    color: var(--accent-color);
+  }
+  
+  /* Image frame */
+  .polaroid-frame {
+    background-color: #ffffff;
+    border-radius: 2px;
+    overflow: hidden;
+    padding: 15px 15px 20px 15px;
+  }
+  
+  .polaroid-image {
+    width: 300px; /* Exact 300px width */
+    height: 300px; /* Exact 300px height */
+    margin: 0; /* Remove bottom margin since text is above */
+  }
+  
+  .placeholder-thumb {
+    width: 100%;
+    height: 100%;
+    background-color: var(--brown-light);
+    border: 1px solid var(--brown-medium);
+    border-radius: 2px; /* 2px border radius */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.2s ease;
+  }
+  
+  .polaroid-card:hover .placeholder-thumb {
+    background-color: #342114;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .polaroid-card {
+      transform: rotate(0deg); /* Still straight on mobile */
+    }
+  
+    .polaroid-card:nth-child(even) {
+      transform: rotate(0deg);
+    }
+  
+    .polaroid-image {
+      width: 280px; /* Slightly smaller on tablet */
+      height: 280px;
+    }
+  
+    .polaroid-caption h3 {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .polaroid-image {
+      width: 250px; /* Smaller on mobile */
+      height: 250px;
+    }
+  }
