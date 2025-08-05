@@ -15,12 +15,13 @@
   .polaroid-caption {
     text-align: left; /* Left aligned */
     margin-bottom: 16px; /* Space between text and image */
+    padding-left: 15px; /* Align with the polaroid frame's left padding */
   }
   
   .polaroid-caption h3 {
     font-family: var(--font-display); /* Header font */
-    font-size: 18px;
-    font-weight: normal;
+    font-size: 24px;
+    font-weight: bold;
     margin: 0 0 8px 0;
     color: var(--brown-dark); /* Dark brown */
     transition: color 0.2s ease;
@@ -32,7 +33,7 @@
   
   .polaroid-caption p {
     font-family: var(--font-body); /* Regular text font */
-    font-size: 14px;
+    font-size: 18px;
     color: var(--brown-medium); /* Regular text brown */
     margin: 0;
     transition: color 0.2s ease;

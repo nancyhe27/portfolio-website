@@ -38,7 +38,7 @@ export const portfolioData = {
     },
     {
       id: 5,
-      title: "ColorGraph AI Coming Soon 2024-2025",
+      title: "ColorGraph AI 2024-2025",
       subtitle: "Ideation, UI/UX, User Research",
       thumbnail: "project-thumb-05.png",
       route: "/project-05"
