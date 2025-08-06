@@ -4,9 +4,11 @@ import PolaroidGallery from '../Gallery/PolaroidGallery';
 
 function Work() {
   return (
-    <section id="work" className="work">
-      <h2 className="section-heading">WORK</h2>
-      <PolaroidGallery />
+    <section id="work" className="work-section page-section">
+      <div className="content">
+        <h2 className="section-heading">WORK</h2>
+        <PolaroidGallery />
+      </div>
     </section>
   );
 }

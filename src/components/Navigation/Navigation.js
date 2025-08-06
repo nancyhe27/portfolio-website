@@ -1,4 +1,5 @@
 import React from 'react';
+import './Navigation.css';
 
 function Navigation() {
     const scrollToSection = (sectionId) => {
@@ -9,7 +10,7 @@ function Navigation() {
     };
 
     return (
-        <nav className="nav-container">
+        <nav className="navigation page-section">
             <a 
                 href="#hero" 
                 className="nav-brand"
@@ -42,18 +43,6 @@ function Navigation() {
                 >
                     skills
                 </a>
-                {/* COMMENTED OUT: About navigation link temporarily removed
-        <a 
-          href="#about" 
-          className="nav-link"
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToSection('about');
-          }}
-        >
-          about
-        </a>
-        */}
                 <a
                     href="/resume.pdf"
                     className="resume-btn"
@@ -67,4 +56,4 @@ function Navigation() {
     );
 }
 
-export default Navigation; 
+export default Navigation;
