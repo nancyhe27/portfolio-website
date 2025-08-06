@@ -1,16 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './ProjectLayout.css';
 import ProjectHeader from './ProjectHeader';
 import SprintSection from './SprintSection';
+import Navigation from '../Navigation/Navigation';
 
 function ProjectLayout({ projectData }) {
   const { title, subtitle, overview, methods, tools, description, sprints, outcome } = projectData;
 
   return (
     <div className="project-layout">
-      <div className="project-navigation">
-        <Link to="/" className="back-link">← Back to Home</Link>
+      <Navigation />
+      <div className="header-image-container">
+        <img src="/images/swipycampus_header_test.png" alt="Header" className="header-image" />
       </div>
       
       <ProjectHeader 
