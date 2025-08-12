@@ -17,8 +17,8 @@ export const portfolioData = {
     },
     {
       id: 2,
-      title: "SwipyCampus 2025",
-      subtitle: "Ideation, UI/UX, User Research",
+      title: "SwipyCampus",
+      subtitle: "Feb 2025 • iOS • 36-hour Designathon",
       thumbnail: "project-thumb-02.png",
       route: "/project-02"
     },
