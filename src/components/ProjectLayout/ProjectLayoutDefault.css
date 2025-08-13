@@ -1,0 +1,118 @@
+/* ===========================
+   DEFAULT PROJECT LAYOUT STYLES
+   =========================== */
+
+/* Project Content Layout */
+.project-content {
+  padding: 60px 0;
+}
+
+.project-body {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-sidebar {
+  position: sticky;
+  top: 40px;
+  height: fit-content;
+}
+
+.project-main {
+  max-width: 700px;
+}
+
+/* Sprint Sections */
+.sprints-section {
+  margin-bottom: 50px;
+}
+
+.sprint-section {
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-sm);
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.sprint-header {
+  margin-bottom: var(--spacing-xs);
+}
+
+.sprint-title {
+  color: var(--text-primary);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin: 0;
+}
+
+.sprint-content {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Project Outcome */
+.project-outcome h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  color: #000000;
+}
+
+.project-outcome p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0;
+}
+
+/* Default Layout Responsive Design */
+@media (max-width: 767px) {
+  .project-content {
+    padding: 40px 0;
+  }
+
+  .project-body {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .project-sidebar {
+    position: static;
+    order: 2;
+  }
+
+  .project-main {
+    order: 1;
+    max-width: none;
+  }
+
+  .methods-tools {
+    padding: 20px;
+  }
+} 
+/* Sprint Section Component Styles */
+.sprint-section {
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-sm);
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.sprint-header {
+  margin-bottom: var(--spacing-xs);
+}
+
+.sprint-title {
+  color: var(--text-primary);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin: 0;
+}
+
+.sprint-content {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}

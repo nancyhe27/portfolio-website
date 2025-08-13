@@ -1,0 +1,198 @@
+/* ===========================
+   SHARED PROJECT LAYOUT STYLES
+   =========================== */
+
+/* Base Layout */
+.project-layout {
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding-top: 80px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+/* Shared Typography */
+.project-title,
+.section-title {
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  font-weight: 600;
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--text-primary);
+  width: 100%;
+}
+
+.section-title {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.subsection-title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--text-primary);
+  width: 100%;
+}
+
+.feature-title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+  font-weight: 600;
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--text-primary);
+  width: 100%;
+}
+
+.flow-title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--text-primary);
+  width: 100%;
+}
+
+/* Shared Content Styles */
+.section-content {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Shared Image Constraints */
+.project-layout img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Shared Navigation */
+.project-navigation-section {
+  padding: 40px 0;
+  border-top: 1px solid #eee;
+}
+
+.project-nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-button {
+  padding: 12px 24px;
+  border: 1px solid #333;
+  background: transparent;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background: #333;
+  color: white;
+}
+
+/* Shared Header Image */
+.header-image-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Shared Methods & Tools */
+.methods-tools {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.methods-section,
+.tools-section {
+  margin-bottom: 30px;
+}
+
+.methods-section:last-child,
+.tools-section:last-child {
+  margin-bottom: 0;
+}
+
+.methods-tools h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+  color: #000000;
+}
+
+.methods-tools ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.methods-tools li {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666666;
+  padding: 3px 0;
+}
+
+/* Shared Project Description */
+.project-description {
+  margin-bottom: 50px;
+}
+
+.project-description p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0;
+}
+
+/* Shared Responsive Design */
+@media (max-width: 1199px) {
+  .project-layout {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .project-layout {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  .project-nav-buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 479px) {
+  .project-layout {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 374px) {
+  .project-layout {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+} 
