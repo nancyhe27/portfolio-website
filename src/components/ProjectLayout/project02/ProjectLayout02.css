@@ -25,18 +25,6 @@
   display: block;
 }
 
-/* Project02 specific hero title */
-.project-layout-02 .hero-title {
-  font-family: var(--font-display);
-  font-size: var(--text-3xl);
-  color: var(--text-primary);
-  margin-bottom: var(--spacing-sm);
-  font-weight: 600;
-  padding-bottom: var(--spacing-xs);
-  border-bottom: 1px solid var(--text-primary);
-  width: 100%;
-}
-
 /* Hour Section Layout */
 .hour-section {
   margin-bottom: var(--spacing-xl);
@@ -198,7 +186,6 @@
   margin-bottom: var(--spacing-xs);
   font-weight: 600;
   padding-bottom: var(--spacing-xs);
-  border-bottom: 1px solid var(--text-primary);
   width: 100%;
 }
 
@@ -336,4 +323,73 @@
   font-size: var(--text-lg);
   line-height: 1.6;
   max-width: 800px;
+}
+
+
+.project-layout-02 .section-title {
+  position: relative;
+  border-bottom: none;
+}
+
+.project-layout-02 .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 1px;
+  background-color: var(--text-primary);
+}
+
+/* Green background for methods and tools box */
+.project-layout-02 .methods-tools {
+  background-color: var(--sage-green);
+}
+
+/* Left-right layout for introduction section */
+.project-layout-02 .introduction-content {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+}
+
+.project-layout-02 .methods-tools {
+  flex: 0 0 300px;
+}
+
+.project-layout-02 .project-description {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* Summary section with logo and short description */
+.project-layout-02 .swipycampus-summary {
+  margin-bottom: var(--spacing-xl);
+}
+
+.project-layout-02 .summary-content {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.project-layout-02 .summary-image {
+  flex: 0 0 120px;
+}
+
+.project-layout-02 .summary-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-layout-02 .summary-text {
+  flex: 1;
+}
+
+.project-layout-02 .summary-text p {
+  margin: 0;
+  font-size: var(--text-lg);
+  line-height: 1.6;
 }

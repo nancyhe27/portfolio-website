@@ -179,7 +179,7 @@ function HourSection({ section }) {
 }
 
 function ProjectLayout02({ projectData }) {
-  const { title, duration, platform, methods, tools, overview, description, sections } = projectData;
+  const { methods, tools, overview, description, sections } = projectData;
 
   return (
     <div>
@@ -192,22 +192,13 @@ function ProjectLayout02({ projectData }) {
           <div className="hero-image-full">
             <img src="/images/swipycampus_header_test.png" alt="SwipyCampus Header" />
           </div>
-          <div className="container">
-            <div className="hero-content">
-              <div className="hero-text">
-                <h1 className="hero-title">{title}</h1>
-                <p className="hero-subtitle">{duration} • {platform}</p>
-                <p className="hero-overview">{overview}</p>
-              </div>
-            </div>
-          </div>
         </section>
 
         {/* Introduction Section - Increased margins */}
         <section className="swipycampus-introduction">
           <div className="container">
             <div className="introduction-content">
-              <div className="methods-tools-box">
+              <div className="methods-tools">
                 <div className="methods-section">
                   <h3>Methods</h3>
                   <ul>
@@ -228,6 +219,20 @@ function ProjectLayout02({ projectData }) {
               </div>
               
               <div className="project-description">
+                <p>{overview}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Summary Section - App logo and short description */}
+        <section className="swipycampus-summary">
+          <div className="container">
+            <div className="summary-content">
+              <div className="summary-image">
+                <img src={description.logo.src} alt={description.logo.alt} />
+              </div>
+              <div className="summary-text">
                 <p>{description.text}</p>
               </div>
             </div>
