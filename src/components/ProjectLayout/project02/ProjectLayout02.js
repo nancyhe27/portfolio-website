@@ -20,7 +20,7 @@ function HourSection({ section }) {
       return (
         <div className="user-research-section">
           <p className="research-intro">{section.content}</p>
-          
+
           <div className="feature-cards">
             {section.features.map((feature, index) => (
               <div key={index} className="feature-card">
@@ -35,7 +35,7 @@ function HourSection({ section }) {
               </div>
             ))}
           </div>
-          
+
           {section.insights && (
             <div className="research-insights">
               <p>{section.insights}</p>
@@ -52,7 +52,7 @@ function HourSection({ section }) {
           {section.subsections.map((subsection, index) => (
             <div key={index} className="wireframe-subsection">
               <h4 className="subsection-title">{subsection.title}</h4>
-              
+
               {/* Image grid for wireframes */}
               {subsection.images && (
                 <div className="wireframe-grid">
@@ -64,7 +64,7 @@ function HourSection({ section }) {
                   ))}
                 </div>
               )}
-              
+
               {/* Before/after comparisons */}
               {subsection.comparisons && (
                 <div className="comparison-grid">
@@ -97,11 +97,11 @@ function HourSection({ section }) {
         <div className="mascot-section">
           <blockquote className="prominent-quote">"{section.quote}"</blockquote>
           <p className="mascot-description">{section.content}</p>
-          
+
           <div className="mascot-info">
             <h4 className="mascot-name">{section.mascot.name}</h4>
             <p className="mascot-about">{section.mascot.description}</p>
-            
+
             <div className="mascot-states">
               {section.mascot.states.map((state, index) => (
                 <figure key={index} className="mascot-state">
@@ -120,16 +120,16 @@ function HourSection({ section }) {
       return (
         <div className="prototype-section">
           <p className="prototype-cta">{section.cta}</p>
-          
+
           <div className="prototype-flows">
             {section.flows.map((flow, index) => (
               <div key={index} className="prototype-flow">
                 <h4 className="flow-title">{flow.title}</h4>
                 <div className="flow-screens">
                   {flow.images.map((imgSrc, imgIndex) => (
-                    <img 
-                      key={imgIndex} 
-                      src={imgSrc} 
+                    <img
+                      key={imgIndex}
+                      src={imgSrc}
                       alt={`${flow.title} screen ${imgIndex + 1}`}
                       className="prototype-screen"
                     />
@@ -148,7 +148,7 @@ function HourSection({ section }) {
       return (
         <div className="promotion-section">
           <div className="video-container">
-            <iframe 
+            <iframe
               src={`https://www.youtube.com/embed/${videoId}`}
               title={section.video.title || section.title}
               frameBorder="0"
@@ -179,21 +179,27 @@ function HourSection({ section }) {
 }
 
 function ProjectLayout02({ projectData }) {
-  const { methods, tools, overview, description, sections } = projectData;
+  const { title, duration, methods, tools, overview, description, sections } = projectData;
 
   return (
     <div>
       {/* Navigation - Full width, no margins */}
       <Navigation />
       
-      <div className="project-layout project-layout-02">
-        {/* Hero Section - Full width header image */}
-        <section className="swipycampus-hero">
-          <div className="hero-image-full">
-            <img src="/images/swipycampus_header_test.png" alt="SwipyCampus Header" />
+      {/* Hero Section - Full width, outside padded container */}
+      <section className="swipycampus-hero">
+        <div className="hero-content-flex">
+          <div className="hero-image-section">
+            <img src="/images/swipycampus_header_test.png?v=2" alt="SwipyCampus Header" />
           </div>
-        </section>
-
+          <div className="hero-info-section">
+            <h1 className="hero-title">{title}</h1>
+            <p className="hero-date">{duration}</p>
+          </div>
+        </div>
+      </section>
+      
+      <div className="project-layout project-layout-02">
         {/* Introduction Section - Increased margins */}
         <section className="swipycampus-introduction">
           <div className="container">
@@ -207,7 +213,7 @@ function ProjectLayout02({ projectData }) {
                     ))}
                   </ul>
                 </div>
-              
+
                 <div className="tools-section">
                   <h3>Tools</h3>
                   <ul>
@@ -217,7 +223,7 @@ function ProjectLayout02({ projectData }) {
                   </ul>
                 </div>
               </div>
-              
+
               <div className="project-description">
                 <p>{overview}</p>
               </div>
@@ -243,7 +249,7 @@ function ProjectLayout02({ projectData }) {
         <section className="swipycampus-phases">
           <div className="container">
             {sections.map((section) => (
-              <HourSection 
+              <HourSection
                 key={section.id}
                 section={section}
               />

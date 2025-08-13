@@ -3,6 +3,7 @@ export const project02Data = {
   "title": "SwipyCampus",
   "duration": "Feb 2025",
   "platform": "IOS",
+  "task": "Mobile App Ideation & Design",
   "collaborators": [
     "Laura Chirila",
     "Ana Urruticoechea Hurtado",

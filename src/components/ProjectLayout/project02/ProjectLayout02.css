@@ -8,21 +8,67 @@
   padding-right: 180px;
 }
 
-/* Full-width header image */
-.hero-image-full {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+/* Hero Section - Flexbox layout */
+.swipycampus-hero {
   margin-bottom: 40px;
 }
 
-.hero-image-full img {
+.hero-content-flex {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+  border-bottom: 1px solid var(--brown-dark);
+}
+
+.hero-image-section {
+  flex: 2; /* Takes 2/3 of space */
+}
+
+.hero-image-section img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.hero-info-section {
+  flex: 1; /* Takes 1/3 of space */
+  padding-left: var(--spacing-md);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0 0 var(--spacing-sm) 0;
+  color: var(--text-primary);
+}
+
+.hero-date {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Mobile responsive - stack vertically */
+@media (max-width: 768px) {
+  .hero-content-flex {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .hero-image-section,
+  .hero-info-section {
+    flex: none;
+    width: 100%;
+  }
+  
+  .hero-info-section {
+    padding-left: 0;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
 }
 
 /* Hour Section Layout */
@@ -276,10 +322,20 @@
     padding-left: 90px;
     padding-right: 90px;
   }
+  
+  .hero-content-flex {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
 }
 
 @media (max-width: 767px) {
   .project-layout-02 {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  
+  .hero-content-flex {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -310,10 +366,20 @@
     padding-left: 36px;
     padding-right: 36px;
   }
+  
+  .hero-content-flex {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
 }
 
 @media (max-width: 374px) {
   .project-layout-02 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  
+  .hero-content-flex {
     padding-left: 24px;
     padding-right: 24px;
   }
