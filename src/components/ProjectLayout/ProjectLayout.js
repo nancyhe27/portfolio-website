@@ -74,29 +74,16 @@ function ProjectLayout({ projectData }) {
           </div>
         </section>
 
-        {/* Next Project Section - 2:1 flex ratio */}
-        <section className="swipycampus-next-project">
+        {/* Project Navigation */}
+        <section className="project-navigation-section">
           <div className="container">
-            <div className="next-project-content">
-              <div className="next-project-image">
-                <img src="/images/swipycampus_bottom_test.png" alt="Next Project" />
-              </div>
-              <div className="next-project-text">
-                <h2 className="next-project-title">PLACEHOLDER: Next Project Title</h2>
-                <button className="next-project-button" onClick={() => console.log('Navigate to next project')}>
-                  View Next Project
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Outcome Section */}
-        <section className="swipycampus-outcome">
-          <div className="container">
-            <div className="project-outcome">
-              <h2>Outcome</h2>
-              <p>{outcome}</p>
+            <div className="project-nav-buttons">
+              <button className="nav-button prev-button" onClick={() => console.log('Navigate to previous project')}>
+                ← Previous Project
+              </button>
+              <button className="nav-button next-button" onClick={() => console.log('Navigate to next project')}>
+                Next Project →
+              </button>
             </div>
           </div>
         </section>
@@ -155,11 +142,6 @@ function ProjectLayout({ projectData }) {
                     sprint={sprint}
                   />
                 ))}
-              </div>
-              
-              <div className="project-outcome">
-                <h2>Outcome</h2>
-                <p>{outcome}</p>
               </div>
             </main>
           </div>

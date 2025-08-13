@@ -2,6 +2,8 @@
   min-height: 100vh;
   background-color: #ffffff;
   padding-top: 80px;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 .header-image-container {
@@ -123,7 +125,47 @@
   margin: 0;
 }
 
-@media (max-width: 768px) {
+.project-navigation-section {
+  padding: 40px 0;
+  border-top: 1px solid #eee;
+}
+
+.project-nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-button {
+  padding: 12px 24px;
+  border: 1px solid #333;
+  background: transparent;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background: #333;
+  color: white;
+}
+
+@media (max-width: 1199px) {
+  .project-layout {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .project-layout {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
   .project-content {
     padding: 40px 0;
   }
@@ -145,5 +187,19 @@
 
   .methods-tools {
     padding: 20px;
+  }
+}
+
+@media (max-width: 479px) {
+  .project-layout {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 374px) {
+  .project-layout {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 } 
