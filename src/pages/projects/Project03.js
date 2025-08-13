@@ -1,10 +1,10 @@
 import React from 'react';
-import ProjectLayoutDefault from '../../components/ProjectLayout/ProjectLayoutDefault';
+import ProjectLayout03 from '../../components/ProjectLayout/project03/ProjectLayout03';
 import { project03Data } from '../../data/projects/project-03-data';
 
 function Project03() {
   return (
-    <ProjectLayoutDefault projectData={project03Data} />
+    <ProjectLayout03 projectData={project03Data} />
   );
 }
 

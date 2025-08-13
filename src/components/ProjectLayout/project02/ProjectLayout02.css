@@ -1,0 +1,339 @@
+/* ===========================
+   PROJECT 02 (SWIPYCAMPUS) SPECIFIC STYLES
+   =========================== */
+
+/* Enhanced margins for Project02 */
+.project-layout-02 {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+/* Full-width header image */
+.hero-image-full {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-bottom: 40px;
+}
+
+.hero-image-full img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Project02 specific hero title */
+.project-layout-02 .hero-title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--text-primary);
+  width: 100%;
+}
+
+/* Hour Section Layout */
+.hour-section {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+}
+
+.hour-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* User Research Section */
+.research-intro {
+  font-size: var(--text-lg);
+  margin-bottom: var(--spacing-md);
+  max-width: 800px;
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+}
+
+.feature-card {
+  background: var(--bg-primary);
+  
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.feature-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature-content {
+  padding: var(--spacing-sm);
+}
+
+.feature-question {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+}
+
+.user-quote {
+  font-style: italic;
+  color: var(--text-secondary);
+  border-left: 3px solid var(--accent-color);
+  padding-left: var(--spacing-xs);
+  margin: var(--spacing-xs) 0;
+  font-size: var(--text-base);
+}
+
+.research-insights {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-sm);
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+/* Wireframes Section */
+.wireframe-subsection {
+  margin-bottom: var(--spacing-lg);
+}
+
+.wireframe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-sm);
+  margin: var(--spacing-sm) 0;
+}
+
+.wireframe-item {
+  text-align: center;
+}
+
+.wireframe-item img {
+  border-radius: 4px;
+  
+}
+
+.wireframe-item figcaption {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-top: var(--spacing-xs);
+}
+
+.comparison-grid {
+  margin: var(--spacing-md) 0;
+}
+
+.comparison-item {
+  margin-bottom: var(--spacing-md);
+}
+
+.comparison-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.comparison-images figure {
+  text-align: center;
+}
+
+.comparison-images img {
+  border-radius: 4px;
+  
+}
+
+.comparison-images figcaption {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-top: var(--spacing-xs);
+  font-weight: 500;
+}
+
+.comparison-description {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Mascot Section */
+.prominent-quote {
+  font-size: var(--text-xl);
+  font-style: italic;
+  color: var(--text-primary);
+  background: #f8f9fa;
+  padding: var(--spacing-sm);
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-color);
+  margin: var(--spacing-sm) 0;
+  text-align: center;
+}
+
+.mascot-description {
+  font-size: var(--text-base);
+  margin: var(--spacing-sm) 0;
+  max-width: 800px;
+}
+
+.mascot-name {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+  font-weight: 600;
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--text-primary);
+  width: 100%;
+}
+
+.mascot-about {
+  font-size: var(--text-base);
+  margin-bottom: var(--spacing-sm);
+  max-width: 800px;
+}
+
+.mascot-states {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-sm);
+  margin: var(--spacing-sm) 0;
+}
+
+.mascot-state {
+  text-align: center;
+}
+
+.mascot-state img {
+  width: 100%;
+  max-width: 120px;
+  border-radius: 8px;
+}
+
+.mascot-state figcaption {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-top: var(--spacing-xs);
+  font-weight: 500;
+}
+
+/* Prototype Section */
+.prototype-cta {
+  font-size: var(--text-lg);
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+.prototype-flows {
+  margin: var(--spacing-md) 0;
+}
+
+.prototype-flow {
+  margin-bottom: var(--spacing-lg);
+}
+
+.flow-screens {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prototype-screen {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  
+}
+
+/* Promotion Section */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  margin: var(--spacing-sm) 0;
+}
+
+.promotion-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* Project02 Responsive Design */
+@media (max-width: 1199px) {
+  .project-layout-02 {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+
+@media (max-width: 767px) {
+  .project-layout-02 {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  
+  .feature-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparison-images {
+    grid-template-columns: 1fr;
+  }
+  
+  .mascot-states {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .wireframe-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .flow-screens {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 479px) {
+  .project-layout-02 {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+@media (max-width: 374px) {
+  .project-layout-02 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+} 
+/* Ideation Section */
+.ideation-section p {
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  max-width: 800px;
+}
