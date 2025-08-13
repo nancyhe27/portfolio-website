@@ -179,7 +179,7 @@ function HourSection({ section }) {
 }
 
 function ProjectLayout02({ projectData }) {
-  const { title, duration, methods, tools, overview, description, sections } = projectData;
+  const { title, duration, task, platform, methods, tools, overview, description, sections } = projectData;
 
   return (
     <div>
@@ -195,6 +195,7 @@ function ProjectLayout02({ projectData }) {
           <div className="hero-info-section">
             <h1 className="hero-title">{title}</h1>
             <p className="hero-date">{duration}</p>
+            <p className="hero-task">{task}</p>
           </div>
         </div>
       </section>
@@ -205,6 +206,13 @@ function ProjectLayout02({ projectData }) {
           <div className="container">
             <div className="introduction-content">
               <div className="methods-tools">
+                <div className="platform-section">
+                  <h3>Platform</h3>
+                  <ul>
+                    <li>{platform}</li>
+                  </ul>
+                </div>
+                
                 <div className="methods-section">
                   <h3>Methods</h3>
                   <ul>
