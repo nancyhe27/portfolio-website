@@ -10,10 +10,11 @@ export const project02Data = {
     "Grace Yang"
   ],
   "methods": [
-    "User Research & Surveys",
-    "Rapid Prototyping",
-    "Wireframing & Testing",
-    "Emotional Branding Design"
+    "Mixed-Methods User Research",
+    "Contextual Inquiry",
+    "Usability Testing",
+    "Rapid Prototyping", 
+    "Wireframing"
   ],
   "tools": [
     "Figma",

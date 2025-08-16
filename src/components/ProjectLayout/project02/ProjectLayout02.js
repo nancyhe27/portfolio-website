@@ -207,28 +207,15 @@ function ProjectLayout02({ projectData }) {
             <div className="introduction-content">
               <div className="methods-tools">
                 <div className="platform-section">
-                  <h3>Platform</h3>
-                  <ul>
-                    <li>{platform}</li>
-                  </ul>
+                  <span className="info-label">Platforms:</span> {platform}
                 </div>
                 
                 <div className="methods-section">
-                  <h3>Methods</h3>
-                  <ul>
-                    {methods.map((method, index) => (
-                      <li key={index}>{method}</li>
-                    ))}
-                  </ul>
+                  <span className="info-label">Methods:</span> {methods.join(', ')}
                 </div>
 
                 <div className="tools-section">
-                  <h3>Tools</h3>
-                  <ul>
-                    {tools.map((tool, index) => (
-                      <li key={index}>{tool}</li>
-                    ))}
-                  </ul>
+                  <span className="info-label">Tools:</span> {tools.join(', ')}
                 </div>
               </div>
 

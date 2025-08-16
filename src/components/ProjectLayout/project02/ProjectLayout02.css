@@ -93,21 +93,24 @@
 }
 
 .feature-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
   margin: var(--spacing-md) 0;
 }
 
 .feature-card {
   background: var(--bg-primary);
-  
   border-radius: 8px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
 }
 
 .feature-image {
-  width: 100%;
+  flex: 0 0 200px;
   height: 200px;
   overflow: hidden;
 }
@@ -119,7 +122,8 @@
 }
 
 .feature-content {
-  padding: var(--spacing-sm);
+  flex: 1;
+  padding: 0;
 }
 
 .feature-question {
@@ -133,9 +137,11 @@
   font-style: italic;
   color: var(--text-secondary);
   border-left: 3px solid var(--accent-color);
-  padding-left: var(--spacing-xs);
+  padding: var(--spacing-sm);
   margin: var(--spacing-xs) 0;
   font-size: var(--text-base);
+  background: var(--sage-green);
+  border-radius: 4px;
 }
 
 .research-insights {
@@ -152,9 +158,10 @@
 
 .wireframe-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--spacing-sm);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-md);
   margin: var(--spacing-sm) 0;
+  max-width: 800px;
 }
 
 .wireframe-item {
@@ -163,7 +170,8 @@
 
 .wireframe-item img {
   border-radius: 4px;
-  
+  max-width: 150px;
+  height: auto;
 }
 
 .wireframe-item figcaption {
@@ -177,14 +185,17 @@
 }
 
 .comparison-item {
-  margin-bottom: var(--spacing-md);
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: flex-start;
+  margin-bottom: var(--spacing-xl);
 }
 
 .comparison-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-xs);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  flex: 0 0 400px;
 }
 
 .comparison-images figure {
@@ -193,7 +204,8 @@
 
 .comparison-images img {
   border-radius: 4px;
-  
+  max-width: 180px;
+  height: auto;
 }
 
 .comparison-images figcaption {
@@ -204,9 +216,11 @@
 }
 
 .comparison-description {
+  flex: 1;
   font-size: var(--text-base);
   color: var(--text-secondary);
   line-height: 1.6;
+  align-self: center;
 }
 
 /* Mascot Section */
@@ -214,7 +228,7 @@
   font-size: var(--text-xl);
   font-style: italic;
   color: var(--text-primary);
-  background: #f8f9fa;
+  background: var(--sage-green);
   padding: var(--spacing-sm);
   border-radius: 8px;
   border-left: 4px solid var(--accent-color);
@@ -344,11 +358,33 @@
   }
   
   .feature-cards {
-    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .feature-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .feature-image {
+    flex: none;
+    width: 200px;
+    margin: 0 auto;
+  }
+  
+  .comparison-item {
+    flex-direction: column;
+    gap: var(--spacing-md);
   }
   
   .comparison-images {
-    grid-template-columns: 1fr;
+    flex: none;
+    width: 100%;
+  }
+  
+  .wireframe-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
   }
   
   .mascot-states {
@@ -414,8 +450,23 @@
 
 /* Green background for methods and tools box */
 .project-layout-02 .methods-tools {
-  background-color: var(--brown-light);
+  background-color: var(--bg-green);
   padding: var(--spacing-sm);
+  border: 1px solid var(--brown-dark);
+}
+
+.project-layout-02 .methods-tools div {
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.5;
+  color: var(--brown-medium);
+}
+
+.project-layout-02 .methods-tools div:last-child {
+  margin-bottom: 0;
+}
+
+.project-layout-02 .info-label {
+  font-weight: bold;
 }
 
 /* Left-right layout for introduction section */
@@ -426,11 +477,11 @@
 }
 
 .project-layout-02 .methods-tools {
-  flex: 2;
+  flex: 1;
 }
 
 .project-layout-02 .project-description {
-  flex: 3;
+  flex: 2;
   margin-bottom: 0;
 }
 

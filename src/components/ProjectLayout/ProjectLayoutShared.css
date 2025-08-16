@@ -159,7 +159,7 @@
 .project-description p {
   font-size: 18px;
   line-height: 1.6;
-  color: #333333;
+  color: var(--brown-medium);
   margin: 0;
 }
 
