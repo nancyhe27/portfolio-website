@@ -1,60 +1,60 @@
 export const project04Data = {
-  title: "ARVision",
-  subtitle: "AR Visualization Tool",
-  overview: "An innovative augmented reality application designed for architecture and engineering professionals to visualize 3D models in real-world environments, enhancing design collaboration and client presentations.",
+  title: "Sample Project Name",
+  subtitle: "Placeholder Subheading",
+  overview: "This is a sample overview text for a project. The purpose of this text is to act as a placeholder and demonstrate the layout of the page without using real content. The length is approximated.",
   
   methods: [
-    "Ethnographic Research",
-    "Prototype Testing",
-    "Spatial Design",
-    "User Journey Mapping",
-    "Technical Feasibility Study",
-    "Expert Evaluation"
+    "Sample Method 1",
+    "Sample Method 2",
+    "Sample Method 3",
+    "Sample Method 4",
+    "Sample Method 5",
+    "Sample Method 6"
   ],
   
   tools: [
-    "Unity",
-    "ARKit",
-    "Figma",
-    "Blender",
-    "Sketch",
-    "Reality Composer"
+    "Sample Tool A",
+    "Sample Tool B",
+    "Sample Tool C",
+    "Sample Tool D",
+    "Sample Tool E",
+    "Sample Tool F"
   ],
   
-  description: "Architecture and engineering teams faced challenges in communicating complex 3D designs to clients and stakeholders. Traditional 2D plans and static 3D renders failed to convey spatial relationships effectively. ARVision bridges this gap through immersive AR visualization.",
+  description: "This is a sample description text. It is used to fill space and show how a longer piece of content would look in this section. The text itself is not meant to be read or understood as it is purely for demonstration.",
   
   sprints: [
     {
       number: 1,
-      title: "Industry Research & User Needs",
-      content: "Conducted ethnographic research with architecture firms and engineering consultancies. Interviewed 18 professionals about current visualization methods and pain points. Identified key challenges: client comprehension of spatial concepts, design iteration communication, and on-site design validation."
+      title: "Sample Sprint A",
+      content: "This is sample content for the first sprint. It describes imaginary work that was completed. This text is a placeholder to show the structure of the sprint sections."
     },
     {
       number: 2,
-      title: "Technical Exploration & Prototyping",
-      content: "Explored AR technology capabilities and limitations through rapid prototyping. Built proof-of-concept applications testing object tracking, lighting integration, and 3D model rendering. Established technical requirements and platform constraints for iOS and Android development."
+      title: "Sample Sprint B",
+      content: "This is sample content for the second sprint. It describes imaginary work that was completed. This text is a placeholder to show the structure of the sprint sections."
     },
     {
       number: 3,
-      title: "Interaction Design & Spatial UX",
-      content: "Designed intuitive gestures and interactions for 3D object manipulation in AR space. Created spatial user interface elements that work effectively in augmented environments. Developed design patterns for AR-specific challenges like occlusion, lighting, and scale perception."
+      title: "Sample Sprint C",
+      content: "This is sample content for the third sprint. It describes imaginary work that was completed. This text is a placeholder to show the structure of the sprint sections."
     },
     {
       number: 4,
-      title: "User Interface Development",
-      content: "Built comprehensive UI system combining traditional 2D interface elements with 3D spatial controls. Created tools for model loading, scaling, rotation, and annotation. Designed collaborative features allowing multiple users to view and interact with shared AR content."
+      title: "Sample Sprint D",
+      content: "This is sample content for the fourth sprint. It describes imaginary work that was completed. This text is a placeholder to show the structure of the sprint sections."
     },
     {
       number: 5,
-      title: "Field Testing & Iteration",
-      content: "Conducted testing sessions at actual construction sites and client meetings with 8 architecture firms. Gathered feedback on practical usability, technical performance, and business value. Refined interaction models based on real-world usage scenarios."
+      title: "Sample Sprint E",
+      content: "This is sample content for the fifth sprint. It describes imaginary work that was completed. This text is a placeholder to show the structure of the sprint sections."
     },
     {
       number: 6,
-      title: "Professional Integration",
-      content: "Developed integration workflows with popular CAD software and BIM tools. Created export processes and file format compatibility. Established best practices for AR model preparation and presentation techniques for professional use."
+      title: "Sample Sprint F",
+      content: "This is sample content for the sixth sprint. It describes imaginary work that was completed. This text is a placeholder to show the structure of the sprint sections."
     }
   ],
   
-  outcome: "ARVision significantly improved client understanding of design proposals, with 90% of users reporting better spatial comprehension compared to traditional methods. The tool reduced design revision cycles by 35% and improved client approval rates by 50%."
+  outcome: "This is a sample outcome text. It summarizes the fictional results of the project. This text is a placeholder and does not represent any actual achievements or data."
 }; 

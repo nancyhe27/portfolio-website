@@ -1,60 +1,60 @@
 export const project05Data = {
-  title: "EcoTrack",
-  subtitle: "Sustainability Tracking App",
-  overview: "A mobile application that helps individuals track their environmental impact through daily activities, providing personalized insights and actionable recommendations to reduce carbon footprint.",
+  title: "Generic Project Title",
+  subtitle: "A Placeholder Subtitle",
+  overview: "A generic overview that fills space. This text describes a fictional project to demonstrate the layout. The content is Lorem Ipsum style placeholder text and is not intended to be meaningful.",
   
   methods: [
-    "Behavioral Research",
-    "Survey Design",
-    "Data Visualization",
-    "Gamification Design",
-    "User Testing",
-    "Environmental Impact Analysis"
+    "Generic Method 1",
+    "Generic Method 2",
+    "Generic Method 3",
+    "Generic Method 4",
+    "Generic Method 5",
+    "Generic Method 6"
   ],
   
   tools: [
-    "Figma",
-    "Adobe XD",
-    "Sketch",
-    "Principle",
-    "After Effects",
-    "D3.js"
+    "Generic Tool A",
+    "Generic Tool B",
+    "Generic Tool C",
+    "Generic Tool D",
+    "Generic Tool E",
+    "Generic Tool F"
   ],
   
-  description: "Climate change awareness is growing, but individuals struggle to understand and reduce their personal environmental impact. EcoTrack makes sustainability accessible by automatically tracking activities and providing clear, actionable feedback on environmental choices.",
+  description: "A generic description section. This text is used as a placeholder to fill the space where a real project description would go. The content has been auto-generated and has no real meaning.",
   
   sprints: [
     {
       number: 1,
-      title: "Environmental Behavior Research",
-      content: "Surveyed 200+ individuals about environmental awareness and current tracking methods. Conducted in-depth interviews with sustainability experts and environmental psychologists. Identified key barriers: complexity of impact calculation, lack of immediate feedback, and difficulty maintaining motivation."
+      title: "Generic Sprint 1",
+      content: "This is generic content for the first sprint. It serves as a placeholder to demonstrate how the sprint information is displayed. The text is not relevant to any actual work."
     },
     {
       number: 2,
-      title: "Impact Calculation Framework",
-      content: "Collaborated with environmental scientists to develop accurate carbon footprint calculation methods. Researched existing environmental APIs and databases. Created algorithms for tracking transportation, energy usage, food choices, and consumption patterns with scientific accuracy."
+      title: "Generic Sprint 2",
+      content: "This is generic content for the second sprint. It serves as a placeholder to demonstrate how the sprint information is displayed. The text is not relevant to any actual work."
     },
     {
       number: 3,
-      title: "User Experience Design",
-      content: "Designed intuitive interfaces for activity logging and impact visualization. Created onboarding flow that educates users about environmental impact without overwhelming them. Developed progressive disclosure patterns to manage complexity while maintaining engagement."
+      title: "Generic Sprint 3",
+      content: "This is generic content for the third sprint. It serves as a placeholder to demonstrate how the sprint information is displayed. The text is not relevant to any actual work."
     },
     {
       number: 4,
-      title: "Data Visualization & Insights",
-      content: "Created compelling visualizations showing personal environmental impact over time. Designed comparative charts showing user progress against local and global averages. Developed predictive models showing potential impact of behavior changes through clear before/after scenarios."
+      title: "Generic Sprint 4",
+      content: "This is generic content for the fourth sprint. It serves as a placeholder to demonstrate how the sprint information is displayed. The text is not relevant to any actual work."
     },
     {
       number: 5,
-      title: "Gamification & Motivation",
-      content: "Implemented reward systems and challenges to maintain user engagement. Created social features allowing users to compete with friends and share achievements. Designed milestone celebrations and progress tracking that reinforce positive environmental behaviors."
+      title: "Generic Sprint 5",
+      content: "This is generic content for the fifth sprint. It serves as a placeholder to demonstrate how the sprint information is displayed. The text is not relevant to any actual work."
     },
     {
       number: 6,
-      title: "Testing & Behavioral Validation",
-      content: "Conducted 6-week beta test with 150 users tracking actual behavior change. Measured app engagement, accuracy of tracking, and real-world impact on user behavior. Refined features based on usage patterns and behavioral outcomes."
+      title: "Generic Sprint 6",
+      content: "This is generic content for the sixth sprint. It serves as a placeholder to demonstrate how the sprint information is displayed. The text is not relevant to any actual work."
     }
   ],
   
-  outcome: "EcoTrack users reduced their carbon footprint by an average of 23% within three months of use. The app achieved 78% user retention after 30 days and received recognition from environmental organizations for its contribution to climate action awareness."
+  outcome: "A generic outcome statement. This text summarizes the fictional results of the placeholder project. It is not based on real data and is used for layout demonstration purposes only."
 }; 
