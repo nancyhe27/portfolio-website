@@ -1,60 +1,60 @@
 export const project06Data = {
-  title: "VoiceFlow",
-  subtitle: "Voice Interface Design",
-  overview: "A comprehensive voice user interface designed for smart home automation, enabling natural language interaction with connected devices through conversational AI and intuitive voice commands.",
+  title: "Filler Project Name",
+  subtitle: "Example Subtitle",
+  overview: "This is filler overview text. It's purpose is to populate the project page with content that looks realistic but is completely made up. This helps in assessing the design and layout.",
   
   methods: [
-    "Conversation Design",
-    "Voice User Testing",
-    "Natural Language Processing",
-    "Audio Prototyping",
-    "Script Writing",
-    "Persona Development"
+    "Filler Method One",
+    "Filler Method Two",
+    "Filler Method Three",
+    "Filler Method Four",
+    "Filler Method Five",
+    "Filler Method Six"
   ],
   
   tools: [
-    "Voiceflow",
-    "Adobe Audition",
-    "Figma",
-    "Botmock",
-    "Dialogflow",
-    "Amazon Alexa Skills Kit"
+    "Filler Tool One",
+    "Filler Tool Two",
+    "Filler Tool Three",
+    "Filler Tool Four",
+    "Filler Tool Five",
+    "Filler Tool Six"
   ],
   
-  description: "Smart home technology adoption is hindered by complex interfaces and unintuitive control methods. VoiceFlow creates a natural, conversational interface that makes home automation accessible to users of all technical backgrounds through voice interaction.",
+  description: "This is filler description text. It serves as a placeholder for a more detailed explanation of a project. The text is not meant to be informative but to fill the designated space in the layout.",
   
   sprints: [
     {
       number: 1,
-      title: "Voice Interaction Research",
-      content: "Studied existing voice interfaces and smart home adoption patterns. Conducted interviews with 25 smart home users about frustrations and desired features. Analyzed conversation patterns and identified optimal voice command structures for home automation tasks."
+      title: "Filler Sprint I",
+      content: "Filler content for the first sprint section. This text is a placeholder and does not describe any real tasks or progress. It is used for visual demonstration of the component."
     },
     {
       number: 2,
-      title: "Conversation Design Framework",
-      content: "Developed comprehensive conversation flows for common smart home scenarios: lighting control, climate adjustment, security management, and entertainment systems. Created decision trees and error handling protocols for robust voice interaction."
+      title: "Filler Sprint II",
+      content: "Filler content for the second sprint section. This text is a placeholder and does not describe any real tasks or progress. It is used for visual demonstration of the component."
     },
     {
       number: 3,
-      title: "Voice Persona Development",
-      content: "Designed voice personality balancing helpfulness with efficiency. Created scriptwriting guidelines ensuring consistent tone across all interactions. Developed response variations to avoid repetitive feeling and maintain natural conversation flow."
+      title: "Filler Sprint III",
+      content: "Filler content for the third sprint section. This text is a placeholder and does not describe any real tasks or progress. It is used for visual demonstration of the component."
     },
     {
       number: 4,
-      title: "Multi-Modal Integration",
-      content: "Designed complementary visual interfaces for devices with screens. Created notification systems and visual confirmations that work alongside voice interactions. Developed accessibility features for users with hearing or speech impairments."
+      title: "Filler Sprint IV",
+      content: "Filler content for the fourth sprint section. This text is a placeholder and does not describe any real tasks or progress. It is used for visual demonstration of the component."
     },
     {
       number: 5,
-      title: "Voice Prototype Testing",
-      content: "Built functional voice prototypes using Wizard of Oz methodology. Conducted testing sessions with 20 participants in simulated home environments. Refined command recognition, response timing, and error recovery based on user feedback."
+      title: "Filler Sprint V",
+      content: "Filler content for the fifth sprint section. This text is a placeholder and does not describe any real tasks or progress. It is used for visual demonstration of the component."
     },
     {
       number: 6,
-      title: "Technical Implementation",
-      content: "Collaborated with AI engineers to implement natural language processing. Optimized voice recognition accuracy and response times. Created comprehensive documentation for voice interface patterns and conversation design principles."
+      title: "Filler Sprint VI",
+      content: "Filler content for the sixth sprint section. This text is a placeholder and does not describe any real tasks or progress. It is used for visual demonstration of the component."
     }
   ],
   
-  outcome: "VoiceFlow achieved 94% command recognition accuracy and reduced smart home task completion time by 60%. User satisfaction increased from 5.2 to 8.7 out of 10, with users particularly praising the natural conversation feel and reliable performance."
+  outcome: "This is a filler outcome summary. It is placeholder text designed to show what the final result section will look like. It does not contain any real information about the project's success."
 }; 
