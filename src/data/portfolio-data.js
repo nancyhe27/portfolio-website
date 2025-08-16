@@ -1,119 +1,59 @@
 export const portfolioData = {
   hero: {
-    text: "i'm grace--\na designer, researcher, technologist, artist, traveler, cinephile, vegan, and an incoming UX Designer at Google Climate Change AI.\n\ni'm working on a new version of this portfolio [here!](https://placeholder-new-portfolio.framer.website/)",
-    image: "hero-animation.gif"
+    name: "Nancy",
+    title: "A Programmer, Designer, and Full-Stack Builder",
+    subtitle: "Computer Science and Asian Studies junior @ Rice University",
+    description: "Creates thoughtful, end-to-end products that blend clean code with intuitive design.",
+    image: "/images/portfolio_hero.PNG"
   },
-  
+
   projects: [
     {
       id: 1,
-      title: "Bouncr",
-      subtitle: "Mobile Event Management App",
+      title: "WeKruit 2025",
+      subtitle: "Ideation, UI/UX, User Research",
       thumbnail: "project-thumb-01.png",
       route: "/project-01"
     },
     {
       id: 2,
-      title: "ShopEase",
-      subtitle: "E-commerce Website Redesign",
+      title: "SwipyCampus",
+      subtitle: "Feb 2025 • iOS • 36-hour Designathon",
       thumbnail: "project-thumb-02.png",
       route: "/project-02"
     },
     {
       id: 3,
-      title: "MedDash",
-      subtitle: "Healthcare Dashboard",
+      title: "RideSystems 2024",
+      subtitle: "Ideation, UI/UX, User Research",
       thumbnail: "project-thumb-03.png",
       route: "/project-03"
     },
     {
       id: 4,
-      title: "ARVision",
-      subtitle: "AR Visualization Tool",
+      title: "Crude Web 2024",
+      subtitle: "Ideation, UI/UX, User Research",
       thumbnail: "project-thumb-04.png",
       route: "/project-04"
     },
     {
       id: 5,
-      title: "EcoTrack",
-      subtitle: "Sustainability Tracking App",
+      title: "ColorGraph AI 2024-2025",
+      subtitle: "Ideation, UI/UX, User Research",
       thumbnail: "project-thumb-05.png",
       route: "/project-05"
     },
-    {
-      id: 6,
-      title: "VoiceFlow",
-      subtitle: "Voice Interface Design",
-      thumbnail: "project-thumb-06.png",
-      route: "/project-06"
-    }
   ],
 
   skills: {
-    methods: [
-      "Wireframing",
-      "Experience Prototyping",
-      "User Stories",
-      "Semi-structured Interviews",
-      "Affinity Diagramming",
-      "Storyboarding",
-      "User + Stakeholder Journey Mapping",
-      "Think Aloud Study",
-      "UML Diagramming",
-      "ER Modeling",
-      "Artifact Analysis",
-      "Speed Dating"
+    programming_languages: [
+      "Python, Java, JavaScript, TypeScript, HTML/CSS, SQL"
     ],
-    tools: [
-      "Figma",
-      "Adobe XD",
-      "Sketch",
-      "Adobe InDesign",
-      "Adobe Illustrator",
-      "ZeroHeight",
-      "Adobe Photoshop",
-      "Adobe Lightroom",
-      "Procreate",
-      "Jupyter Notebook",
-      "Canva",
-      "Microsoft Office",
-      "Google Suite",
-      "Slack",
-      "Github",
-      "XCode"
+    frameworks_and_tools: [
+      "React, Node.js, Express.js, Firebase, GitHub, Tailwind CSS, \nFigma, Adobe Creative Suite (Illustrator, Photoshop, InDesign), Procreate, Canva"
     ],
-    technical: [
-      "HTML/CSS",
-      "React",
-      "Javascript",
-      "Swift",
-      "C/C++",
-      "Java",
-      "SQL",
-      "NoSQL",
-      "R",
-      "Ruby on Rails",
-      "Python",
-      "SML"
+    specialties: [
+      "Full-Stack Development, REST API & Database Design, Responsive UI Engineering, UX-Driven Frontend Design, Cloud Deployment & Git Collaboration"
     ]
   },
-
-  about: {
-    personalImages: [
-      "personal-01.png",
-      "personal-02.png",
-      "personal-03.png",
-      "personal-04.png",
-      "personal-05.png"
-    ],
-    description: "born and raised in portland, oregon, I have soft spots for used books (the best ones come with annotations + bookmarks), black coffee, and all things green! outside of class, you can usually find me experimenting with tofu, trying out new boba places (i have a rubric), freaking out about my carbon footprint, being dragged on hikes by my friends, and/or making pointillist portraits.",
-    additionalImage: "personal-06.png",
-    artDescription: "speaking of pointillist portraits -- in my free time, i love to paint and draw. here are some of my favorite works including a pointillist piece illustrating the need for the Never Again movement, a piece of an owl on scratchboard, an in-progress painting i have depicting my travels, and a chuck close inspired conceptual portrait of my roommate.",
-    artImages: [
-      "artwork-pointillist.png",
-      "artwork-owl-scratchboard.png",
-      "artwork-travel-painting.png",
-      "artwork-portrait-progress.png"
-    ]
-  }
 }; 

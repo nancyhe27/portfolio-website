@@ -4,43 +4,36 @@ import { portfolioData } from '../../data/portfolio-data';
 
 function Skills() {
   const { skills } = portfolioData;
+  
+  const fallbackSkills = {
+    programming_languages: ["Python, Java, JavaScript, TypeScript, HTML/CSS, SQL"],
+    frameworks_and_tools: ["React, Node.js, Express.js, Firebase, GitHub, Tailwind CSS, Figma, Adobe Creative Suite"],
+    specialties: ["Full-Stack Development, REST API & Database Design, Responsive UI Engineering"]
+  };
+  
+  const safeSkills = skills || fallbackSkills;
+  
+  const skillsData = {
+    "Programming Languages": (safeSkills.programming_languages || []).join(', '),
+    "Frameworks & Tools": (safeSkills.frameworks_and_tools || []).join(', '),
+    "Specialties": (safeSkills.specialties || []).join(', ')
+  };
 
   return (
-    <section className="skills">
-      <div className="container">
-        <div className="skills-header">
-          <h2>skills</h2>
-          <p className="skills-subtitle">in order of relevance / proficiency</p>
-        </div>
-        <div className="skills-content">
-          <div className="skills-column">
-            <h3>Methods</h3>
-            <ul>
-              {skills.methods.map((method, index) => (
-                <li key={index}>{method}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="skills-column">
-            <h3>Tools</h3>
-            <ul>
-              {skills.tools.map((tool, index) => (
-                <li key={index}>{tool}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="skills-column">
-            <h3>Technical</h3>
-            <ul>
-              {skills.technical.map((tech, index) => (
-                <li key={index}>{tech}</li>
-              ))}
-            </ul>
-          </div>
+    <section id="skills" className="skills-section page-section">
+      <div className="content">
+        <h2 className="section-heading">SKILLS</h2>
+        <div className="skills-categories">
+          {Object.entries(skillsData).map(([category, skillsText]) => (
+            <div key={category} className="skills-category">
+              <h3>{category}</h3>
+              <p className="skills-text">{skillsText}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-export default Skills; 
+export default Skills;

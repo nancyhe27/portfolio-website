@@ -1,19 +1,16 @@
 import React from 'react';
 import './Work.css';
-import PolaroidGallery from '../PolaroidGallery/PolaroidGallery';
+import PolaroidGallery from '../Gallery/PolaroidGallery';
 
 function Work() {
   return (
-    <section className="work">
-      <div className="container">
-        <div className="work-header">
-          <h2>work</h2>
-          <p className="work-subtitle">internships / innovations / ideations</p>
-        </div>
+    <section id="work" className="work-section page-section">
+      <div className="content">
+        <h2 className="section-heading">WORK</h2>
         <PolaroidGallery />
       </div>
     </section>
   );
 }
 
-export default Work; 
+export default Work;

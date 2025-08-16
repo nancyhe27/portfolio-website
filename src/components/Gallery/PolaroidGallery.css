@@ -1,0 +1,41 @@
+
+.polaroid-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the gallery */
+    padding: 0;
+    width: 100%; /* Ensure it takes full available width within section padding */
+    justify-items: center; /* Center individual cards */
+  }
+  
+  @media (max-width: 1199px) {
+    .polaroid-gallery {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 35px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .polaroid-gallery {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 0;
+    }
+  }
+  
+  @media (max-width: 479px) {
+    .polaroid-gallery {
+      grid-template-columns: 1fr; /* Single column on small screens */
+      gap: 25px;
+      max-width: none; /* Remove max-width constraint on very small screens */
+    }
+  }
+  
+  /* For very small screens, ensure optimal spacing */
+  @media (max-width: 374px) {
+    .polaroid-gallery {
+      gap: 20px;
+    }
+  }
