@@ -48,7 +48,7 @@ function ProjectLayout02({ projectData }) {
           <div className="container">
             <div className="summary-content p-flex-split p-flex-split--fixed-left">
               <div>
-                <img src={description.logo.src} alt={description.logo.alt} className="p-image summary-logo-image"  />
+                <img src={description.logo.src} alt={description.logo.alt} className="p-image summary-logo-image" />
               </div>
               <p className="p-body">{description.text}</p>
             </div>
@@ -59,12 +59,8 @@ function ProjectLayout02({ projectData }) {
         <section className="swipycampus-phases">
           <div className="container">
             {/* Hour 1: Ideation */}
-            <section className="hour-section">
-              <h3 className="p-title">{ideation.title}</h3>
-              <div className="section-content">
-                <p className="p-body">{ideation.content}</p>
-              </div>
-            </section>
+            <h3 className="p-title">{ideation.title}</h3>
+            <p className="p-body">{ideation.content}</p>
 
             {/* Hour 4: User Research */}
             <section className="hour-section">
