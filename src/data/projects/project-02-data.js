@@ -29,6 +29,7 @@ export const project02Data = {
       "alt": "SwipyCampus app logo featuring Swipy mascot character",
     }
   },
+  "heroImage": "/images/projects/project-02/header/swipycampus_header_test2.png",
   "sections": [
     {
       "id": "ideation",

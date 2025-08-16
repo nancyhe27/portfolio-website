@@ -1,10 +1,13 @@
 import React from 'react';
-import ProjectLayout01 from '../../components/ProjectLayout/project01/ProjectLayout01';
 import { project01Data } from '../../data/projects/project-01-data';
+import ProjectPageLayout from '../../components/ProjectLayout/ProjectPageLayout';
+import DefaultProjectContent from '../../components/ProjectLayout/DefaultProjectContent';
 
 function Project01() {
   return (
-    <ProjectLayout01 projectData={project01Data} />
+    <ProjectPageLayout projectData={project01Data}>
+      <DefaultProjectContent projectData={project01Data} />
+    </ProjectPageLayout>
   );
 }
 
