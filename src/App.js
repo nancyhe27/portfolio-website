@@ -11,7 +11,7 @@ import Project06 from './pages/projects/Project06';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio-website">
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
