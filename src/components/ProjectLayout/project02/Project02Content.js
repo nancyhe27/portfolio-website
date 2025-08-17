@@ -49,7 +49,7 @@ function Project02Content({ projectData }) {
             <p className="p-body">{userResearch.content}</p>
             <div className="p-flex-split">
               <div className="feature-image">
-                <img src={userResearch.features[0].image.src} alt={userResearch.features[0].image.alt} className="p-image" />
+                <img src={`${process.env.PUBLIC_URL}${userResearch.features[0].image.src}`} alt={userResearch.features[0].image.alt} className="p-image" />
               </div>
               <div className="feature-content">
                 <h4 className="p-subtitle">{userResearch.features[0].title}</h4>
@@ -59,7 +59,7 @@ function Project02Content({ projectData }) {
             </div>
             <div className="p-flex-split">
               <div className="feature-image">
-                <img src={userResearch.features[1].image.src} alt={userResearch.features[1].image.alt} className="p-image" />
+                <img src={`${process.env.PUBLIC_URL}${userResearch.features[1].image.src}`} alt={userResearch.features[1].image.alt} className="p-image" />
               </div>
               <div className="feature-content">
                 <h4 className="p-subtitle">{userResearch.features[1].title}</h4>
@@ -86,7 +86,7 @@ function Project02Content({ projectData }) {
                   <div className="p-grid" style={{ '--grid-cols': 5 }}>
                     {subsection.images.map((img, imgIndex) => (
                       <figure key={imgIndex}>
-                        <img src={img.src} alt={img.alt} className="p-image" />
+                        <img src={`${process.env.PUBLIC_URL}${img.src}`} alt={img.alt} className="p-image" />
                         {img.caption && <figcaption className="p-caption">{img.caption}</figcaption>}
                       </figure>
                     ))}
@@ -98,11 +98,11 @@ function Project02Content({ projectData }) {
                       <div key={compIndex} className="p-flex-split">
                         <div className="p-grid" style={{ '--grid-cols': 2 }}>
                           <figure>
-                            <img src={comparison.before.src} alt={comparison.before.alt} className="p-image" />
+                            <img src={`${process.env.PUBLIC_URL}${comparison.before.src}`} alt={comparison.before.alt} className="p-image" />
                             <figcaption className="p-caption">{comparison.before.caption}</figcaption>
                           </figure>
                           <figure>
-                            <img src={comparison.after.src} alt={comparison.after.alt} className="p-image" />
+                            <img src={`${process.env.PUBLIC_URL}${comparison.after.src}`} alt={comparison.after.alt} className="p-image" />
                             <figcaption className="p-caption">{comparison.after.caption}</figcaption>
                           </figure>
                         </div>
@@ -128,7 +128,7 @@ function Project02Content({ projectData }) {
               <div className="p-grid" style={{ '--grid-cols': 4 }}>
                 {mascotDesign.mascot.states.map((state, index) => (
                   <figure key={index}>
-                    <img src={state.src} alt={state.alt} className="p-image" />
+                    <img src={`${process.env.PUBLIC_URL}${state.src}`} alt={state.alt} className="p-image" />
                     <figcaption className="p-caption">{state.caption}</figcaption>
                   </figure>
                 ))}
@@ -150,7 +150,7 @@ function Project02Content({ projectData }) {
                     {flow.images.map((imgSrc, imgIndex) => (
                       <img
                         key={imgIndex}
-                        src={imgSrc}
+                        src={`${process.env.PUBLIC_URL}${imgSrc}`}
                         alt={`${flow.title} screen ${imgIndex + 1}`}
                         className="p-image-prototype"
                       />
