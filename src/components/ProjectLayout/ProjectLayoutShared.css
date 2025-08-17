@@ -330,3 +330,100 @@
     padding-right: 16px;
   }
 }
+
+/* ===========================
+   PROJECT HEADER RESPONSIVE STYLES
+   =========================== */
+
+/* Base desktop styles - add responsive minimum padding-right */
+.project-header-info {
+  padding-right: max(60px, 4vw); /* At least 60px OR 4% of viewport width */
+}
+
+/* Medium Desktop: Start scaling down (1200px - 992px) */
+@media (max-width: 1199px) {
+  .project-header-content {
+    gap: 4%; /* Reduce from 80px */
+  }
+  
+  .project-header-info {
+    padding-left: 45px; /* Reduce from 60px */
+    padding-right: max(45px, 3.5vw); /* Scale proportionally with minimums */
+  }
+  
+  .project-header .p-header-title {
+    font-size: 2.25rem; /* Reduce from 2.5rem */
+  }
+  
+  .project-header .p-header-body {
+    font-size: 1.125rem; /* Reduce from 1.25rem */
+  }
+}
+
+/* Small Desktop/Large Tablet: Further scaling (992px - 768px) */
+@media (max-width: 991px) {
+  .project-header-content {
+    gap: 0; /* Further reduce */
+  }
+  
+  .project-header-info {
+    padding-left: 30px; /* Further reduce */
+    padding-right: max(30px, 3vw); /* Maintain proportion with minimum */
+  }
+  
+  .project-header .p-header-title {
+    font-size: 2rem; /* Further reduce */
+  }
+  
+  .project-header .p-header-body {
+    font-size: 1rem; /* Further reduce */
+  }
+}
+
+/* Mobile/Tablet: Stack header content vertically */
+@media (max-width: 807px) {
+  .project-header-content {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .project-header-image {
+    flex: none;
+    width: 100%;
+    border-bottom: 1px solid var(--brown-dark);
+  }
+  
+  .project-header-info {
+    flex: none;
+    padding: var(--spacing-md) var(--spacing-md) 0 var(--spacing-md);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  /* Adjust typography for mobile */
+  .project-header .p-header-title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .project-header .p-header-body {
+    font-size: 1.1rem;
+  }
+}
+
+/* Small mobile: Further adjustments */
+@media (max-width: 479px) {
+  .project-header-info {
+    padding: var(--spacing-sm) var(--spacing-sm) 0 var(--spacing-sm);
+  }
+  
+  .project-header .p-header-title {
+    font-size: 1.75rem;
+  }
+  
+  .project-header .p-header-body {
+    font-size: 1rem;
+  }
+}
