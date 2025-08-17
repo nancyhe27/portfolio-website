@@ -10,19 +10,19 @@ function ProjectPageLayout({ projectData, children }) {
       <Navigation />
 
       {/* Shared Header Structure - Full Width */}
-      <header style={{ borderBottom: '1px solid var(--brown-dark)'}}>
+      <header style={{ borderBottom: '1px solid var(--brown-dark)' }}>
         {/* Inner container to align content with the page */}
         <div className="p-flex-split" style={{ margin: '0 auto' }}>
           {/* Left Side: Single Image (2 parts) */}
-          <div style={{flex: 2}}>
-              <img src={heroImage} alt={`${title} hero`} className="p-image"/>
+          <div style={{ flex: 2 }}>
+            <img src={`${process.env.PUBLIC_URL}${heroImage}`} alt={`${title} hero`} className="p-image" />
           </div>
-          
+
           {/* Right Side: Project Info (1 part) */}
-          <div style={{flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingLeft: '60px' }}>
+          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingLeft: '60px' }}>
             <h1 className="p-header-title">{title}</h1>
             <p className="p-header-body">{duration}</p>
-            <p className="p-header-body" style={{margin: 0}}>{task}</p>
+            <p className="p-header-body" style={{ margin: 0 }}>{task}</p>
           </div>
         </div>
       </header>
