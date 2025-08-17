@@ -26,7 +26,7 @@ function Project02Content({ projectData }) {
       <section className="section-content">
         <div className="p-flex-split p-flex-split--fixed-left">
           <div className="summary-logo-image">
-          <img src="https://chaxotol.github.io/portfolio-website/images/projects/project-02/header/logo.png" alt={description.logo.alt} className="p-image" />
+            <img src={`${process.env.PUBLIC_URL}${description.logo.src}`} alt={description.logo.alt} className="p-image" />
           </div>
           <p className="p-body">{description.text}</p>
         </div>
