@@ -25,7 +25,7 @@ export const project02Data = {
   "description": {
     "text": "SwipyCampus helps students navigate campus more efficiently by providing real-time building and entrance access, live crowd levels, and detailed location information, all in one app.",
     "logo": {
-      "src": "./images/projects/project-02/header/logo.png",
+      "src": `${process.env.PUBLIC_URL}/images/projects/project-02/header/logo.png`,
       "alt": "SwipyCampus app logo featuring Swipy mascot character",
     }
   },
