@@ -47,7 +47,7 @@ export const project02Data = {
             "src": "/images/projects/project-02/pie/pie1.PNG",
             "alt": "User interface mockup showing real-time building access status with door availability indicators"
           },
-          "question": "Have you ever experienced difficulty accessing a building or room on campus due to restricted door access?",
+          "question": "Q: \"Have you ever experienced difficulty accessing a building or room on campus due to restricted door access?\"",
           "quote": "One night I walked 20 minutes in -30° weather to a quiet study spot, only to find it locked. I gave up and went home instead."
         },
         {
@@ -56,7 +56,7 @@ export const project02Data = {
             "src": "/images/projects/project-02/pie/pie2.PNG", 
             "alt": "App interface displaying study space recommendations with crowd levels and amenity information"
           },
-          "question": "How often do you struggle to find a suitable study space on campus?",
+          "question": "Q: \"How often do you struggle to find a suitable study space on campus?\"",
           "quote": "Popular spots are often full, leaving me to wander in search of a study space through trial and error."
         }
       ],
