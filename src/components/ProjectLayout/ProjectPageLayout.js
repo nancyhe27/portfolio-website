@@ -1,13 +1,42 @@
 import React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Navigation from '../../components/Navigation/Navigation';
 import './ProjectLayoutShared.css';
 
 function ProjectPageLayout({ projectData, children }) {
   const { title, duration, task, heroImage } = projectData;
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  // Get current project number from URL path
+  const currentProjectNum = parseInt(location.pathname.match(/project-(\d+)/)?.[1] || '1');
+  const totalProjects = 6;
+  
+  const goToPreviousProject = () => {
+    const prevProject = currentProjectNum === 1 ? totalProjects : currentProjectNum - 1;
+    navigate(`/project-${prevProject.toString().padStart(2, '0')}`);
+  };
+  
+  const goToNextProject = () => {
+    const nextProject = currentProjectNum === totalProjects ? 1 : currentProjectNum + 1;
+    navigate(`/project-${nextProject.toString().padStart(2, '0')}`);
+  };
 
   return (
     <>
       <Navigation />
+
+      {/* Shared Footer Navigation */}
+      <section className="project-navigation-section" style={{ borderTop: 'none' }}>
+        <div className="project-nav-buttons">
+          <button className="nav-button" onClick={goToPreviousProject}>
+            ← &nbsp; Previous Project
+          </button>
+          <button className="nav-button" onClick={goToNextProject}>
+            Next Project &nbsp; →
+          </button>
+        </div>
+      </section>
 
       {/* Shared Header Structure - Full Width */}
       <header className="project-header" style={{ borderBottom: '1px solid var(--brown-dark)' }}>
@@ -35,16 +64,14 @@ function ProjectPageLayout({ projectData, children }) {
       </main>
 
       {/* Shared Footer Navigation */}
-      <section className="project-navigation-section">
-        <div className="container">
-          <div className="project-nav-buttons">
-            <button className="nav-button prev-button">
-              ← Previous Project
-            </button>
-            <button className="nav-button next-button">
-              Next Project →
-            </button>
-          </div>
+      <section className="project-navigation-section" style={{ borderBottom: 'none' }}>
+        <div className="project-nav-buttons">
+          <button className="nav-button" onClick={goToPreviousProject}>
+          ← &nbsp; Previous Project
+          </button>
+          <button className="nav-button" onClick={goToNextProject}>
+            Next Project &nbsp; →
+          </button>
         </div>
       </section>
     </>

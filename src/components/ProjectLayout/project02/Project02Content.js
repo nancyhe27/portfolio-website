@@ -47,7 +47,7 @@ function Project02Content({ projectData }) {
           <h3 className="p-title">{userResearch.title}</h3>
           <div className="section-content">
             <p className="p-body">{userResearch.content}</p>
-            <div className="p-separator--short" style={{ marginTop: 'var(--spacing-md)'}}></div>
+            <div className="p-separator--short" style={{ marginTop: 'var(--spacing-md)' }}></div>
             <div className="p-flex-split p-flex-split--fixed-pie">
               <div>
                 <img src={`${process.env.PUBLIC_URL}${userResearch.features[0].image.src}`} alt={userResearch.features[0].image.alt} className="p-image" />
@@ -69,7 +69,7 @@ function Project02Content({ projectData }) {
                 <div className="p-quote-box">"{userResearch.features[1].quote}"</div>
               </div>
             </div>
-            <div className="p-separator--short" style={{ marginBottom: 'var(--spacing-md)'}}></div>
+            <div className="p-separator--short" style={{ marginBottom: 'var(--spacing-md)' }}></div>
             {userResearch.insights && (
               <div className="p-body">
                 <p>{userResearch.insights}</p>
@@ -85,66 +85,57 @@ function Project02Content({ projectData }) {
             {wireframes.subsections.map((subsection, index) => (
               <div key={index}>
                 <h4 className="p-subtitle">{subsection.title}</h4>
-                
+
                 {/* Feature Map - standalone container */}
                 {subsection.title === "Feature Map" && subsection.images && (
-                  <div style={{ textAlign: 'center', marginBottom: 'var(--spacing-lg)' }}>
-                    <img 
-                      src={`${process.env.PUBLIC_URL}${subsection.images[0].src}`} 
-                      alt={subsection.images[0].alt} 
-                      className="p-image" 
+                  <div style={{ textAlign: 'center', marginBottom: 'var(--spacing-lg)', marginTop: 'var(--spacing-md)' }}>
+                    <img
+                      src={`${process.env.PUBLIC_URL}${subsection.images[0].src}`}
+                      alt={subsection.images[0].alt}
+                      className="p-image"
                       style={{ maxWidth: '800px', width: '100%' }}
                     />
                   </div>
                 )}
-                
-                {/* Low-fidelity Wireframes - 1:2 flexbox layout */}
+
+                {/* Low-fidelity Wireframes - 1x5 grid layout */}
                 {subsection.title === "Low-fidelity Wireframes" && subsection.images && (
-                  <div className="p-flex-split" style={{ '--flex-ratio': '1:2', alignItems: 'flex-start' }}>
-                    {/* Left side: Home(Map View) - first image */}
-                    <div style={{ flex: 1 }}>
-                      <figure>
-                        <img 
-                          src={`${process.env.PUBLIC_URL}${subsection.images[0].src}`} 
-                          alt={subsection.images[0].alt} 
-                          className="p-image" 
-                        />
-                        {subsection.images[0].caption && (
-                          <figcaption className="p-caption">{subsection.images[0].caption}</figcaption>
-                        )}
+                  <div className="p-grid" style={{ '--grid-cols': 5, gap: 'var(--spacing-md)', marginTop: 'var(--spacing-md)', marginBottom: 'var(--spacing-lg)' }}>
+                    {subsection.images.map((img, imgIndex) => (
+                      <figure key={imgIndex} style={{ margin: 0 }}>
+                        <img src={`${process.env.PUBLIC_URL}${img.src}`} alt={img.alt} className="p-image" />
+                        {img.caption && <figcaption className="p-caption">{img.caption}</figcaption>}
                       </figure>
-                    </div>
-                    
-                    {/* Right side: 2x2 grid with remaining 4 images */}
-                    <div style={{ flex: 2 }}>
-                      <div className="p-grid" style={{ '--grid-cols': 2 }}>
-                        {subsection.images.slice(1).map((img, imgIndex) => (
-                          <figure key={imgIndex + 1}>
-                            <img src={`${process.env.PUBLIC_URL}${img.src}`} alt={img.alt} className="p-image" />
-                            {img.caption && <figcaption className="p-caption">{img.caption}</figcaption>}
-                          </figure>
-                        ))}
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 )}
-                
+
                 {/* UI/UX Refinement - keep existing comparison layout */}
                 {subsection.comparisons && (
                   <div>
                     {subsection.comparisons.map((comparison, compIndex) => (
                       <div key={compIndex} className="p-flex-split">
-                        <div className="p-grid" style={{ '--grid-cols': 2 }}>
-                          <figure>
-                            <img src={`${process.env.PUBLIC_URL}${comparison.before.src}`} alt={comparison.before.alt} className="p-image" />
-                            <figcaption className="p-caption">{comparison.before.caption}</figcaption>
-                          </figure>
-                          <figure>
-                            <img src={`${process.env.PUBLIC_URL}${comparison.after.src}`} alt={comparison.after.alt} className="p-image" />
-                            <figcaption className="p-caption">{comparison.after.caption}</figcaption>
-                          </figure>
+                        <div style={{ display: 'flex', alignItems: 'center', flex: 3, gap: 0 }}>
+                          <div style={{ flex: 4 }}>
+                            <figure style={{ margin: 0 }}>
+                              <img src={`${process.env.PUBLIC_URL}${comparison.before.src}`} alt={comparison.before.alt} className="p-image" />
+                              <figcaption className="p-caption">{comparison.before.caption}</figcaption>
+                            </figure>
+                          </div>
+                          <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'var(--font-display)', fontSize: '2rem', color: 'var(--brown-medium)' }}>
+                            →
+                          </div>
+                          <div style={{ flex: 4 }}>
+                            <figure style={{ margin: 0 }}>
+                              <img src={`${process.env.PUBLIC_URL}${comparison.after.src}`} alt={comparison.after.alt} className="p-image" />
+                              <figcaption className="p-caption">{comparison.after.caption}</figcaption>
+                            </figure>
+                          </div>
                         </div>
-                        <p className="p-body">{comparison.description}</p>
+                        <div style={{ flex: 4 }}>
+                          <h4 className="p-subtitle" style={{ marginTop: '0px', marginBottom: '0px' }}>{comparison.subtitle}</h4>
+                          <p className="p-body">{comparison.description}</p>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -155,19 +146,19 @@ function Project02Content({ projectData }) {
         </section>
 
         {/* Hour 16: Emotional Branding */}
-        <section className="hour-section">
+        <section>
           <h3 className="p-title">{mascotDesign.title}</h3>
           <div className="section-content">
-            <div className="p-container-box">"{mascotDesign.quote}"</div>
-            <p className="p-body">{mascotDesign.content}</p>
+            <div className="p-quote-box" style={{ marginBottom: 'var(--spacing-sm)' }}>"{mascotDesign.quote}"</div>
+            <p className="p-body" style={{ marginBottom: 'var(--spacing-md)' }}>{mascotDesign.content}</p>
             <div>
               <h4 className="p-subtitle">{mascotDesign.mascot.name}</h4>
               <p className="p-body">{mascotDesign.mascot.description}</p>
-              <div className="p-grid" style={{ '--grid-cols': 4 }}>
+              <div className="p-grid" style={{ '--grid-cols': 4, gap: '0px' }}>
                 {mascotDesign.mascot.states.map((state, index) => (
                   <figure key={index}>
-                    <img src={`${process.env.PUBLIC_URL}${state.src}`} alt={state.alt} className="p-image" />
-                    <figcaption className="p-caption">{state.caption}</figcaption>
+                    <img src={`${process.env.PUBLIC_URL}${state.src}`} alt={state.alt} className="p-image" style={{ marginTop: 'var(--spacing-sm)'}}/>
+                    <figcaption className="p-caption-separator">{state.caption}</figcaption>
                   </figure>
                 ))}
               </div>
@@ -179,7 +170,25 @@ function Project02Content({ projectData }) {
         <section className="hour-section">
           <h3 className="p-title">{prototype.title}</h3>
           <div className="section-content">
-            <p className="p-body" style={{ color: 'var(--accent-color)', fontWeight: '600' }}>{prototype.cta}</p>
+            <p style={{ fontSize: '1.125rem', color: 'var(--brown-medium)', fontWeight: '400' }}>
+              Experience SwipyCampus{' '}
+              <a
+                href="https://www.figma.com/proto/Z7p0zcC3oY8jMkSLov804R/SwipyCampus-Prototype?node-id=1-2074&p=f&t=QiJTFXuUp8i1xMSR-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2074&show-proto-sidebar=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: 'var(--brown-medium)',
+                  textDecoration: 'underline',
+                  fontWeight: '600',
+                  transition: 'color 0.3s ease'
+                }}
+                onMouseEnter={(e) => e.target.style.color = 'var(--accent-color)'}
+                onMouseLeave={(e) => e.target.style.color = 'var(--brown-medium)'}
+              >
+                HERE
+              </a>
+              !
+            </p>
             <div>
               {prototype.flows.map((flow, index) => (
                 <div key={index}>
@@ -191,6 +200,7 @@ function Project02Content({ projectData }) {
                         src={`${process.env.PUBLIC_URL}${imgSrc}`}
                         alt={`${flow.title} screen ${imgIndex + 1}`}
                         className="p-image-prototype"
+                        style={{ marginBottom: 'var(--spacing-sm)' }}
                       />
                     ))}
                   </div>

@@ -1,11 +1,50 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './Navigation.css';
 
 function Navigation() {
-    const scrollToSection = (sectionId) => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+    const navigate = useNavigate();
+    const location = useLocation();
+    
+    const isOnProjectPage = location.pathname.includes('/project-');
+    
+    // Handle hash-based navigation when landing on home page
+    useEffect(() => {
+        if (location.pathname === '/' && location.hash) {
+            const sectionId = location.hash.substring(1);
+            setTimeout(() => {
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    const navHeight = 80; // Navigation bar height
+                    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - navHeight;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 100); // Small delay to ensure page is loaded
+        }
+    }, [location]);
+
+    const handleSectionNavigation = (sectionId) => {
+        if (isOnProjectPage) {
+            // Navigate to home page with section anchor
+            navigate(`/#${sectionId}`);
+        } else {
+            // Scroll to section on current page (home) with offset
+            const element = document.getElementById(sectionId);
+            if (element) {
+                const navHeight = 80; // Navigation bar height
+                const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - navHeight;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
         }
     };
 
@@ -16,7 +55,7 @@ function Navigation() {
                 className="nav-brand"
                 onClick={(e) => {
                     e.preventDefault();
-                    scrollToSection('hero');
+                    handleSectionNavigation('hero');
                 }}
             >
                 NANCY HE
@@ -28,7 +67,7 @@ function Navigation() {
                     className="nav-link"
                     onClick={(e) => {
                         e.preventDefault();
-                        scrollToSection('work');
+                        handleSectionNavigation('work');
                     }}
                 >
                     work
@@ -38,7 +77,7 @@ function Navigation() {
                     className="nav-link"
                     onClick={(e) => {
                         e.preventDefault();
-                        scrollToSection('skills');
+                        handleSectionNavigation('skills');
                     }}
                 >
                     skills

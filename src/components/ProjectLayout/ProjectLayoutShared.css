@@ -95,6 +95,26 @@
   text-align: center;
 }
 
+.p-caption-separator {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-top: var(--spacing-sm);
+  text-align: center;
+  position: relative;
+  padding-top: calc(var(--spacing-xs) / 2);
+}
+
+.p-caption-separator::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -5%;
+  right: 5%;
+  width: 110%;
+  height: 1px;
+  background-color: var(--brown-dark);
+}
+
 .p-label {
   font-weight: bold;
   color: var(--brown-medium);
@@ -261,7 +281,7 @@
 }
 
 .p-image-prototype {
-  border-radius: 25px;
+  border-radius: 20px;
   border: 1px solid var(--brown-dark);
   display: block;
   max-width: 100%;
@@ -293,31 +313,32 @@
 
 /* Shared Navigation */
 .project-navigation-section {
-  padding: 40px 0;
-  border-top: 1px solid #eee;
+  padding: 40px 80px;
+  border-top: 1px solid var(--brown-dark);
+  border-bottom: 1px solid var(--brown-dark);
 }
 
 .project-nav-buttons {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .nav-button {
   padding: 12px 24px;
-  border: 1px solid #333;
+  border: 1px solid var(--brown-dark);
   background: transparent;
-  color: #333;
-  font-size: 16px;
+  color: var(--brown-dark);
+  font-size: var(--text-base);
   cursor: pointer;
   transition: all 0.3s ease;
+  border-radius: 2px;
 }
 
 .nav-button:hover {
-  background: #333;
-  color: white;
+  background: var(--accent-color);
+  color: var(--bg-primary);
+  border-color: var(--accent-color);
 }
 
 /* Shared Header Image */
