@@ -174,7 +174,7 @@ export const project02Data = {
     {
       "id": "prototype",
       "title": "Hour 18: Prototype",
-      "cta": "Experience the prototype here!",
+      "cta": "Experience the prototype HERE!",
       "flows": [
         {
           "title": "Sign In/Up + ID Verification",

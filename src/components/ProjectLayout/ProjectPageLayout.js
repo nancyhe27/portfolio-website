@@ -9,6 +9,18 @@ function ProjectPageLayout({ projectData, children }) {
     <>
       <Navigation />
 
+      {/* Shared Footer Navigation */}
+      <section className="project-navigation-section" style={{ borderTop: 'none' }}>
+        <div className="project-nav-buttons">
+          <button className="nav-button">
+            ← &nbsp; Previous Project
+          </button>
+          <button className="nav-button">
+            Next Project &nbsp; →
+          </button>
+        </div>
+      </section>
+
       {/* Shared Header Structure - Full Width */}
       <header className="project-header" style={{ borderBottom: '1px solid var(--brown-dark)' }}>
         {/* Inner container to align content with the page */}
@@ -35,16 +47,14 @@ function ProjectPageLayout({ projectData, children }) {
       </main>
 
       {/* Shared Footer Navigation */}
-      <section className="project-navigation-section">
-        <div className="container">
-          <div className="project-nav-buttons">
-            <button className="nav-button prev-button">
-              ← Previous Project
-            </button>
-            <button className="nav-button next-button">
-              Next Project →
-            </button>
-          </div>
+      <section className="project-navigation-section" style={{ borderBottom: 'none' }}>
+        <div className="project-nav-buttons">
+          <button className="nav-button">
+          ← &nbsp; Previous Project
+          </button>
+          <button className="nav-button">
+            Next Project &nbsp; →
+          </button>
         </div>
       </section>
     </>

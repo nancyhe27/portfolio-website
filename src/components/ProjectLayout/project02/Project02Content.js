@@ -133,8 +133,8 @@ function Project02Content({ projectData }) {
                           </div>
                         </div>
                         <div style={{ flex: 4 }}>
-                            <h4 className="p-subtitle" style={{ marginTop: '0px', marginBottom: '0px'}}>{comparison.subtitle}</h4>
-                            <p className="p-body">{comparison.description}</p>
+                          <h4 className="p-subtitle" style={{ marginTop: '0px', marginBottom: '0px' }}>{comparison.subtitle}</h4>
+                          <p className="p-body">{comparison.description}</p>
                         </div>
                       </div>
                     ))}
@@ -149,16 +149,16 @@ function Project02Content({ projectData }) {
         <section>
           <h3 className="p-title">{mascotDesign.title}</h3>
           <div className="section-content">
-            <div className="p-quote-box" style={{ marginBottom: 'var(--spacing-sm)'}}>"{mascotDesign.quote}"</div>
-            <p className="p-body" style={{ marginBottom: 'var(--spacing-md)'}}>{mascotDesign.content}</p>
+            <div className="p-quote-box" style={{ marginBottom: 'var(--spacing-sm)' }}>"{mascotDesign.quote}"</div>
+            <p className="p-body" style={{ marginBottom: 'var(--spacing-md)' }}>{mascotDesign.content}</p>
             <div>
               <h4 className="p-subtitle">{mascotDesign.mascot.name}</h4>
               <p className="p-body">{mascotDesign.mascot.description}</p>
-              <div className="p-grid" style={{ '--grid-cols': 4, gap: '0px'}}>
+              <div className="p-grid" style={{ '--grid-cols': 4, gap: '0px' }}>
                 {mascotDesign.mascot.states.map((state, index) => (
                   <figure key={index}>
-                    <img src={`${process.env.PUBLIC_URL}${state.src}`} alt={state.alt} className="p-image" />
-                    <figcaption className="p-caption">{state.caption}</figcaption>
+                    <img src={`${process.env.PUBLIC_URL}${state.src}`} alt={state.alt} className="p-image" style={{ marginTop: 'var(--spacing-sm)'}}/>
+                    <figcaption className="p-caption-separator">{state.caption}</figcaption>
                   </figure>
                 ))}
               </div>
@@ -170,7 +170,25 @@ function Project02Content({ projectData }) {
         <section className="hour-section">
           <h3 className="p-title">{prototype.title}</h3>
           <div className="section-content">
-            <p className="p-body" style={{ color: 'var(--accent-color)', fontWeight: '600' }}>{prototype.cta}</p>
+            <p style={{ fontSize: '1.125rem', color: 'var(--brown-medium)', fontWeight: '400' }}>
+              Experience SwipyCampus{' '}
+              <a
+                href="https://www.figma.com/proto/Z7p0zcC3oY8jMkSLov804R/SwipyCampus-Prototype?node-id=1-2074&p=f&t=QiJTFXuUp8i1xMSR-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2074&show-proto-sidebar=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: 'var(--brown-medium)',
+                  textDecoration: 'underline',
+                  fontWeight: '600',
+                  transition: 'color 0.3s ease'
+                }}
+                onMouseEnter={(e) => e.target.style.color = 'var(--accent-color)'}
+                onMouseLeave={(e) => e.target.style.color = 'var(--brown-medium)'}
+              >
+                HERE
+              </a>
+              !
+            </p>
             <div>
               {prototype.flows.map((flow, index) => (
                 <div key={index}>
@@ -182,6 +200,7 @@ function Project02Content({ projectData }) {
                         src={`${process.env.PUBLIC_URL}${imgSrc}`}
                         alt={`${flow.title} screen ${imgIndex + 1}`}
                         className="p-image-prototype"
+                        style={{ marginBottom: 'var(--spacing-sm)' }}
                       />
                     ))}
                   </div>
