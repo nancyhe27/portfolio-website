@@ -106,27 +106,29 @@ export const project02Data = {
             {
               "before": {
                 "src": "/images/projects/project-02/improve/home_before.png",
-                "alt": "Home(Before)",
-                "caption": "Home(Before)"
+                "alt": "Home (Before)",
+                "caption": "Home (Before)"
               },
               "after": {
                 "src": "/images/projects/project-02/improve/home_after.png",
-                "alt": "Home(After)",
-                "caption": "Home(After)"
+                "alt": "Home (After)",
+                "caption": "Home (After)"
               },
+              "subtitle": "Navigation Consolidation",
               "description": "Scattered buttons on the home page were replaced with a navigation bar, making navigation clearer and reducing confusion through a more distinct separation of tasks."
             },
             {
               "before": {
                 "src": "/images/projects/project-02/improve/colorcode_before.png",
-                "alt": "Building Information(Before)",
-                "caption": "Building Information(Before)"
+                "alt": "Building Info (Before)",
+                "caption": "Building Info (Before)"
               },
               "after": {
                 "src": "/images/projects/project-02/improve/colorcode_after.png",
-                "alt": "Building Information(After)",
-                "caption": "Building Information(After)"
+                "alt": "Building Info (After)",
+                "caption": "Building Info (After)"
               },
+              "subtitle": "Contextual Data Enhancement",
               "description": "Previously, the building page only displayed general access information. The update adds door-specific access and live crowd details, using extra map space when zoomed in so users can often view all key information without opening the page."
             }
           ]
