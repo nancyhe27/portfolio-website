@@ -81,27 +81,22 @@ export const project02Data = {
             {
               "src": "/images/projects/project-02/sketch/home_sketch.png",
               "alt": "Home(Map View)",
-              "caption": "Home(Map View)"
             },
             {
               "src": "/images/projects/project-02/sketch/search_sketch.png",
               "alt": "Search",
-              "caption": "Search"
             },
             {
               "src": "/images/projects/project-02/sketch/building_sketch.png",
               "alt": "Location",
-              "caption": "Location"
             },
             {
               "src": "/images/projects/project-02/sketch/homelist_sketch.png",
               "alt": "Home(List View)",
-              "caption": "Home(List View)"
             },
             {
               "src": "/images/projects/project-02/sketch/ai_sketch.png",
               "alt": "AI Chatbot",
-              "caption": "AI Chatbot"
             }
           ]
         },

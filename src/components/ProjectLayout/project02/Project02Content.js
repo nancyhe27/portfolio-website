@@ -88,36 +88,33 @@ function Project02Content({ projectData }) {
                 
                 {/* Feature Map - standalone container */}
                 {subsection.title === "Feature Map" && subsection.images && (
-                  <div style={{ textAlign: 'center', marginBottom: 'var(--spacing-lg)' }}>
+                  <div style={{ textAlign: 'center', marginBottom: 'var(--spacing-lg)', marginTop: 'var(--spacing-lg)'}}>
                     <img 
                       src={`${process.env.PUBLIC_URL}${subsection.images[0].src}`} 
                       alt={subsection.images[0].alt} 
                       className="p-image" 
-                      style={{ maxWidth: '800px', width: '100%' }}
+                      style={{ maxWidth: '800px', width: '100%'}}
                     />
                   </div>
                 )}
                 
                 {/* Low-fidelity Wireframes - 1:2 flexbox layout */}
                 {subsection.title === "Low-fidelity Wireframes" && subsection.images && (
-                  <div className="p-flex-split" style={{ '--flex-ratio': '1:2', alignItems: 'flex-start' }}>
+                  <div className="p-flex-split" style={{ '--flex-ratio': '1:2', gap: 0}}>
                     {/* Left side: Home(Map View) - first image */}
-                    <div style={{ flex: 1 }}>
+                    <div style={{ flex: 1, display: 'flex'}}>
                       <figure>
                         <img 
                           src={`${process.env.PUBLIC_URL}${subsection.images[0].src}`} 
                           alt={subsection.images[0].alt} 
                           className="p-image" 
                         />
-                        {subsection.images[0].caption && (
-                          <figcaption className="p-caption">{subsection.images[0].caption}</figcaption>
-                        )}
                       </figure>
                     </div>
                     
                     {/* Right side: 2x2 grid with remaining 4 images */}
                     <div style={{ flex: 2 }}>
-                      <div className="p-grid" style={{ '--grid-cols': 2 }}>
+                      <div className="p-grid" style={{ '--grid-cols': 2, gap: 0}}>
                         {subsection.images.slice(1).map((img, imgIndex) => (
                           <figure key={imgIndex + 1}>
                             <img src={`${process.env.PUBLIC_URL}${img.src}`} alt={img.alt} className="p-image" />
