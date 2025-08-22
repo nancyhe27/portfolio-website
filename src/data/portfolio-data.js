@@ -13,7 +13,8 @@ export const portfolioData = {
       title: "WeKruit 2025",
       subtitle: "Ideation, UI/UX, User Research",
       thumbnail: "project-thumb-01.png",
-      route: "/project-01"
+      route: "/project-01",
+      comingSoon: true
     },
     {
       id: 2,
@@ -27,21 +28,24 @@ export const portfolioData = {
       title: "RideSystems 2024",
       subtitle: "Ideation, UI/UX, User Research",
       thumbnail: "project-thumb-03.png",
-      route: "/project-03"
+      route: "/project-03",
+      comingSoon: true
     },
     {
       id: 4,
       title: "Crude Web 2024",
       subtitle: "Ideation, UI/UX, User Research",
       thumbnail: "project-thumb-04.png",
-      route: "/project-04"
+      route: "/project-04",
+      comingSoon: true
     },
     {
       id: 5,
       title: "ColorGraph AI 2024-2025",
       subtitle: "Ideation, UI/UX, User Research",
       thumbnail: "project-thumb-05.png",
-      route: "/project-05"
+      route: "/project-05",
+      comingSoon: true
     },
   ],
 

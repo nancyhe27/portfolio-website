@@ -6,22 +6,28 @@ function PolaroidCard({ project }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(project.route);
+    if (!project.comingSoon) {
+      navigate(project.route);
+    }
   };
 
   return (
-    <div className="polaroid-card" onClick={handleClick}>
+    <div 
+      className={`polaroid-card ${project.comingSoon ? 'coming-soon' : ''}`} 
+      onClick={handleClick}
+      style={{ cursor: project.comingSoon ? 'default' : 'pointer' }}
+    >
       {/* Caption ABOVE the image */}
       <div className="polaroid-caption">
         <h3>{project.title}</h3>
-        <p>{project.subtitle}</p>
+        <p>{project.comingSoon ? 'Coming Soon...' : project.subtitle}</p>
       </div>
       
       {/* Image below the caption */}
       <div className="polaroid-frame">
         <div className="polaroid-image">
           <div className="placeholder-thumb">
-            <span>{project.title}</span>
+            <span>{project.comingSoon ? 'Coming Soon...' : project.title}</span>
           </div>
         </div>
       </div>

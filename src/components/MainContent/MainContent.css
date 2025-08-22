@@ -64,6 +64,22 @@
   border-bottom: 1px solid var(--brown-dark);
 }
 
+.p-flex-split {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.p-flex-split--fixed-hero>*:first-child {
+  flex: 0 0 120px;
+}
+
+.p-flex-split--fixed-hero>*:last-child {
+  flex: 1;
+}
+
 /* ===========================
    WORK SUBSECTION
    =========================== */
