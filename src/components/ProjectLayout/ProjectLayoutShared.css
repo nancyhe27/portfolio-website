@@ -485,4 +485,11 @@
   .p-subtitle {
     font-size: var(--text-lg);
   }
+
+  /* Force word breaks to prefer breaking after colons */
+  .p-title {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: none;
+  }
 }
