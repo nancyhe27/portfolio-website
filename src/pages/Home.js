@@ -1,17 +1,13 @@
 import React from 'react';
 import Navigation from '../components/Navigation/Navigation';
-import Hero from '../components/Hero/Hero';
-import Work from '../components/Work/Work';
-import Skills from '../components/Skills/Skills';
+import MainContent from '../components/MainContent/MainContent';
 // import About from '../components/About/About'; // COMMENTED OUT: About section temporarily removed
 
 function Home() {
   return (
     <div className="home">
       <Navigation />
-      <Hero />
-      <Work />
-      <Skills />
+      <MainContent />
       {/* <About /> */} {/* COMMENTED OUT: About section temporarily removed */}
     </div>
   );

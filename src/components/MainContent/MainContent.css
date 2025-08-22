@@ -1,3 +1,19 @@
+/* ===========================
+   MAIN CONTENT - Combined Hero, Work, Skills
+   =========================== */
+
+.main-content {
+  /* Main container styling */
+}
+
+/* ===========================
+   HERO SUBSECTION
+   =========================== */
+
+.hero-subsection {
+  padding-bottom: 0; /* Remove bottom padding since we're combining */
+}
+
 .hero {
   /* Remove debug colors and use real styling */
   padding: 120px 80px 64px 80px;
@@ -48,7 +64,60 @@
   border-bottom: 1px solid var(--brown-dark);
 }
 
-/* Responsive breakpoints */
+/* ===========================
+   WORK SUBSECTION
+   =========================== */
+
+.work-subsection {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+/* ===========================
+   SKILLS SUBSECTION
+   =========================== */
+
+.skills-subsection {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.skills-categories {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.skills-category {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.skills-category h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+  font-weight: normal;
+}
+
+.skills-text {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+/* Hero responsive breakpoints */
 @media (max-width: 1199px) {
   .hero {
     padding: 100px 60px 64px 60px;
@@ -71,6 +140,16 @@
   .hero p {
     font-size: 16px;
   }
+
+  /* Skills responsive */
+  .skills-categories {
+    gap: 32px;
+  }
+  
+  .skills-category {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 
 @media (max-width: 479px) {
@@ -80,6 +159,10 @@
   
   .hero h1 {
     font-size: 32px;
+  }
+
+  .skills-categories {
+    gap: 24px;
   }
 }
 
@@ -91,4 +174,4 @@
   .hero h1 {
     font-size: 28px;
   }
-} 
+}
