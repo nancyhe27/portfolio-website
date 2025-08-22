@@ -476,3 +476,13 @@
   }
 
 }
+
+@media (max-width: 767px) {
+  .p-title {
+    font-size: var(--text-xl);
+  }
+
+  .p-subtitle {
+    font-size: var(--text-lg);
+  }
+}

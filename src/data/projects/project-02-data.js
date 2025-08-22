@@ -42,7 +42,7 @@ export const project02Data = {
       "content": "We conducted a campus-wide survey with 37 college students, which revealed two key issues: difficulty accessing buildings due to restricted entrances and challenges finding suitable study spaces. These became the focus of our core features.",
       "features": [
         {
-          "title": "Main feature 1: Realtime access information for locations",
+          "title": "Feature 1: Realtime Location Access Info",
           "image": {
             "src": "/images/projects/project-02/pie/pie1.PNG",
             "alt": "User interface mockup showing real-time building access status with door availability indicators"
@@ -51,7 +51,7 @@ export const project02Data = {
           "quote": "One night I walked 20 minutes in -30° weather to a quiet study spot, only to find it locked. I gave up and went home instead."
         },
         {
-          "title": "Main feature 2: Realtime study spot recommendation",
+          "title": "Feature 2: Study Spot Recommendation",
           "image": {
             "src": "/images/projects/project-02/pie/pie2.PNG", 
             "alt": "App interface displaying study space recommendations with crowd levels and amenity information"
@@ -137,7 +137,7 @@ export const project02Data = {
     },
     {
       "id": "mascot_design",
-      "title": "Hour 16: Emotional Branding",
+      "title": "Hour 16: Branding",
       "quote": "Honestly, I'd probably forget to use it after a while unless I have to.",
       "content": "During testing, one student pointed out that users might forget to use the app regularly. To boost engagement and build a stronger emotional connection, we introduced a mascot as the app's personality and assistant.",
       "mascot": {
@@ -194,7 +194,7 @@ export const project02Data = {
           ]
         },
         {
-          "title": "Home(List View) + Update Realtime Entrance Status",
+          "title": "Home(List View) + Update Status",
           "images": [
             "/images/projects/project-02/prototype/3/home.png",
             "/images/projects/project-02/prototype/3/kraft_hall.png",
