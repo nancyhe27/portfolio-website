@@ -11,40 +11,45 @@ export const portfolioData = {
     {
       id: 1,
       title: "WeKruit 2025",
-      subtitle: "Ideation, UI/UX, User Research",
+      subtitle: "Feb 2025 - Apr 2025",
+      task: "Internship (Full-Stack Development)",
       thumbnail: "project-thumb-01.png",
-      route: "/project-01",
+      route: "/wekruit",
       comingSoon: true
     },
     {
       id: 2,
       title: "SwipyCampus",
-      subtitle: "Feb 2025 • iOS • 36-hour Designathon",
+      subtitle: "Feb 2025",
+      task: "Mobile App Design",
       thumbnail: "project-thumb-02.png",
-      route: "/project-02"
+      route: "/swipycampus"
     },
     {
       id: 3,
-      title: "RideSystems 2024",
-      subtitle: "Ideation, UI/UX, User Research",
+      title: "RideSystems",
+      subtitle: "Sept 2024 - Dec 2024",
+      task: "Mobile App Design",
       thumbnail: "project-thumb-03.png",
-      route: "/project-03",
+      route: "/ridesystems",
       comingSoon: true
     },
     {
       id: 4,
-      title: "Crude Web 2024",
-      subtitle: "Ideation, UI/UX, User Research",
+      title: "English Hunt",
+      subtitle: "Nov 2024 - Dec 2024",
+      task: "Web Game Development",
       thumbnail: "project-thumb-04.png",
-      route: "/project-04",
+      route: "/englishhunt",
       comingSoon: true
     },
     {
       id: 5,
-      title: "ColorGraph AI 2024-2025",
-      subtitle: "Ideation, UI/UX, User Research",
+      title: "ColorGraph AI",
+      subtitle: "Sept 2024 - Present",
+      task: "AI Design Tool",
       thumbnail: "project-thumb-05.png",
-      route: "/project-05",
+      route: "/colorgraphai",
       comingSoon: true
     },
   ],

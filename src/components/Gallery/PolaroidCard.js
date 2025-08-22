@@ -20,7 +20,8 @@ function PolaroidCard({ project }) {
       {/* Caption ABOVE the image */}
       <div className="polaroid-caption">
         <h3>{project.title}</h3>
-        <p>{project.comingSoon ? 'Coming Soon...' : project.subtitle}</p>
+        <p>{project.task}</p>
+        <p>{project.subtitle}</p>
       </div>
       
       {/* Image below the caption */}
