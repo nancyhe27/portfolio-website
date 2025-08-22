@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Navigation from '../../components/Navigation/Navigation';
 import './ProjectLayoutShared.css';
@@ -21,6 +21,20 @@ function ProjectPageLayout({ projectData, children }) {
     const nextProject = currentProjectNum === totalProjects ? 1 : currentProjectNum + 1;
     navigate(`/project-${nextProject.toString().padStart(2, '0')}`);
   };
+
+  // Add word breaks after ":" and "+" for titles and subtitles
+  useEffect(() => {
+    const addWordBreaks = () => {
+      const elements = document.querySelectorAll('.p-title, .p-subtitle');
+      elements.forEach(el => {
+        el.innerHTML = el.innerHTML
+          .replace(/:/g, ':<wbr>')
+          .replace(/\+/g, '+<wbr>');
+      });
+    };
+
+    addWordBreaks();
+  }, [children]); // Re-run when children content changes
 
   return (
     <>
