@@ -392,6 +392,10 @@
     gap: var(--spacing-md);
   }
 
+  .p-flex-split--fixed-logo {
+    flex-direction: row;
+  }
+
   .p-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -433,8 +437,15 @@
   gap: clamp(0px, 4vw, 80px); /* Scales automatically from 0px to 80px */
 }
 
+/* Remove gap at intermediate width to prevent text wrapping */
+@media (max-width: 1100px) {
+  .project-header-content {
+    gap: 0;
+  }
+}
+
 /* Only mobile breakpoint needed - for layout change */
-@media (max-width: 767px) {
+@media (max-width: 940px) {
   .project-header-content {
     flex-direction: column; /* Stack vertically */
     gap: 0;
@@ -452,6 +463,16 @@
     flex: none;
     padding: var(--spacing-md);
     text-align: center;
-    margin-bottom: 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
+
+  .p-title {
+    font-size: 30px;
+  }
+
+  .p-subtitle {
+    font-size: 20px;
+  }
+
 }
