@@ -386,6 +386,15 @@
     flex-direction: column;
     gap: 16px;
   }
+
+  .p-flex-split {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .p-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 479px) {
