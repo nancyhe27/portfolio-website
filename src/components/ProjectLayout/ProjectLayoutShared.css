@@ -369,23 +369,21 @@
 }
 
 /* Shared Responsive Design */
-@media (max-width: 1199px) {
+@media (max-width: 1400px) {
   .project-layout {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 180px;
+    padding-right: 180px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   .project-layout {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 120px;
+    padding-right: 120px;
   }
+}
 
-  .project-nav-buttons {
-    flex-direction: column;
-    gap: 16px;
-  }
+@media (max-width: 940px) {
 
   .p-flex-split {
     flex-direction: column;
@@ -398,6 +396,19 @@
 
   .p-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+
+  .project-nav-buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .project-layout {
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
 
@@ -483,13 +494,13 @@
   }
 
   .p-subtitle {
-    font-size: var(--text-lg);
+    font-size: 20px;
   }
 
-  /* Force word breaks to prefer breaking after colons */
-  .p-title {
-    word-break: break-word;
-    overflow-wrap: break-word;
-    hyphens: none;
+  /* Specific smaller subtitles: "Navigation Consolidation" and "Contextual Data Enhancement" */
+  .p-subtitle:nth-of-type(2),
+  .p-subtitle:nth-of-type(3) {
+    font-size: 16px;
   }
+
 }
