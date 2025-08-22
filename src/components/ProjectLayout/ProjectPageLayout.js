@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Navigation from '../../components/Navigation/Navigation';
+import { portfolioData } from '../../data/portfolio-data';
 import './ProjectLayoutShared.css';
 
 function ProjectPageLayout({ projectData, children }) {
@@ -10,16 +11,23 @@ function ProjectPageLayout({ projectData, children }) {
   
   // Get current project number from URL path
   const currentProjectNum = parseInt(location.pathname.match(/project-(\d+)/)?.[1] || '1');
-  const totalProjects = 6;
+  
+  // Get only available projects (not coming soon)
+  const availableProjects = portfolioData.projects.filter(project => !project.comingSoon);
+  const availableProjectNums = availableProjects.map(project => project.id);
   
   const goToPreviousProject = () => {
-    const prevProject = currentProjectNum === 1 ? totalProjects : currentProjectNum - 1;
-    navigate(`/project-${prevProject.toString().padStart(2, '0')}`);
+    const currentIndex = availableProjectNums.indexOf(currentProjectNum);
+    const prevIndex = currentIndex === 0 ? availableProjectNums.length - 1 : currentIndex - 1;
+    const prevProjectNum = availableProjectNums[prevIndex];
+    navigate(`/project-${prevProjectNum.toString().padStart(2, '0')}`);
   };
   
   const goToNextProject = () => {
-    const nextProject = currentProjectNum === totalProjects ? 1 : currentProjectNum + 1;
-    navigate(`/project-${nextProject.toString().padStart(2, '0')}`);
+    const currentIndex = availableProjectNums.indexOf(currentProjectNum);
+    const nextIndex = currentIndex === availableProjectNums.length - 1 ? 0 : currentIndex + 1;
+    const nextProjectNum = availableProjectNums[nextIndex];
+    navigate(`/project-${nextProjectNum.toString().padStart(2, '0')}`);
   };
 
   return (
