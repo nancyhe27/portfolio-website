@@ -9,25 +9,26 @@ function ProjectPageLayout({ projectData, children }) {
   const navigate = useNavigate();
   const location = useLocation();
   
-  // Get current project number from URL path
-  const currentProjectNum = parseInt(location.pathname.match(/project-(\d+)/)?.[1] || '1');
+  // Get current project from URL path
+  const currentRoute = location.pathname;
+  const currentProject = portfolioData.projects.find(project => project.route === currentRoute);
   
   // Get only available projects (not coming soon)
   const availableProjects = portfolioData.projects.filter(project => !project.comingSoon);
-  const availableProjectNums = availableProjects.map(project => project.id);
+  const availableRoutes = availableProjects.map(project => project.route);
   
   const goToPreviousProject = () => {
-    const currentIndex = availableProjectNums.indexOf(currentProjectNum);
-    const prevIndex = currentIndex === 0 ? availableProjectNums.length - 1 : currentIndex - 1;
-    const prevProjectNum = availableProjectNums[prevIndex];
-    navigate(`/project-${prevProjectNum.toString().padStart(2, '0')}`);
+    const currentIndex = availableRoutes.indexOf(currentRoute);
+    const prevIndex = currentIndex === 0 ? availableRoutes.length - 1 : currentIndex - 1;
+    const prevRoute = availableRoutes[prevIndex];
+    navigate(prevRoute);
   };
   
   const goToNextProject = () => {
-    const currentIndex = availableProjectNums.indexOf(currentProjectNum);
-    const nextIndex = currentIndex === availableProjectNums.length - 1 ? 0 : currentIndex + 1;
-    const nextProjectNum = availableProjectNums[nextIndex];
-    navigate(`/project-${nextProjectNum.toString().padStart(2, '0')}`);
+    const currentIndex = availableRoutes.indexOf(currentRoute);
+    const nextIndex = currentIndex === availableRoutes.length - 1 ? 0 : currentIndex + 1;
+    const nextRoute = availableRoutes[nextIndex];
+    navigate(nextRoute);
   };
 
   return (

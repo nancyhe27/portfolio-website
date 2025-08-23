@@ -45,13 +45,13 @@ function MainContent() {
 
         {/* Work Section */}
         <section id="work" className="work-subsection">
-          <h2 className="p-title">WORK</h2>
+          <h2 className="all-title">WORK</h2>
           <PolaroidGallery />
         </section>
 
         {/* Skills Section */}
         <section id="skills">
-          <h2 className="p-title">SKILLS</h2>
+          <h2 className="all-title">SKILLS</h2>
           <div>
             {Object.entries(skillsData).map(([category, skillsText]) => (
               <div key={category}>

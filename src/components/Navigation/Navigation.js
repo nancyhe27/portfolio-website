@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { portfolioData } from '../../data/portfolio-data';
 import './Navigation.css';
 
 function Navigation() {
     const navigate = useNavigate();
     const location = useLocation();
     
-    const isOnProjectPage = location.pathname.includes('/project-');
+    // Check if current path matches any project route
+    const projectRoutes = portfolioData.projects.map(project => project.route);
+    const isOnProjectPage = projectRoutes.includes(location.pathname);
     
     // Handle hash-based navigation when landing on home page
     useEffect(() => {
