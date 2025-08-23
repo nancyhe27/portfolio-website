@@ -32,29 +32,18 @@ function Navigation() {
     }, [location]);
 
     const handleSectionNavigation = (sectionId) => {
-        if (isOnProjectPage) {
-            // Navigate to home page with section anchor
-            navigate(`/#${sectionId}`);
+        if (sectionId === 'hero') {
+            navigate('/');
         } else {
-            // Scroll to section on current page (home) with offset
-            const element = document.getElementById(sectionId);
-            if (element) {
-                const navHeight = 80; // Navigation bar height
-                const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-                const offsetPosition = elementPosition - navHeight;
-                
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
+            // Navigate to proper routes for work and skills
+            navigate(`/${sectionId}`);
         }
     };
 
     return (
         <nav className="navigation page-section">
             <a 
-                href="#hero" 
+                href="/" 
                 className="nav-brand"
                 onClick={(e) => {
                     e.preventDefault();
@@ -66,7 +55,7 @@ function Navigation() {
 
             <div className="nav-links">
                 <a
-                    href="#work"
+                    href="/work"
                     className="nav-link"
                     onClick={(e) => {
                         e.preventDefault();
@@ -76,7 +65,7 @@ function Navigation() {
                     work
                 </a>
                 <a
-                    href="#skills"
+                    href="/skills"
                     className="nav-link"
                     onClick={(e) => {
                         e.preventDefault();
