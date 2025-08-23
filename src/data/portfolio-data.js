@@ -10,10 +10,11 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
-      title: "WeKruit 2025",
+      title: "WeKruit",
       subtitle: "Feb 2025 - Apr 2025",
-      task: "Internship (Full-Stack Development)",
-      thumbnail: "project-thumb-01.png",
+      task: "Internship (Full-Stack Dev)",
+      thumbnail: "/images/projects/project-01/thumbnails/project-thumb-01.png",
+      hoverThumbnail: "/images/projects/project-01/thumbnails/project-thumb-01-hover.png",
       route: "/wekruit",
       comingSoon: true
     },
@@ -22,7 +23,8 @@ export const portfolioData = {
       title: "SwipyCampus",
       subtitle: "Feb 2025",
       task: "Mobile App Design",
-      thumbnail: "project-thumb-02.png",
+      thumbnail: "/images/projects/project-02/thumbnails/swipycampus_thumbnail.png",
+      hoverThumbnail: "/images/projects/project-02/thumbnails/swipycampus_thumbnail_hover.png",
       route: "/swipycampus"
     },
     {
@@ -30,7 +32,8 @@ export const portfolioData = {
       title: "RideSystems",
       subtitle: "Sept 2024 - Dec 2024",
       task: "Mobile App Design",
-      thumbnail: "project-thumb-03.png",
+      thumbnail: "/images/projects/project-03/thumbnails/project-thumb-03.png",
+      hoverThumbnail: "/images/projects/project-03/thumbnails/project-thumb-03-hover.png",
       route: "/ridesystems",
       comingSoon: true
     },
@@ -39,7 +42,8 @@ export const portfolioData = {
       title: "English Hunt",
       subtitle: "Nov 2024 - Dec 2024",
       task: "Web Game Development",
-      thumbnail: "project-thumb-04.png",
+      thumbnail: "/images/projects/project-04/thumbnails/project-thumb-04.png",
+      hoverThumbnail: "/images/projects/project-04/thumbnails/project-thumb-04-hover.png",
       route: "/englishhunt",
       comingSoon: true
     },
@@ -47,8 +51,9 @@ export const portfolioData = {
       id: 5,
       title: "ColorGraph AI",
       subtitle: "Sept 2024 - Present",
-      task: "AI Design Tool",
-      thumbnail: "project-thumb-05.png",
+      task: "AI Design Tool Startup",
+      thumbnail: "/images/projects/project-05/thumbnails/project-thumb-05.png",
+      hoverThumbnail: "/images/projects/project-05/thumbnails/project-thumb-05-hover.png",
       route: "/colorgraphai",
       comingSoon: true
     },
