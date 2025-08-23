@@ -6,6 +6,28 @@
   /* Main container styling */
 }
 
+.all-title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
+  font-weight: 600;
+  padding-top: 40px;
+  padding-bottom: calc(var(--spacing-xs) / 2); /* Reduced for closer line */
+  width: 100%;
+  position: relative; /* For pseudo-element positioning */
+}
+
+.all-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 1px;
+  background-color: var(--brown-dark);
+}
+
 /* ===========================
    HERO SUBSECTION
    =========================== */
@@ -139,9 +161,14 @@
     padding: 100px 60px 64px 60px;
     gap: 50px;
   }
+
+  .all-title {
+    font-size: 28px;
+  }
 }
 
 @media (max-width: 767px) {
+
   .hero {
     padding: 80px 40px 64px 40px;
     flex-direction: column-reverse;
