@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { portfolioData } from '../../data/portfolio-data';
 import './Navigation.css';
 
 function Navigation() {
