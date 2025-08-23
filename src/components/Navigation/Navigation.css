@@ -48,7 +48,7 @@
   font-size: var(--text-sm);
   font-weight: 600;
   transition: background-color 0.2s ease;
-  margin-left: 32px;
+  margin-left: 20px; /* Decreased from 32px to 20px */
 }
 
 .resume-btn:hover {
@@ -66,7 +66,7 @@
   }
   
   .resume-btn {
-    margin-left: 24px;
+    margin-left: 16px; /* Decreased from 24px to 16px */
     padding: 10px 20px;
   }
 }
@@ -77,7 +77,7 @@
   }
   
   .resume-btn {
-    margin-left: 16px;
+    margin-left: 12px; /* Decreased from 16px to 12px */
     padding: 8px 16px;
     font-size: 12px;
   }
