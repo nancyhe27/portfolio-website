@@ -7,7 +7,7 @@
     padding: 0;
     width: 100%;
     max-width: 300px; /* Fixed card width */
-    margin: 0 auto; /* Center card within grid cell */
+    margin: 0; /* Remove auto centering for desktop left alignment */
   }
   
   /* Title and subtitle ABOVE the card */
@@ -109,10 +109,11 @@
     color: var(--sage-green);
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .polaroid-card {
       transform: rotate(0deg); /* Still straight on mobile */
       max-width: 280px; /* Smaller max width for tablets */
+      margin: 0 auto; /* Center card within grid cell on mobile */
     }
   
     .polaroid-card:nth-child(even) {

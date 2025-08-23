@@ -26,9 +26,9 @@ function MainContent() {
     <main className="main-content page-section">
       <div className="content">
         {/* Hero Section */}
-        <section id="hero" className="hero-subsection">
+        <section id="hero">
           <div className="hero">
-            <div className="hero-content">
+            <div>
               <h1>I'm {name},</h1>
               <p>{title}</p>
               <p>{subtitle}</p>
