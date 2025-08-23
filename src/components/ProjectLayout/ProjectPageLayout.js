@@ -11,7 +11,6 @@ function ProjectPageLayout({ projectData, children }) {
   
   // Get current project from URL path
   const currentRoute = location.pathname;
-  const currentProject = portfolioData.projects.find(project => project.route === currentRoute);
   
   // Get only available projects (not coming soon)
   const availableProjects = portfolioData.projects.filter(project => !project.comingSoon);
