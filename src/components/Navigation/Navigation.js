@@ -7,9 +7,6 @@ function Navigation() {
     const navigate = useNavigate();
     const location = useLocation();
     
-    // Check if current path matches any project route
-    const projectRoutes = portfolioData.projects.map(project => project.route);
-    
     // Handle hash-based navigation when landing on home page
     useEffect(() => {
         if (location.pathname === '/' && location.hash) {
