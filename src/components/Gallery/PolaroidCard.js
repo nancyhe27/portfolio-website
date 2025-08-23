@@ -10,6 +10,8 @@ function PolaroidCard({ project }) {
   const handleClick = () => {
     if (!project.comingSoon) {
       navigate(project.route);
+      // Scroll to top of the page
+      window.scrollTo(0, 0);
     }
   };
 
