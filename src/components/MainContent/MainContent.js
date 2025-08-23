@@ -45,7 +45,7 @@ function MainContent() {
 
         {/* Work Section */}
         <section id="work" className="work-subsection">
-          <h2 className="all-title">WORK</h2>
+          <h2 className="all-title" style={{ marginBottom: '40px' }}>WORK</h2>
           <PolaroidGallery />
         </section>
 

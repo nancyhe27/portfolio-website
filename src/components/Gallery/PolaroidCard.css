@@ -5,7 +5,9 @@
     border: none;
     background: none;
     padding: 0;
-    width: 100%; /* Make card responsive to grid container */
+    width: 100%;
+    max-width: 300px; /* Fixed card width */
+    margin: 0 auto; /* Center card within grid cell */
   }
   
   /* Title and subtitle ABOVE the card */
@@ -48,7 +50,7 @@
   .polaroid-image {
     width: 100%; /* Responsive width */
     aspect-ratio: 1; /* Maintain square shape */
-    max-width: 300px;
+    margin: 0 auto; /* Center image within card */
   }
   
   .placeholder-thumb {
@@ -110,15 +112,11 @@
   @media (max-width: 768px) {
     .polaroid-card {
       transform: rotate(0deg); /* Still straight on mobile */
-      max-width: 320px; /* Smaller max width for tablets */
+      max-width: 280px; /* Smaller max width for tablets */
     }
   
     .polaroid-card:nth-child(even) {
       transform: rotate(0deg);
-    }
-  
-    .polaroid-image {
-      max-width: 280px; /* Slightly smaller max on tablet */
     }
   
     .polaroid-caption h3 {
@@ -132,10 +130,6 @@
   
   @media (max-width: 480px) {
     .polaroid-card {
-      max-width: 100%; /* Full width available on mobile */
-    }
-    
-    .polaroid-image {
       max-width: 280px; /* Appropriate size for mobile */
     }
     
@@ -149,7 +143,7 @@
   }
   
   @media (max-width: 374px) {
-    .polaroid-image {
+    .polaroid-card {
       max-width: 250px; /* Smaller on very small screens */
     }
   }
