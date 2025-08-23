@@ -9,7 +9,6 @@ function Navigation() {
     
     // Check if current path matches any project route
     const projectRoutes = portfolioData.projects.map(project => project.route);
-    const isOnProjectPage = projectRoutes.includes(location.pathname);
     
     // Handle hash-based navigation when landing on home page
     useEffect(() => {
