@@ -86,10 +86,9 @@ function Navigation() {
                     skills
                 </a>
                 <a
-                    href="/resume.pdf"
+                    href={`${process.env.PUBLIC_URL}/resume.pdf`}
                     className="resume-btn"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    download="Nancy_He_Resume.pdf"
                 >
                     resume
                 </a>

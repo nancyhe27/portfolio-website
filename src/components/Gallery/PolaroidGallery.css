@@ -6,7 +6,7 @@
     margin: 0 auto;
     padding: 0;
     width: 100%;
-    justify-items: center;
+    justify-items: start; /* Left align cards on desktop */
     max-width: 1200px; /* Prevent overly wide layouts */
   }
   
@@ -23,6 +23,7 @@
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 40px;
       max-width: 600px;
+      justify-items: center; /* Center cards on mobile */
     }
   }
   

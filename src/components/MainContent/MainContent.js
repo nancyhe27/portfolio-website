@@ -26,9 +26,9 @@ function MainContent() {
     <main className="main-content page-section">
       <div className="content">
         {/* Hero Section */}
-        <section id="hero" className="hero-subsection">
+        <section id="hero">
           <div className="hero">
-            <div className="hero-content">
+            <div>
               <h1>I'm {name},</h1>
               <p>{title}</p>
               <p>{subtitle}</p>
@@ -45,7 +45,7 @@ function MainContent() {
 
         {/* Work Section */}
         <section id="work" className="work-subsection">
-          <h2 className="all-title">WORK</h2>
+          <h2 className="all-title" style={{ marginBottom: '40px' }}>WORK</h2>
           <PolaroidGallery />
         </section>
 
