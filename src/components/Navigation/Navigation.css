@@ -66,19 +66,42 @@
   }
   
   .resume-btn {
-    margin-left: 16px; /* Decreased from 24px to 16px */
+    margin-left: 12px; /* Decreased from 24px to 16px */
     padding: 10px 20px;
   }
 }
 
 @media (max-width: 479px) {
   .nav-links {
-    gap: 16px;
+    gap: 12px;
   }
   
+  .nav-brand {
+    font-size: 22px;
+    margin-right: 16px;
+  }
+
   .resume-btn {
-    margin-left: 12px; /* Decreased from 16px to 12px */
+    margin-left: 4px; /* Decreased from 16px to 12px */
     padding: 8px 16px;
     font-size: 12px;
   }
 } 
+
+@media (max-width: 350px) {
+
+  .nav-brand {
+    font-size: 20px;
+    margin-right: 16px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .resume-btn {
+    margin-left: 4px; /* Decreased from 16px to 12px */
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+}
