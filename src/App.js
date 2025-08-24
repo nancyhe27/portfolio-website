@@ -26,6 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/work" element={<Home />} />
           <Route path="/skills" element={<Home />} />
+          <Route path="/about" element={<Home />} />
           <Route path="/wekruit" element={<ComingSoonRoute projectId={1}><Project01 /></ComingSoonRoute>} />
           <Route path="/swipycampus" element={<ComingSoonRoute projectId={2}><Project02 /></ComingSoonRoute>} />
           <Route path="/ridesystems" element={<ComingSoonRoute projectId={3}><Project03 /></ComingSoonRoute>} />

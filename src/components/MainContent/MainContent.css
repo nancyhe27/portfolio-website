@@ -117,6 +117,15 @@
   padding-bottom: 64px;
 }
 
+/* ===========================
+   ABOUT SUBSECTION
+   =========================== */
+
+.about-subsection {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
 .skills-categories {
   display: grid;
   grid-template-columns: 1fr;

@@ -70,6 +70,16 @@ function Navigation() {
                     skills
                 </a>
                 <a
+                    href="/about"
+                    className="nav-link"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        handleSectionNavigation('about');
+                    }}
+                >
+                    about
+                </a>
+                <a
                     href={`${process.env.PUBLIC_URL}/resume.pdf`}
                     className="resume-btn"
                     download="Nancy_He_Resume.pdf"

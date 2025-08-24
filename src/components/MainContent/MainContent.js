@@ -13,9 +13,9 @@ function MainContent() {
   const subtitle = hero?.subtitle;
   const description = hero?.description;
   const image = hero?.image;
-  
+
   const safeSkills = skills;
-  
+
   const skillsData = {
     "Programming Languages": (safeSkills.programming_languages || []).join(', '),
     "Frameworks & Tools": (safeSkills.frameworks_and_tools || []).join(', '),
@@ -61,6 +61,58 @@ function MainContent() {
             ))}
           </div>
         </section>
+
+
+        {/* About Section */}
+        <section id="about" className="about-subsection">
+          <h2 className="all-title">ABOUT</h2>
+
+          {/* First paragraph: text left, 1 image right (2:1 flex) */}
+          <div className="p-flex-split p-flex-split--2-1" style={{ marginBottom: '40px' }}>
+            <p className="p-body">
+              Born in Shanghai and based in Houston, I split my time between design and development. I’m drawn to projects that live at the intersection of logic and aesthetics, from prototyping in Figma to building responsive interfaces to experimenting with AI-powered browser tools.
+            </p>
+            <div>
+              <img src={`${process.env.PUBLIC_URL}/images/about/campanile1.jpg`} alt="About Nancy - Image 1" className="p-image" />
+            </div>
+          </div>
+
+          <div className="p-separator--short" />
+
+          {/* Second paragraph: 2 images left, text right (1:2 flex) */}
+          <div className="p-flex-split p-flex-split--1-2" style={{ marginBottom: '40px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <img src={`${process.env.PUBLIC_URL}/images/about/food2.jpg`} alt="About Nancy - Image 2" className="p-image" />
+              <img src={`${process.env.PUBLIC_URL}/images/about/wordplay3.jpg`} alt="About Nancy - Image 3" className="p-image" />
+            </div>
+            <p className="p-body">
+              Growing up, I made art across mediums — oils, pastels, collage, digital illustration. Later on, I studied computer science and realized programming gave me a creative structure more powerful than ever before. It expanded how I think about creation in a modern context, where visuals, logic, and systems all shape the experience.
+            </p>
+          </div>
+          <div className="p-separator--short" />
+
+          {/* Third paragraph*/}
+          <div>
+            <p className="p-body">
+              Now, I work fluidly across Figma and IDEs, thinking about how things behave, how they scale, and how people experience them from the first interaction to the last. I care equally about how things look, how they work, and why they exist.
+            </p>
+          </div>
+
+          <div className="p-separator--short" />
+
+          {/* Fourth paragraphs: text left, tall image right (2:1 flex) */}
+          <div className="p-flex-split p-flex-split--2-1">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <p className="p-body">
+                Outside of class and work, I love learning languages. I speak Mandarin, English, Japanese, Shanghainese, and a bit of Korean. Language learning made me naturally curious about linguistic structure and connecting with people, which has been a nice side kick to casual user experience thinking. Music helps the process, too (a big fan of Jpop and Kpop).
+              </p>
+            </div>
+            <div>
+              <img src={`${process.env.PUBLIC_URL}/images/about/physics4.jpg`} alt="About Nancy - Image 4" className="p-image" />
+            </div>
+          </div>
+        </section>
+
       </div>
     </main>
   );
