@@ -42,7 +42,16 @@ function Navigation() {
                 className="nav-brand"
                 onClick={(e) => {
                     e.preventDefault();
-                    handleSectionNavigation('hero');
+                    if (location.pathname === '/') {
+                        // If already on home page, scroll to top
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        // Navigate to home page
+                        handleSectionNavigation('hero');
+                    }
                 }}
             >
                 NANCY HE
