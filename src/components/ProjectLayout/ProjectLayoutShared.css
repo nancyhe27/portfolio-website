@@ -524,11 +524,13 @@
 
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1000px) {
   /* p-flex-about-single: image goes below paragraph */
   .p-flex-about-single {
     flex-direction: column;
     gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
   .p-flex-about-single .p-image {
@@ -545,15 +547,49 @@
 
   .p-flex-about-double .p-images-row {
     justify-content: center;
+    gap: 40px;
   }
 
   .p-flex-about-double .p-images-row .p-image {
-    height: 300px;
+    height: 360px;
   }
 }
 
 @media (max-width: 600px) {
+
+  .p-flex-about-single {
+    gap: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  /* p-flex-about-double: images go below paragraph in same row */
+  .p-flex-about-double {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .p-flex-about-double .p-images-row {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .p-flex-about-double .p-images-row .p-image {
+    height: 280px;
+    width: auto;
+  }
+}
+
+@media (max-width: 460px) {
   /* p-flex-about-double: images stack in separate rows */
+
+  .p-flex-about-double {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  } 
+
   .p-flex-about-double .p-images-row {
     flex-direction: column;
     gap: 20px;
@@ -561,7 +597,7 @@
   }
 
   .p-flex-about-double .p-images-row .p-image {
-    height: 250px;
+    height: 240px;
     width: auto;
   }
 }
