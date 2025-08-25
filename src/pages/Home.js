@@ -11,7 +11,8 @@ function Home() {
     // Scroll to appropriate section based on route
     const sectionMap = {
       '/work': 'work',
-      '/skills': 'skills'
+      '/skills': 'skills',
+      '/about': 'about'
     };
     
     const sectionId = sectionMap[location.pathname];

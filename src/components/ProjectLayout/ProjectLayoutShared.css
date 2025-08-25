@@ -280,6 +280,42 @@
   height: auto;
 }
 
+/* Fixed size image containers for About section */
+.p-flex-about-single {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.p-flex-about-single .p-image {
+  width: 1600px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.p-flex-about-double {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.p-flex-about-double .p-images-row {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.p-flex-about-double .p-images-row .p-image {
+  width: auto;
+  height: 400px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
 .p-image-prototype {
   border-radius: 20px;
   border: 1px solid var(--brown-dark);
@@ -486,6 +522,84 @@
     font-size: 20px;
   }
 
+}
+
+@media (max-width: 1000px) {
+  /* p-flex-about-single: image goes below paragraph */
+  .p-flex-about-single {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .p-flex-about-single .p-image {
+    width: 100%;
+    max-width: 600px;
+    align-self: center;
+  }
+
+  /* p-flex-about-double: images go below paragraph in same row */
+  .p-flex-about-double {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .p-flex-about-double .p-images-row {
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .p-flex-about-double .p-images-row .p-image {
+    height: 360px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .p-flex-about-single {
+    gap: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  /* p-flex-about-double: images go below paragraph in same row */
+  .p-flex-about-double {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .p-flex-about-double .p-images-row {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .p-flex-about-double .p-images-row .p-image {
+    height: 280px;
+    width: auto;
+  }
+}
+
+@media (max-width: 460px) {
+  /* p-flex-about-double: images stack in separate rows */
+
+  .p-flex-about-double {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  } 
+
+  .p-flex-about-double .p-images-row {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .p-flex-about-double .p-images-row .p-image {
+    height: 240px;
+    width: auto;
+  }
 }
 
 @media (max-width: 767px) {
