@@ -68,7 +68,7 @@ function MainContent() {
           <h2 className="all-title">ABOUT</h2>
 
           {/* First paragraph: text left, 1 image right - fixed size */}
-          <div className="p-flex-about-single" style={{ marginTop: '60px'}}>
+          <div className="p-flex-about-single" style={{ marginTop: '20px'}}>
             <p className="p-body">
               Born in Shanghai and based in Houston, I split my time between design and development. I'm drawn to projects that live at the intersection of logic and aesthetics, from prototyping in Figma to building responsive interfaces to experimenting with AI-powered browser tools.
             </p>
