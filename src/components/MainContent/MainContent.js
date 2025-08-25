@@ -67,26 +67,33 @@ function MainContent() {
         <section id="about" className="about-subsection">
           <h2 className="all-title">ABOUT</h2>
 
-          {/* First paragraph: text left, 1 image right (2:1 flex) */}
-          <div className="p-flex-split p-flex-split--2-1" style={{ marginBottom: '40px' }}>
+          {/* First paragraph: text left, 1 image right - fixed size */}
+          <div className="p-flex-about-single">
             <p className="p-body">
-              Born in Shanghai and based in Houston, I split my time between design and development. I’m drawn to projects that live at the intersection of logic and aesthetics, from prototyping in Figma to building responsive interfaces to experimenting with AI-powered browser tools.
+              Born in Shanghai and based in Houston, I split my time between design and development. I'm drawn to projects that live at the intersection of logic and aesthetics, from prototyping in Figma to building responsive interfaces to experimenting with AI-powered browser tools.
             </p>
             <div>
               <img src={`${process.env.PUBLIC_URL}/images/about/campanile1.jpg`} alt="About Nancy - Image 1" className="p-image" />
+              <p className="p-caption">Cover of RiceU Yearbook Campanile (Digital)</p>
             </div>
           </div>
 
           <div className="p-separator--short" />
 
-          {/* Second paragraph: 2 images left, text right (1:2 flex) */}
-          <div className="p-flex-split p-flex-split--1-2" style={{ marginBottom: '40px' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-              <img src={`${process.env.PUBLIC_URL}/images/about/food2.jpg`} alt="About Nancy - Image 2" className="p-image" />
-              <img src={`${process.env.PUBLIC_URL}/images/about/wordplay3.jpg`} alt="About Nancy - Image 3" className="p-image" />
+          {/* Second paragraph: 2 images horizontally, text right - fixed size */}
+          <div className="p-flex-about-double">
+            <div className="p-images-row">
+              <div>
+                <img src={`${process.env.PUBLIC_URL}/images/about/food2.jpg`} alt="About Nancy - Image 2" className="p-image" />
+                <p className="p-caption">Recipes in Dogmatism (Oil)</p>
+              </div>
+              <div>
+                <img src={`${process.env.PUBLIC_URL}/images/about/wordplay3.jpg`} alt="About Nancy - Image 3" className="p-image"/>
+                <p className="p-caption">Wordplay (Mixed Media)</p>
+              </div>
             </div>
             <p className="p-body">
-              Growing up, I made art across mediums — oils, pastels, collage, digital illustration. Later on, I studied computer science and realized programming gave me a creative structure more powerful than ever before. It expanded how I think about creation in a modern context, where visuals, logic, and systems all shape the experience.
+              Growing up, I made art across mediums — oils, pastels, collage, digital illustration, some of which are shown here. Later on, I studied computer science and realized programming gave me a creative structure more powerful than ever before. It expanded how I think about creation in a modern context, where visuals, logic, and systems all shape the experience.
             </p>
           </div>
           <div className="p-separator--short" />
@@ -100,15 +107,14 @@ function MainContent() {
 
           <div className="p-separator--short" />
 
-          {/* Fourth paragraphs: text left, tall image right (2:1 flex) */}
-          <div className="p-flex-split p-flex-split--2-1">
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-              <p className="p-body">
-                Outside of class and work, I love learning languages. I speak Mandarin, English, Japanese, Shanghainese, and a bit of Korean. Language learning made me naturally curious about linguistic structure and connecting with people, which has been a nice side kick to casual user experience thinking. Music helps the process, too (a big fan of Jpop and Kpop).
-              </p>
-            </div>
+          {/* Fourth paragraph: text left, image right - fixed size */}
+          <div className="p-flex-about-single">
+            <p className="p-body">
+              Outside of class and work, I love learning languages. I speak Mandarin, English, Japanese, Shanghainese, and a bit of Korean. Language learning made me naturally curious about linguistic structure and connecting with people, which has been a nice side kick to casual user experience thinking. Music helps the process, too (a big fan of Jpop and Kpop).
+            </p>
             <div>
               <img src={`${process.env.PUBLIC_URL}/images/about/physics4.jpg`} alt="About Nancy - Image 4" className="p-image" />
+              <p className="p-caption">Comphosics (Acrylic)</p>
             </div>
           </div>
         </section>
