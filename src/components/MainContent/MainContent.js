@@ -68,7 +68,7 @@ function MainContent() {
           <h2 className="all-title">ABOUT</h2>
 
           {/* First paragraph: text left, 1 image right - fixed size */}
-          <div className="p-flex-about-single" style={{ marginTop: '20px'}}>
+          <div className="p-flex-about-single" style={{ marginTop: '40px'}}>
             <p className="p-body">
               Born in Shanghai and based in Houston, I split my time between design and development. I'm drawn to projects that live at the intersection of logic and aesthetics, from prototyping in Figma to building responsive interfaces to experimenting with AI-powered browser tools.
             </p>
@@ -78,7 +78,7 @@ function MainContent() {
             </div>
           </div>
 
-          <div className="p-separator--short" />
+          <div className="about-separator" />
 
           {/* Second paragraph: 2 images horizontally, text right - fixed size */}
           <div className="p-flex-about-double">
@@ -96,16 +96,16 @@ function MainContent() {
               Growing up, I made art across mediums — oils, pastels, collage, digital illustration, some of which are shown here. Later on, I studied computer science and realized programming gave me a creative structure more powerful than ever before. It expanded how I think about creation in a modern context, where visuals, logic, and systems all shape the experience.
             </p>
           </div>
-          <div className="p-separator--short" />
+          <div className="about-separator" />
 
           {/* Third paragraph*/}
           <div>
-            <p className="p-body">
+            <p className="p-body" style={{ marginTop: '40px', marginBottom: '40px'}}>
               Now, I work fluidly across Figma and IDEs, thinking about how things behave, how they scale, and how people experience them from the first interaction to the last. I care equally about how things look, how they work, and why they exist.
             </p>
           </div>
 
-          <div className="p-separator--short" />
+          <div className="about-separator" />
 
           {/* Fourth paragraph: text left, image right - fixed size */}
           <div className="p-flex-about-single">

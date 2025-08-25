@@ -223,3 +223,16 @@
     font-size: 28px;
   }
 }
+
+/* ===========================
+   ABOUT SEPARATOR COMPONENT
+   =========================== */
+
+.about-separator {
+  border: none;
+  height: 1px;
+  background-color: var(--brown-dark);
+  margin: var(--spacing-sm) 0;
+  width: 100%;
+  position: relative;
+}
