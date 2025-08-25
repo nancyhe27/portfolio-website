@@ -11,8 +11,8 @@ export const portfolioData = {
     {
       id: 1,
       title: "WeKruit",
-      subtitle: "Feb 2025 - Apr 2025",
-      task: "Internship (Full-Stack Dev)",
+      subtitle: "May 2025 - Aug 2025",
+      task: "Internship (UI/UX + Full-Stack Dev)",
       thumbnail: "/images/projects/project-01/thumbnails/project-thumb-01.png",
       hoverThumbnail: "/images/projects/project-01/thumbnails/project-thumb-01-hover.png",
       route: "/wekruit",
