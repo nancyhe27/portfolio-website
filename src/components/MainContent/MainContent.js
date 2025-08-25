@@ -68,12 +68,12 @@ function MainContent() {
           <h2 className="all-title">ABOUT</h2>
 
           {/* First paragraph: text left, 1 image right - fixed size */}
-          <div className="p-flex-about-single">
+          <div className="p-flex-about-single" style={{ marginTop: '60px'}}>
             <p className="p-body">
               Born in Shanghai and based in Houston, I split my time between design and development. I'm drawn to projects that live at the intersection of logic and aesthetics, from prototyping in Figma to building responsive interfaces to experimenting with AI-powered browser tools.
             </p>
             <div>
-              <img src={`${process.env.PUBLIC_URL}/images/about/campanile1.jpg`} alt="About Nancy - Image 1" className="p-image" />
+              <img src={`${process.env.PUBLIC_URL}/images/about/campanile1.jpg`} alt="Cover of RiceU Yearbook Campanile (Digital)" className="p-image" style={{ borderRadius: '2px'}}/>
               <p className="p-caption">Cover of RiceU Yearbook Campanile (Digital)</p>
             </div>
           </div>
@@ -84,12 +84,12 @@ function MainContent() {
           <div className="p-flex-about-double">
             <div className="p-images-row">
               <div>
-                <img src={`${process.env.PUBLIC_URL}/images/about/food2.jpg`} alt="About Nancy - Image 2" className="p-image" />
-                <p className="p-caption">Recipes in Dogmatism (Oil)</p>
+                <img src={`${process.env.PUBLIC_URL}/images/about/food2.jpg`} alt="Recipes in Dogmatism (Oil)" className="p-image" style={{ borderRadius: '2px'}}/>
+                <p className="p-caption">"Recipes in Dogmatism" (Oil)</p>
               </div>
               <div>
-                <img src={`${process.env.PUBLIC_URL}/images/about/wordplay3.jpg`} alt="About Nancy - Image 3" className="p-image"/>
-                <p className="p-caption">Wordplay (Mixed Media)</p>
+                <img src={`${process.env.PUBLIC_URL}/images/about/wordplay3.jpg`} alt="Wordplay (Mixed Media)" className="p-image" style={{ borderRadius: '2px'}}/>
+                <p className="p-caption">"Wordplay" (Mixed Media)</p>
               </div>
             </div>
             <p className="p-body">
@@ -113,8 +113,8 @@ function MainContent() {
               Outside of class and work, I love learning languages. I speak Mandarin, English, Japanese, Shanghainese, and a bit of Korean. Language learning made me naturally curious about linguistic structure and connecting with people, which has been a nice side kick to casual user experience thinking. Music helps the process, too (a big fan of Jpop and Kpop).
             </p>
             <div>
-              <img src={`${process.env.PUBLIC_URL}/images/about/physics4.jpg`} alt="About Nancy - Image 4" className="p-image" />
-              <p className="p-caption">Comphosics (Acrylic)</p>
+              <img src={`${process.env.PUBLIC_URL}/images/about/physics4.jpg`} alt="Comphosics (Acrylic)" className="p-image" style={{ borderRadius: '2px'}}/>
+              <p className="p-caption">"Comphosics" (Acrylic)</p>
             </div>
           </div>
         </section>
