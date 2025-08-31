@@ -33,12 +33,57 @@ export const project01Data = {
             "I began by clarifying feature requirements with the team manager. I mapped key user flows, created low-fidelity wireframes, and iterated on interactive prototypes to define how screens and features connect. Multiple rounds of feedback refined the prototypes into a clear, testable design.",
             "Due to confidentiality, I cannot share the full workflow diagram. Instead, I've included representative UI flows and component refinements to illustrate my contributions."
           ],
-          "images": [
-            "placeholder link",
-            "placeholder link", 
-            "placeholder link",
-            "placeholder link",
-            "placeholder link"
+          "imageGroups": [
+            {
+              "title": "Flow 1",
+              "images": [
+                {
+                  "src": "placeholder link",
+                  "alt": "WeKruit prototype design wireframe",
+                  "caption": "Initial wireframe exploration"
+                },
+                {
+                  "src": "placeholder link",
+                  "alt": "WeKruit prototype design wireframe",
+                  "caption": "Initial wireframe exploration"
+                },
+                {
+                  "src": "placeholder link",
+                  "alt": "WeKruit prototype design wireframe",
+                  "caption": "Initial wireframe exploration"
+                }
+              ]
+            },
+            {
+              "title": "Flow 2",
+              "images": [
+                {
+                  "src": "placeholder link",
+                  "alt": "WeKruit prototype design wireframe",
+                  "caption": "Initial wireframe exploration"
+                },
+                {
+                  "src": "placeholder link",
+                  "alt": "User flow diagram for interview dashboard",
+                  "caption": "Key user flows mapped"
+                },
+                {
+                  "src": "placeholder link",
+                  "alt": "Interactive prototype screens",
+                  "caption": "Interactive prototype iterations"
+                },
+                {
+                  "src": "placeholder link",
+                  "alt": "Component refinement process",
+                  "caption": "Component design refinements"
+                },
+                {
+                  "src": "placeholder link",
+                  "alt": "Final prototype mockup",
+                  "caption": "Final testable design"
+                }
+              ]
+            }
           ]
         },
         {
@@ -65,8 +110,16 @@ export const project01Data = {
             "placeholder universal paragraph"
           ],
           "images": [
-            "placeholder link",
-            "placeholder link"
+            {
+              "src": "placeholder link",
+              "alt": "WeKruit design system universal styles",
+              "caption": "Universal style guidelines"
+            },
+            {
+              "src": "placeholder link", 
+              "alt": "Color palette and typography specs",
+              "caption": "Color and typography standards"
+            }
           ]
         },
         {
@@ -76,9 +129,21 @@ export const project01Data = {
             "placeholder button paragraph"
           ],
           "images": [
-            "placeholder link",
-            "placeholder link",
-            "placeholder link"
+            {
+              "src": "placeholder link",
+              "alt": "Button component variations",
+              "caption": "Primary and secondary button states"
+            },
+            {
+              "src": "placeholder link",
+              "alt": "Button interaction states",
+              "caption": "Hover and active states"
+            },
+            {
+              "src": "placeholder link",
+              "alt": "Button component documentation",
+              "caption": "Usage guidelines and specs"
+            }
           ]
         },
         {
@@ -88,8 +153,16 @@ export const project01Data = {
             "placeholder upload paragraph"
           ],
           "images": [
-            "placeholder link",
-            "placeholder link"
+            {
+              "src": "placeholder link",
+              "alt": "File upload component design",
+              "caption": "Upload component interface"
+            },
+            {
+              "src": "placeholder link",
+              "alt": "Upload progress states",
+              "caption": "Progress and error states"
+            }
           ]
         },
         {
@@ -99,7 +172,11 @@ export const project01Data = {
             "placeholder interaction paragraph"
           ],
           "images": [
-            "placeholder link"
+            {
+              "src": "placeholder link",
+              "alt": "Component interaction specifications",
+              "caption": "Detailed interaction guidelines"
+            }
           ]
         }
       ]
@@ -114,12 +191,36 @@ export const project01Data = {
         "placeholder text before and after 3"
       ],
       "images": [
-        "placeholder link",
-        "placeholder link",
-        "placeholder link",
-        "placeholder link",
-        "placeholder link",
-        "placeholder link"
+        {
+          "src": "placeholder link",
+          "alt": "Student portal before redesign",
+          "caption": "Before: Legacy interface"
+        },
+        {
+          "src": "placeholder link",
+          "alt": "Student portal after redesign",
+          "caption": "After: Improved visual hierarchy"
+        },
+        {
+          "src": "placeholder link",
+          "alt": "Task flow improvements",
+          "caption": "Before: Complex task flow"
+        },
+        {
+          "src": "placeholder link",
+          "alt": "Streamlined task flow",
+          "caption": "After: Streamlined experience"
+        },
+        {
+          "src": "placeholder link",
+          "alt": "Component modularization",
+          "caption": "Before: Legacy CSS structure"
+        },
+        {
+          "src": "placeholder link",
+          "alt": "Modular component system",
+          "caption": "After: Modular components"
+        }
       ]
     },
     {
