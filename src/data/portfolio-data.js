@@ -16,7 +16,6 @@ export const portfolioData = {
       thumbnail: "/images/projects/project-01/thumbnails/project-thumb-01.png",
       hoverThumbnail: "/images/projects/project-01/thumbnails/project-thumb-01-hover.png",
       route: "/wekruit",
-      comingSoon: true
     },
     {
       id: 2,
