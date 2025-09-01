@@ -20,7 +20,7 @@ export const project01Data = {
     "Clickup"
   ],
   "overview": "In summer 2025, I interned as a UI/UX full stack developer intern at WeKruit, a SaaS startup building an AI-powered interview platform for enterprises and students. My role combined design and engineering, from mapping user flows to implementing full-stack features. Over 10 weeks, I contributed to the client-facing interview dashboard, the AI agent interview process, the WeKruit design system, and UI/UX refinements that transformed prototypes into a polished product. These efforts streamlined the review and preparation process for 1,000+ interviews across 3 client companies and enabled 100+ students to run mock sessions more smoothly.",
-  "heroImage": "/images/projects/project-01/header/wekruit_header.png",
+  "heroImage": "/images/projects/project-01/header/hero.png",
   "sections": [
     {
       "id": 1,
@@ -35,52 +35,81 @@ export const project01Data = {
           ],
           "imageGroups": [
             {
-              "title": "Flow 1",
+              "title": "Flow 1: Interview Dashboard",
+              "description": "I designed this flow to guide recruiters from the dashboard overview into individual interviews. The design centralizes candidate data, transcripts, and recordings, reducing context switching and streamlining review for 1,000+ interviews.",
+              "steps": [
+                {
+                  "title": "Step 1: Interview Dashboard",
+                  "description": "Recruiters see a candidate list with interview time, duration, and direct links to recordings."
+                },
+                {
+                  "title": "Step 2.1: View Audio Interview",
+                  "description": "For audio-only interviews, recruiters see a time-stamped transcript synced with playback for quick review."
+                },
+                {
+                  "title": "Step 2.2: Video Interview",
+                  "description": "For video interviews, recruiters see a time-stamped transcript displayed alongside the recording for combined verbal and non-verbal review."
+                }
+              ],
               "images": [
                 {
-                  "src": "placeholder link",
+                  "src": "/images/projects/project-01/main_product/flow1/1.png",
                   "alt": "WeKruit prototype design wireframe",
-                  "caption": "Initial wireframe exploration"
+                  "caption": "Step 1: Interview Dashboard"
                 },
                 {
-                  "src": "placeholder link",
+                  "src": "/images/projects/project-01/main_product/flow1/2.png",
                   "alt": "WeKruit prototype design wireframe",
-                  "caption": "Initial wireframe exploration"
+                  "caption": "Step 2.1: View Audio Interview"
                 },
                 {
-                  "src": "placeholder link",
+                  "src": "/images/projects/project-01/main_product/flow1/3.png",
                   "alt": "WeKruit prototype design wireframe",
-                  "caption": "Initial wireframe exploration"
+                  "caption": "Step 2.2: View Video Interview"
                 }
               ]
             },
             {
-              "title": "Flow 2",
+              "title": "Flow 2: Candidate Onboarding",
+              "description": "I designed and implemented this flow to simplify how recruiters add candidates to the system. The flow brings together resume parsing, question generation, and built-in invitations, cutting down on manual steps and making sure interviewers have tailored materials ready ahead of time. This system has already been adopted by 3 companies and used to onboard 100+ candidates and students.",
+              "steps": [
+                {
+                  "title": "Step 1: Upload & Parse Resume",
+                  "description": "Recruiters upload a candidate's resume, which is automatically parsed and confirmed in the system."
+                },
+                {
+                  "title": "Step 2: Generate Interview Questions",
+                  "description": "Interview questions are generated from the parsed resume for interviewers to reference."
+                },
+                {
+                  "title": "Step 3: Candidate Dashboard",
+                  "description": "The new candidate–resume pair appears on the dashboard for easy tracking."
+                },
+                {
+                  "title": "Step 4: Send Interview Invitation",
+                  "description": "Recruiters send the interview invitation email directly from the dashboard."
+                }
+              ],
               "images": [
                 {
-                  "src": "placeholder link",
+                  "src": "/images/projects/project-01/main_product/flow2/1.png",
                   "alt": "WeKruit prototype design wireframe",
-                  "caption": "Initial wireframe exploration"
+                  "caption": "Step 1: Upload & Parse Resume"
                 },
                 {
-                  "src": "placeholder link",
-                  "alt": "User flow diagram for interview dashboard",
-                  "caption": "Key user flows mapped"
-                },
-                {
-                  "src": "placeholder link",
+                  "src": "/images/projects/project-01/main_product/flow2/2.png",
                   "alt": "Interactive prototype screens",
-                  "caption": "Interactive prototype iterations"
+                  "caption": "Step 2: Generate Interview Questions"
                 },
                 {
-                  "src": "placeholder link",
+                  "src": "/images/projects/project-01/main_product/flow2/3.png",
                   "alt": "Component refinement process",
-                  "caption": "Component design refinements"
+                  "caption": "Step 3: Candidate Dashboard"
                 },
                 {
-                  "src": "placeholder link",
+                  "src": "/images/projects/project-01/main_product/flow2/4.png",
                   "alt": "Final prototype mockup",
-                  "caption": "Final testable design"
+                  "caption": "Step 4: Send Interview Invitation"
                 }
               ]
             }
@@ -112,7 +141,7 @@ export const project01Data = {
           "images": [
             {
               "src": "placeholder link",
-              "alt": "WeKruit design system universal styles",
+              "alt": "WeKruit design system color",
               "caption": "Universal style guidelines"
             },
             {
@@ -131,16 +160,6 @@ export const project01Data = {
           "images": [
             {
               "src": "placeholder link",
-              "alt": "Button component variations",
-              "caption": "Primary and secondary button states"
-            },
-            {
-              "src": "placeholder link",
-              "alt": "Button interaction states",
-              "caption": "Hover and active states"
-            },
-            {
-              "src": "placeholder link",
               "alt": "Button component documentation",
               "caption": "Usage guidelines and specs"
             }
@@ -157,11 +176,6 @@ export const project01Data = {
               "src": "placeholder link",
               "alt": "File upload component design",
               "caption": "Upload component interface"
-            },
-            {
-              "src": "placeholder link",
-              "alt": "Upload progress states",
-              "caption": "Progress and error states"
             }
           ]
         },
@@ -225,6 +239,7 @@ export const project01Data = {
     },
     {
       "id": 4,
+      "title": "Conclusion",
       "paragraphs": [
         "Overall, this internship was a valuable opportunity to apply my skills in a real-world setting while learning how to adapt in a fast-paced, collaborative environment. I not only deepened my technical and design abilities but also gained a clearer understanding of how teams balance user needs, business goals, and engineering constraints to bring a product to life. Working with mentors and peers challenged me to think critically, communicate more effectively, and take initiative when facing new problems. Most importantly, I leave this experience with a stronger sense of confidence in my abilities and a clearer direction for where I want to grow next."
       ]

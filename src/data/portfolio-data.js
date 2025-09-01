@@ -13,8 +13,8 @@ export const portfolioData = {
       title: "WeKruit",
       subtitle: "May 2025 - Aug 2025",
       task: "Internship (UI/UX + Full-Stack Dev)",
-      thumbnail: "/images/projects/project-01/thumbnails/project-thumb-01.png",
-      hoverThumbnail: "/images/projects/project-01/thumbnails/project-thumb-01-hover.png",
+      thumbnail: "/images/projects/project-01/thumbnails/wekruit_thumbnail.png",
+      hoverThumbnail: "/images/projects/project-01/thumbnails/wekruit_thumbnail_hover.png",
       route: "/wekruit",
     },
     {
