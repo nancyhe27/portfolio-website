@@ -210,7 +210,7 @@ export const project01Data = {
       "title": "UI/UX Refinement",
       "paragraphs": [
         "In the final phase of my internship, I transitioned the B2C student portal from prototype to production-ready product. I replaced legacy CSS with modular components, improved visual hierarchy, clarified task flows based on usability feedback. These refinements created a smoother, more intuitive experience, enabling students to set up and complete mock interviews with less friction and greater confidence.",
-        "placeholder text before and after 1",
+        "The redesigned dashboard shifts from static, data-heavy tables to an action-oriented layout that improves clarity, consistency, and recruiter efficiency.",
         "placeholder text before and after 2", 
         "placeholder text before and after 3"
       ],

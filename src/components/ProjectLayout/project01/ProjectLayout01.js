@@ -200,6 +200,8 @@ function ProjectLayout01({ projectData }) {
         <h3 className="p-title">{sections[2].title}</h3>
         <div className="section-content">
           <p className="p-body">{sections[2].paragraphs[0]}</p>
+
+          <h4 className="p-separator--short"></h4>
           
           {/* Comparison 1 */}
           <div className="p-flex-split">
@@ -218,52 +220,46 @@ function ProjectLayout01({ projectData }) {
             </div>
           </div>
 
+          <h4 className="p-separator--short"></h4>
+
           {/* Comparison 2 */}
-          <div className="p-flex-split">
-            <div style={{ display: 'flex', alignItems: 'center', flex: 3, gap: 0 }}>
-              <div style={{ flex: 4 }}>
-                <figure style={{ margin: 0 }}>
+          <div>
+            <div className="p-flex-split">
+              <div style={{ flex: 1 }}>
+                <figure style={{ margin: 0}}>
                   <img src={`${process.env.PUBLIC_URL}${sections[2].images[2].src}`} alt={sections[2].images[2].alt} className="p-image" />
                   <figcaption className="p-caption">{sections[2].images[2].caption}</figcaption>
                 </figure>
               </div>
-              <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'var(--font-display)', fontSize: '2rem', color: 'var(--brown-medium)' }}>
-                →
-              </div>
-              <div style={{ flex: 4 }}>
+              <div style={{ flex: 1 }}>
                 <figure style={{ margin: 0 }}>
                   <img src={`${process.env.PUBLIC_URL}${sections[2].images[3].src}`} alt={sections[2].images[3].alt} className="p-image" />
                   <figcaption className="p-caption">{sections[2].images[3].caption}</figcaption>
                 </figure>
               </div>
             </div>
-            <div style={{ flex: 4 }}>
-              <p className="p-body">{sections[2].paragraphs[2]}</p>
-            </div>
+            <p className="p-body">{sections[2].paragraphs[2]}</p>
           </div>
 
+          <h4 className="p-separator--short"></h4>
+
           {/* Comparison 3 */}
-          <div className="p-flex-split">
-            <div style={{ display: 'flex', alignItems: 'center', flex: 3, gap: 0 }}>
-              <div style={{ flex: 4 }}>
-                <figure style={{ margin: 0 }}>
+          <div>
+            <div className="p-flex-split">
+              <div style={{ flex: 1 }}>
+                <figure style={{ margin: 0}}>
                   <img src={`${process.env.PUBLIC_URL}${sections[2].images[4].src}`} alt={sections[2].images[4].alt} className="p-image" />
                   <figcaption className="p-caption">{sections[2].images[4].caption}</figcaption>
                 </figure>
               </div>
-              <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'var(--font-display)', fontSize: '2rem', color: 'var(--brown-medium)' }}>
-                →
-              </div>
-              <div style={{ flex: 4 }}>
+              <div style={{ flex: 1 }}>
                 <figure style={{ margin: 0 }}>
                   <img src={`${process.env.PUBLIC_URL}${sections[2].images[5].src}`} alt={sections[2].images[5].alt} className="p-image" />
                   <figcaption className="p-caption">{sections[2].images[5].caption}</figcaption>
                 </figure>
               </div>
             </div>
-            <div style={{ flex: 4 }}>
-              <p className="p-body">{sections[2].paragraphs[3]}</p>
-            </div>
+            <p className="p-body">{sections[2].paragraphs[3]}</p>
           </div>
         </div>
       </section>
