@@ -214,6 +214,11 @@ export const project01Data = {
         "placeholder text before and after 2", 
         "placeholder text before and after 3"
       ],
+      "subtitles": [
+        "Placeholder Subtitle 1",
+        "Placeholder Subtitle 2",
+        "Placeholder Subtitle 3"
+      ],
       "images": [
         {
           "src": "/images/projects/project-01/refinement/before1.png",

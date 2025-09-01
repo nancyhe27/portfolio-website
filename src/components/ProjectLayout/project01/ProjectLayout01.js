@@ -24,14 +24,14 @@ function ProjectLayout01({ projectData }) {
       {/* Section 1: Main Product */}
       <section>
         <h3 className="p-title">{sections[0].title}</h3>
-        
+
         {/* Prototype Design Subsection */}
         <section className="section-content">
           <h4 className="p-subtitle">{sections[0].subsections[0].subtitle}</h4>
           {sections[0].subsections[0].paragraphs.map((paragraph, index) => (
             <p key={index} className="p-body">{paragraph}</p>
           ))}
-          
+
           {/* Flow 1: Interview Dashboard */}
           <div>
             <h4 className="p-subtitle">{sections[0].subsections[0].imageGroups[0].title}</h4>
@@ -118,7 +118,7 @@ function ProjectLayout01({ projectData }) {
           {sections[1].paragraphs.map((paragraph, index) => (
             <p key={index} className="p-body">{paragraph}</p>
           ))}
-          
+
           {/* Universal Style Definitions */}
           <section>
             <h4 className="p-subtitle">{sections[1].subsections[0].subtitle}</h4>
@@ -201,12 +201,12 @@ function ProjectLayout01({ projectData }) {
         <div className="section-content">
           <p className="p-body">{sections[2].paragraphs[0]}</p>
 
-          <h4 className="p-separator--short"></h4>
-          
+          <h4 className="p-subtitle">{sections[2].subtitles[0]}</h4>
+
           {/* Comparison 1 */}
           <div className="p-flex-split">
             <div style={{ flex: 3, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'var(--spacing-sm)' }}>
-              <figure style={{ margin: 0}}>
+              <figure style={{ margin: 0 }}>
                 <img src={`${process.env.PUBLIC_URL}${sections[2].images[0].src}`} alt={sections[2].images[0].alt} className="p-image" />
                 <figcaption className="p-caption">{sections[2].images[0].caption}</figcaption>
               </figure>
@@ -220,13 +220,14 @@ function ProjectLayout01({ projectData }) {
             </div>
           </div>
 
-          <h4 className="p-separator--short"></h4>
+          <h4 className="p-subtitle">{sections[2].subtitles[1]}</h4>
 
           {/* Comparison 2 */}
           <div>
+          <p className="p-body">{sections[2].paragraphs[2]}</p>
             <div className="p-flex-split">
               <div style={{ flex: 1 }}>
-                <figure style={{ margin: 0}}>
+                <figure style={{ margin: 0 }}>
                   <img src={`${process.env.PUBLIC_URL}${sections[2].images[2].src}`} alt={sections[2].images[2].alt} className="p-image" />
                   <figcaption className="p-caption">{sections[2].images[2].caption}</figcaption>
                 </figure>
@@ -238,16 +239,16 @@ function ProjectLayout01({ projectData }) {
                 </figure>
               </div>
             </div>
-            <p className="p-body">{sections[2].paragraphs[2]}</p>
           </div>
 
-          <h4 className="p-separator--short"></h4>
+          <h4 className="p-subtitle">{sections[2].subtitles[2]}</h4>
 
           {/* Comparison 3 */}
           <div>
+          <p className="p-body">{sections[2].paragraphs[3]}</p>
             <div className="p-flex-split">
               <div style={{ flex: 1 }}>
-                <figure style={{ margin: 0}}>
+                <figure style={{ margin: 0 }}>
                   <img src={`${process.env.PUBLIC_URL}${sections[2].images[4].src}`} alt={sections[2].images[4].alt} className="p-image" />
                   <figcaption className="p-caption">{sections[2].images[4].caption}</figcaption>
                 </figure>
@@ -259,7 +260,6 @@ function ProjectLayout01({ projectData }) {
                 </figure>
               </div>
             </div>
-            <p className="p-body">{sections[2].paragraphs[3]}</p>
           </div>
         </div>
       </section>
