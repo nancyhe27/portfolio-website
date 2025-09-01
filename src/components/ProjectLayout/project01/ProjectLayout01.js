@@ -32,20 +32,76 @@ function ProjectLayout01({ projectData }) {
             <p key={index} className="p-body">{paragraph}</p>
           ))}
           
-          {/* Image Groups */}
-          {sections[0].subsections[0].imageGroups.map((group, groupIndex) => (
-            <div key={groupIndex}>
-              <h4 className="p-subtitle">{group.title}</h4>
-              <div className="p-grid" style={{ '--grid-cols': 3, gap: 'var(--spacing-md)', marginBottom: 'var(--spacing-lg)' }}>
-                {group.images.map((img, imgIndex) => (
-                  <figure key={imgIndex} style={{ margin: 0 }}>
-                    <img src={`${process.env.PUBLIC_URL}${img.src}`} alt={img.alt} className="p-image" />
-                    <figcaption className="p-caption">{img.caption}</figcaption>
+          {/* Flow 1: Interview Dashboard */}
+          <div>
+            <h4 className="p-subtitle">{sections[0].subsections[0].imageGroups[0].title}</h4>
+            <p className="p-body">{sections[0].subsections[0].imageGroups[0].description}</p>
+
+            <h4 className="p-separator--short"></h4>
+
+            <div className="p-flex-split">
+              {/* Left side: 2x2 grid of images */}
+              <div style={{ flex: 2 }}>
+                <div className="p-grid" style={{ '--grid-cols': 2, gap: 'var(--spacing-md)' }}>
+                  {/* Top left: Step 1 */}
+                  <figure style={{ margin: 0 }}>
+                    <img src={`${process.env.PUBLIC_URL}${sections[0].subsections[0].imageGroups[0].images[0].src}`} alt={sections[0].subsections[0].imageGroups[0].images[0].alt} className="p-image" />
+                    <figcaption className="p-caption">{sections[0].subsections[0].imageGroups[0].images[0].caption}</figcaption>
                   </figure>
+                  {/* Top right: Empty */}
+                  <div></div>
+                  {/* Bottom left: Step 2.1 */}
+                  <figure style={{ margin: 0 }}>
+                    <img src={`${process.env.PUBLIC_URL}${sections[0].subsections[0].imageGroups[0].images[1].src}`} alt={sections[0].subsections[0].imageGroups[0].images[1].alt} className="p-image" />
+                    <figcaption className="p-caption">{sections[0].subsections[0].imageGroups[0].images[1].caption}</figcaption>
+                  </figure>
+                  {/* Bottom right: Step 2.2 */}
+                  <figure style={{ margin: 0 }}>
+                    <img src={`${process.env.PUBLIC_URL}${sections[0].subsections[0].imageGroups[0].images[2].src}`} alt={sections[0].subsections[0].imageGroups[0].images[2].alt} className="p-image" />
+                    <figcaption className="p-caption">{sections[0].subsections[0].imageGroups[0].images[2].caption}</figcaption>
+                  </figure>
+                </div>
+              </div>
+              {/* Right side: Steps text */}
+              <div style={{ flex: 1 }}>
+                {sections[0].subsections[0].imageGroups[0].steps.map((step, stepIndex) => (
+                  <div key={stepIndex} style={{ marginBottom: 'var(--spacing-sm)' }}>
+                    <p className="p-body--bold">{step.title}</p>
+                    <p className="p-body">{step.description}</p>
+                  </div>
                 ))}
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* Flow 2: Candidate Onboarding */}
+          <div>
+            <h4 className="p-subtitle">{sections[0].subsections[0].imageGroups[1].title}</h4>
+            <p className="p-body">{sections[0].subsections[0].imageGroups[1].description}</p>
+            <h4 className="p-separator--short"></h4>
+            <div className="p-flex-split">
+              {/* Left side: 2x2 grid of images */}
+              <div style={{ flex: 2 }}>
+                <div className="p-grid" style={{ '--grid-cols': 2, gap: 'var(--spacing-md)' }}>
+                  {sections[0].subsections[0].imageGroups[1].images.map((img, imgIndex) => (
+                    <figure key={imgIndex} style={{ margin: 0 }}>
+                      <img src={`${process.env.PUBLIC_URL}${img.src}`} alt={img.alt} className="p-image" />
+                      <figcaption className="p-caption">{img.caption}</figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </div>
+              {/* Right side: Steps text */}
+              <div style={{ flex: 1 }}>
+                {sections[0].subsections[0].imageGroups[1].steps.map((step, stepIndex) => (
+                  <div key={stepIndex} style={{ marginBottom: 'var(--spacing-sm)' }}>
+                    <p className="p-body--bold">{step.title}</p>
+                    <p className="p-body">{step.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Prototype Development Subsection */}
