@@ -43,13 +43,11 @@ function ProjectLayout01({ projectData }) {
               {/* Left side: 2x2 grid of images */}
               <div style={{ flex: 2 }}>
                 <div className="p-grid" style={{ '--grid-cols': 2, gap: 'var(--spacing-md)' }}>
-                  {/* Top left: Step 1 */}
-                  <figure style={{ margin: 0 }}>
+                  {/* Top center: Step 1 spanning both columns */}
+                  <figure style={{ margin: 0, gridColumn: '1 / -1', justifySelf: 'center', maxWidth: '50%' }}>
                     <img src={`${process.env.PUBLIC_URL}${sections[0].subsections[0].imageGroups[0].images[0].src}`} alt={sections[0].subsections[0].imageGroups[0].images[0].alt} className="p-image" />
                     <figcaption className="p-caption">{sections[0].subsections[0].imageGroups[0].images[0].caption}</figcaption>
                   </figure>
-                  {/* Top right: Empty */}
-                  <div></div>
                   {/* Bottom left: Step 2.1 */}
                   <figure style={{ margin: 0 }}>
                     <img src={`${process.env.PUBLIC_URL}${sections[0].subsections[0].imageGroups[0].images[1].src}`} alt={sections[0].subsections[0].imageGroups[0].images[1].alt} className="p-image" />
@@ -124,15 +122,19 @@ function ProjectLayout01({ projectData }) {
           {/* Universal Style Definitions */}
           <section>
             <h4 className="p-subtitle">{sections[1].subsections[0].subtitle}</h4>
+            <p className="p-body">{sections[1].subsections[0].paragraphs[0]}</p>
             <div className="p-flex-split">
-              <div style={{ flex: 1 }}>
+              <div style={{ flex: 3 }}>
                 <figure style={{ margin: 0 }}>
                   <img src={`${process.env.PUBLIC_URL}${sections[1].subsections[0].images[0].src}`} alt={sections[1].subsections[0].images[0].alt} className="p-image" />
                   <figcaption className="p-caption">{sections[1].subsections[0].images[0].caption}</figcaption>
                 </figure>
               </div>
               <div style={{ flex: 1 }}>
-                <p className="p-body">{sections[1].subsections[0].paragraphs[0]}</p>
+                <figure style={{ margin: 0 }}>
+                  <img src={`${process.env.PUBLIC_URL}${sections[1].subsections[0].images[1].src}`} alt={sections[1].subsections[0].images[1].alt} className="p-image" style={{ border: '1px solid var(--brown-medium)', borderRadius: '2px' }} />
+                  <figcaption className="p-caption">{sections[1].subsections[0].images[1].caption}</figcaption>
+                </figure>
               </div>
             </div>
           </section>
@@ -140,21 +142,39 @@ function ProjectLayout01({ projectData }) {
           {/* Button Component */}
           <section>
             <h4 className="p-subtitle">{sections[1].subsections[1].subtitle}</h4>
-            <p className="p-body">{sections[1].subsections[1].paragraphs[0]}</p>
-            <figure style={{ margin: 0, textAlign: 'center' }}>
-              <img src={`${process.env.PUBLIC_URL}${sections[1].subsections[1].images[0].src}`} alt={sections[1].subsections[1].images[0].alt} className="p-image" />
-              <figcaption className="p-caption">{sections[1].subsections[1].images[0].caption}</figcaption>
-            </figure>
+            <div className="p-flex-split">
+              <div style={{ flex: 1 }}>
+                <figure style={{ margin: 0 }}>
+                  <img src={`${process.env.PUBLIC_URL}${sections[1].subsections[1].images[0].src}`} alt={sections[1].subsections[1].images[0].alt} className="p-image" />
+                  <figcaption className="p-caption">{sections[1].subsections[1].images[0].caption}</figcaption>
+                </figure>
+              </div>
+              <div style={{ flex: 1 }}>
+                <figure style={{ margin: 0 }}>
+                  <img src={`${process.env.PUBLIC_URL}${sections[1].subsections[1].images[1].src}`} alt={sections[1].subsections[1].images[1].alt} className="p-image" />
+                  <figcaption className="p-caption">{sections[1].subsections[1].images[1].caption}</figcaption>
+                </figure>
+              </div>
+              <div style={{ flex: 1 }}>
+                <p className="p-body">{sections[1].subsections[1].paragraphs[0]}</p>
+              </div>
+            </div>
           </section>
 
           {/* Upload Component */}
           <section>
             <h4 className="p-subtitle">{sections[1].subsections[2].subtitle}</h4>
-            <p className="p-body">{sections[1].subsections[2].paragraphs[0]}</p>
-            <figure style={{ margin: 0, textAlign: 'center' }}>
-              <img src={`${process.env.PUBLIC_URL}${sections[1].subsections[2].images[0].src}`} alt={sections[1].subsections[2].images[0].alt} className="p-image" />
-              <figcaption className="p-caption">{sections[1].subsections[2].images[0].caption}</figcaption>
-            </figure>
+            <div className="p-flex-split">
+              <div style={{ flex: 2 }}>
+                <figure style={{ margin: 0 }}>
+                  <img src={`${process.env.PUBLIC_URL}${sections[1].subsections[2].images[0].src}`} alt={sections[1].subsections[2].images[0].alt} className="p-image" />
+                  <figcaption className="p-caption">{sections[1].subsections[2].images[0].caption}</figcaption>
+                </figure>
+              </div>
+              <div style={{ flex: 1 }}>
+                <p className="p-body">{sections[1].subsections[2].paragraphs[0]}</p>
+              </div>
+            </div>
           </section>
 
           {/* Interaction Specs */}
@@ -183,24 +203,17 @@ function ProjectLayout01({ projectData }) {
           
           {/* Comparison 1 */}
           <div className="p-flex-split">
-            <div style={{ display: 'flex', alignItems: 'center', flex: 3, gap: 0 }}>
-              <div style={{ flex: 4 }}>
-                <figure style={{ margin: 0 }}>
-                  <img src={`${process.env.PUBLIC_URL}${sections[2].images[0].src}`} alt={sections[2].images[0].alt} className="p-image" />
-                  <figcaption className="p-caption">{sections[2].images[0].caption}</figcaption>
-                </figure>
-              </div>
-              <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'var(--font-display)', fontSize: '2rem', color: 'var(--brown-medium)' }}>
-                →
-              </div>
-              <div style={{ flex: 4 }}>
-                <figure style={{ margin: 0 }}>
-                  <img src={`${process.env.PUBLIC_URL}${sections[2].images[1].src}`} alt={sections[2].images[1].alt} className="p-image" />
-                  <figcaption className="p-caption">{sections[2].images[1].caption}</figcaption>
-                </figure>
-              </div>
+            <div style={{ flex: 3, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'var(--spacing-sm)' }}>
+              <figure style={{ margin: 0}}>
+                <img src={`${process.env.PUBLIC_URL}${sections[2].images[0].src}`} alt={sections[2].images[0].alt} className="p-image" />
+                <figcaption className="p-caption">{sections[2].images[0].caption}</figcaption>
+              </figure>
+              <figure style={{ margin: 0 }}>
+                <img src={`${process.env.PUBLIC_URL}${sections[2].images[1].src}`} alt={sections[2].images[1].alt} className="p-image" />
+                <figcaption className="p-caption">{sections[2].images[1].caption}</figcaption>
+              </figure>
             </div>
-            <div style={{ flex: 4 }}>
+            <div style={{ flex: 1 }}>
               <p className="p-body">{sections[2].paragraphs[1]}</p>
             </div>
           </div>

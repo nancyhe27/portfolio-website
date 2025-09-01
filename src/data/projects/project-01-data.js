@@ -140,12 +140,12 @@ export const project01Data = {
           ],
           "images": [
             {
-              "src": "placeholder link",
+              "src": "/images/projects/project-01/design_system/colors.png",
               "alt": "WeKruit design system color",
               "caption": "Universal style guidelines"
             },
             {
-              "src": "placeholder link", 
+              "src": "/images/projects/project-01/design_system/fonts.png", 
               "alt": "Color palette and typography specs",
               "caption": "Color and typography standards"
             }
@@ -159,7 +159,12 @@ export const project01Data = {
           ],
           "images": [
             {
-              "src": "placeholder link",
+              "src": "/images/projects/project-01/design_system/button.png",
+              "alt": "Button component documentation",
+              "caption": "Usage guidelines and specs"
+            },
+            {
+              "src": "/images/projects/project-01/design_system/margin.png",
               "alt": "Button component documentation",
               "caption": "Usage guidelines and specs"
             }
@@ -173,7 +178,7 @@ export const project01Data = {
           ],
           "images": [
             {
-              "src": "placeholder link",
+              "src": "/images/projects/project-01/design_system/upload.png",
               "alt": "File upload component design",
               "caption": "Upload component interface"
             }
@@ -187,7 +192,12 @@ export const project01Data = {
           ],
           "images": [
             {
-              "src": "placeholder link",
+              "src": "/images/projects/project-01/design_system/interaction.png",
+              "alt": "Component interaction specifications",
+              "caption": "Detailed interaction guidelines"
+            },
+            {
+              "src": "/images/projects/project-01/design_system/margin.png",
               "alt": "Component interaction specifications",
               "caption": "Detailed interaction guidelines"
             }
@@ -206,32 +216,32 @@ export const project01Data = {
       ],
       "images": [
         {
-          "src": "placeholder link",
+          "src": "/images/projects/project-01/refinement/before1.png",
           "alt": "Student portal before redesign",
           "caption": "Before: Legacy interface"
         },
         {
-          "src": "placeholder link",
+          "src": "/images/projects/project-01/refinement/after1.png",
           "alt": "Student portal after redesign",
           "caption": "After: Improved visual hierarchy"
         },
         {
-          "src": "placeholder link",
+          "src": "/images/projects/project-01/refinement/before2.png",
           "alt": "Task flow improvements",
           "caption": "Before: Complex task flow"
         },
         {
-          "src": "placeholder link",
+          "src": "/images/projects/project-01/refinement/after2.png",
           "alt": "Streamlined task flow",
           "caption": "After: Streamlined experience"
         },
         {
-          "src": "placeholder link",
+          "src": "/images/projects/project-01/refinement/before3.png",
           "alt": "Component modularization",
           "caption": "Before: Legacy CSS structure"
         },
         {
-          "src": "placeholder link",
+          "src": "/images/projects/project-01/refinement/after3.png",
           "alt": "Modular component system",
           "caption": "After: Modular components"
         }
