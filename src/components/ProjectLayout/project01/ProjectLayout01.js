@@ -126,8 +126,8 @@ function ProjectLayout01({ projectData }) {
             <div className="p-flex-split">
               <div style={{ flex: 3 }}>
                 <figure style={{ margin: 0 }}>
-                  <img src={`${process.env.PUBLIC_URL}${sections[1].subsections[0].images[0].src}`} alt={sections[1].subsections[0].images[0].alt} className="p-image" />
-                  <figcaption className="p-caption">{sections[1].subsections[0].images[0].caption}</figcaption>
+                  <img src={`${process.env.PUBLIC_URL}${sections[1].subsections[0].images[0].src}`} alt={sections[1].subsections[0].images[0].alt} className="p-image" style={{ border: '1px solid var(--brown-medium)', borderRadius: '2px' }} />
+                  <figcaption className="p-caption" style={{ marginTop: '0px' }}>{sections[1].subsections[0].images[0].caption}</figcaption>
                 </figure>
               </div>
               <div style={{ flex: 1 }}>
@@ -143,15 +143,15 @@ function ProjectLayout01({ projectData }) {
           <section>
             <h4 className="p-subtitle">{sections[1].subsections[1].subtitle}</h4>
             <div className="p-flex-split">
-              <div style={{ flex: 1 }}>
+              <div style={{ flex: '0 0 auto' }}>
                 <figure style={{ margin: 0 }}>
-                  <img src={`${process.env.PUBLIC_URL}${sections[1].subsections[1].images[0].src}`} alt={sections[1].subsections[1].images[0].alt} className="p-image" />
+                  <img src={`${process.env.PUBLIC_URL}${sections[1].subsections[1].images[0].src}`} alt={sections[1].subsections[1].images[0].alt} className="p-image" style={{ height: '250px', width: 'auto' }} />
                   <figcaption className="p-caption">{sections[1].subsections[1].images[0].caption}</figcaption>
                 </figure>
               </div>
-              <div style={{ flex: 1 }}>
+              <div style={{ flex: '0 0 auto' }}>
                 <figure style={{ margin: 0 }}>
-                  <img src={`${process.env.PUBLIC_URL}${sections[1].subsections[1].images[1].src}`} alt={sections[1].subsections[1].images[1].alt} className="p-image" />
+                  <img src={`${process.env.PUBLIC_URL}${sections[1].subsections[1].images[1].src}`} alt={sections[1].subsections[1].images[1].alt} className="p-image" style={{ height: '250px', width: 'auto' }} />
                   <figcaption className="p-caption">{sections[1].subsections[1].images[1].caption}</figcaption>
                 </figure>
               </div>

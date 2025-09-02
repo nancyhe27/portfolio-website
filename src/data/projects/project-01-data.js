@@ -129,31 +129,31 @@ export const project01Data = {
       "id": 2,
       "title": "WeKruit Design System",
       "paragraphs": [
-        "After initial dashboard testing, I led the creation of WeKruit's scalable design system. Each component was documented with: Guidelines for usage, Accessibility notes, Live code examples. This system standardized previously inconsistent UI elements, aligned designers and engineers on implementation, and established a foundation for high-fidelity prototyping and production development."
+        "Over a week, I worked with two teammates on the UI/UX team to define universal guidelines for typography, spacing, and color. Before, every frontend developer (including me!) styled components differently, causing inconsistencies and slowing development. After we built the system, all components followed the same baseline, making handoff smoother, ensuring accessibility, and giving the product a cohesive identity. I realized how much faster it became to switch between design work and frontend coding once everything followed the same system."
       ],
       "subsections": [
         {
           "id": 1,
-          "subtitle": "Universal Style Definitions",
+          "subtitle": "Universal Colors + Fonts",
           "paragraphs": [
-            "placeholder universal paragraph"
+            "We chose cool blues and neutrals as primary colors to convey clarity and professionalism. Semantic colors stayed low-saturation so they signaled states without distracting from core actions. Paired with a clean serif font, the system created a focused, trustworthy tone."
           ],
           "images": [
             {
               "src": "/images/projects/project-01/design_system/colors.png",
-              "alt": "WeKruit design system color",
-              "caption": "Universal style guidelines"
+              "alt": "WeKruit Design System Colors",
+              "caption": "WeKruit Colors"
             },
             {
               "src": "/images/projects/project-01/design_system/fonts.png", 
-              "alt": "Color palette and typography specs",
-              "caption": "Color and typography standards"
+              "alt": "WeKruit Design System Typography",
+              "caption": "WeKruit Fonts"
             }
           ]
         },
         {
           "id": 2,
-          "subtitle": "Button Component",
+          "subtitle": "Button Component + Basic Margins",
           "paragraphs": [
             "placeholder button paragraph"
           ],
@@ -215,40 +215,40 @@ export const project01Data = {
         "placeholder text before and after 3"
       ],
       "subtitles": [
-        "Placeholder Subtitle 1",
-        "Placeholder Subtitle 2",
-        "Placeholder Subtitle 3"
+        "Interview Management Dashboard",
+        "Interview Review Page",
+        "Interview Creation Flow"
       ],
       "images": [
         {
           "src": "/images/projects/project-01/refinement/before1.png",
-          "alt": "Student portal before redesign",
-          "caption": "Before: Legacy interface"
+          "alt": "Interview Management Dashboard Before Redesign",
+          "caption": "Before: Data-Heavy, Action-Light"
         },
         {
           "src": "/images/projects/project-01/refinement/after1.png",
-          "alt": "Student portal after redesign",
-          "caption": "After: Improved visual hierarchy"
+          "alt": "Interview Management Dashboard After Redesign",
+          "caption": "After: Action-Oriented & Efficient"
         },
         {
           "src": "/images/projects/project-01/refinement/before2.png",
-          "alt": "Task flow improvements",
-          "caption": "Before: Complex task flow"
+          "alt": "Interview Review Page Before Redesign",
+          "caption": "Before: Cluttered & Redundant"
         },
         {
           "src": "/images/projects/project-01/refinement/after2.png",
-          "alt": "Streamlined task flow",
-          "caption": "After: Streamlined experience"
+          "alt": "Interview Review Page After Redesign",
+          "caption": "After: Streamlined & Insightful"
         },
         {
           "src": "/images/projects/project-01/refinement/before3.png",
-          "alt": "Component modularization",
-          "caption": "Before: Legacy CSS structure"
+          "alt": "Interview Creation Flow Before Redesign",
+          "caption": "Before: Disorganized Layout"
         },
         {
           "src": "/images/projects/project-01/refinement/after3.png",
-          "alt": "Modular component system",
-          "caption": "After: Modular components"
+          "alt": "Interview Creation Flow After Redesign",
+          "caption": "After: Optimized Structured Workflow"
         }
       ]
     },
