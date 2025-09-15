@@ -15,9 +15,10 @@ export const project01Data = {
   "tools": [
     "Figma",
     "React", 
+    "Tailwind CSS",
     "Firebase",
     "GitHub",
-    "Clickup"
+    "ClickUp"
   ],
   "overview": "In summer 2025, I interned as a UI/UX full stack developer intern at WeKruit, a SaaS startup building an AI-powered interview platform for enterprises and students. My role combined design and engineering, from mapping user flows to implementing full-stack features. Over 10 weeks, I contributed to the client-facing interview dashboard, the AI agent interview process, the WeKruit design system, and UI/UX refinements that transformed prototypes into a polished product. These efforts streamlined the review and preparation process for 1,000+ interviews across 3 client companies and enabled 100+ students to run mock sessions more smoothly.",
   "heroImage": "/images/projects/project-01/header/hero.png",
@@ -141,46 +142,46 @@ export const project01Data = {
           "images": [
             {
               "src": "/images/projects/project-01/design_system/colors.png",
-              "alt": "WeKruit Design System Colors",
+              "alt": "WeKruit Colors",
               "caption": "WeKruit Colors"
             },
             {
               "src": "/images/projects/project-01/design_system/fonts.png", 
-              "alt": "WeKruit Design System Typography",
+              "alt": "WeKruit Typography",
               "caption": "WeKruit Fonts"
             }
           ]
         },
         {
           "id": 2,
-          "subtitle": "Button Component + Basic Margins",
+          "subtitle": "Single Components: Button & Margins",
           "paragraphs": [
-            "placeholder button paragraph"
+            "We documented button states, spacing, and alignment, unifying variations into a single reusable model. Input fields, tags, and other core elements were standardized in Figma with the same rules. We also introduced a shared spacing scale for commonly used composite components, keeping layouts consistent and easy to extend with Tailwind CSS."
           ],
           "images": [
             {
               "src": "/images/projects/project-01/design_system/button.png",
-              "alt": "Button component documentation",
-              "caption": "Usage guidelines and specs"
+              "alt": "WeKruit Buttons",
+              "caption": "WeKruit Buttons"
             },
             {
               "src": "/images/projects/project-01/design_system/margin.png",
-              "alt": "Button component documentation",
-              "caption": "Usage guidelines and specs"
+              "alt": "WeKruitMargins",
+              "caption": "WeKruit Margins"
             }
           ]
         },
         {
           "id": 3,
-          "subtitle": "Upload Component",
+          "subtitle": "Composite Components: Upload Interface",
           "paragraphs": [
-            "placeholder upload paragraph"
+            "After defining single elements, we moved on to composite ones like the upload interface used across the site. We added drag-and-drop, progress indicators, and error states, and documented lists and other complex components with the same standards. I enjoyed this lego-like process because it showed how simple elements fit together and clarified their usage and constraints."
           ],
           "images": [
             {
               "src": "/images/projects/project-01/design_system/upload.png",
-              "alt": "File upload component design",
-              "caption": "Upload component interface"
+              "alt": "WeKruit Upload Interface",
+              "caption": "WeKruit Upload Interface"
             }
           ]
         },
@@ -188,18 +189,13 @@ export const project01Data = {
           "id": 4,
           "subtitle": "Interaction Specs",
           "paragraphs": [
-            "placeholder interaction paragraph"
+            "Finally, we documented interaction flows like delete confirmations and file uploads. For example, we marked how buttons change state in specific cases and how components connect across different contexts. I found this step especially valuable because it revealed interaction edge cases (and it saved me from a lot of ambiguities when I developed the new system UI later!)."
           ],
           "images": [
             {
               "src": "/images/projects/project-01/design_system/interaction.png",
               "alt": "Component interaction specifications",
-              "caption": "Detailed interaction guidelines"
-            },
-            {
-              "src": "/images/projects/project-01/design_system/margin.png",
-              "alt": "Component interaction specifications",
-              "caption": "Detailed interaction guidelines"
+              "caption": "Interaction Guidelines for Key Interfaces"
             }
           ]
         }
