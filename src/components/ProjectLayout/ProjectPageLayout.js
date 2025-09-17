@@ -21,6 +21,7 @@ function ProjectPageLayout({ projectData, children }) {
     const prevIndex = currentIndex === 0 ? availableRoutes.length - 1 : currentIndex - 1;
     const prevRoute = availableRoutes[prevIndex];
     navigate(prevRoute);
+    window.scrollTo(0, 0);
   };
   
   const goToNextProject = () => {
@@ -28,6 +29,7 @@ function ProjectPageLayout({ projectData, children }) {
     const nextIndex = currentIndex === availableRoutes.length - 1 ? 0 : currentIndex + 1;
     const nextRoute = availableRoutes[nextIndex];
     navigate(nextRoute);
+    window.scrollTo(0, 0);
   };
 
   return (
