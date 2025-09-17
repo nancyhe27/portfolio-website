@@ -11,6 +11,4 @@ function Project01() {
   );
 }
 
-// export default Project01; 
-
 export default Project01; 

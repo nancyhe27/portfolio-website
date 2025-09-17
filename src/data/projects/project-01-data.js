@@ -120,8 +120,8 @@ export const project01Data = {
           "id": 2,
           "subtitle": "Prototype Development",
           "paragraphs": [
-            "I translated these flows into a working React prototype. I structured the product architecture to align with requirements and implemented core features such as candidate profile search and filtering, Real-time transcript synchronization, Dynamic status updates for interview progress",
-            "I also integrated AI agent connections and data handling. Collaborating with backend developers ensured smooth integration and improved overall platform speed and reliability."
+            "I brought these flows to life in a working React prototype, structuring the architecture around user and product requirements. I built key features such as candidate profile search and filtering, real-time transcript synchronization, and dynamic status updates to reflect interview progress.",
+            "The prototype served as a validation tool, a way to check whether the flows we had brainstormed were technically feasible and usable at a minimum level. I integrated AI-driven resume parsing and question generation to explore how intelligent features could fit into the process, and I worked with backend developers to ensure smooth API connections and realistic data handling. Building the prototype made abstract workflows tangible, helping the team refine both the design and the technical direction moving forward."
           ]
         }
       ]
@@ -207,8 +207,8 @@ export const project01Data = {
       "paragraphs": [
         "In the final phase of my internship, I transitioned the B2C student portal from prototype to production-ready product. I replaced legacy CSS with modular components, improved visual hierarchy, clarified task flows based on usability feedback. These refinements created a smoother, more intuitive experience, enabling students to set up and complete mock interviews with less friction and greater confidence.",
         "The redesigned dashboard shifts from static, data-heavy tables to an action-oriented layout that improves clarity, consistency, and recruiter efficiency.",
-        "placeholder text before and after 2", 
-        "placeholder text before and after 3"
+        "The redesigned Interview Review page shifts from cluttered layouts and redundant feedback to a streamlined, content-led design that improves navigation clarity, reduces excess scrolling, and streamlines reviewer insight.", 
+        "The redesigned Interview Creation flow shifts from a disorganized, space-heavy layout to a structured workflow that reduces excess scrolling, adds customizable fields, and improves clarity with a refined step graph."
       ],
       "subtitles": [
         "Interview Management Dashboard",
@@ -250,9 +250,12 @@ export const project01Data = {
     },
     {
       "id": 4,
-      "title": "Conclusion",
+      "title": "Reflections",
       "paragraphs": [
-        "Overall, this internship was a valuable opportunity to apply my skills in a real-world setting while learning how to adapt in a fast-paced, collaborative environment. I not only deepened my technical and design abilities but also gained a clearer understanding of how teams balance user needs, business goals, and engineering constraints to bring a product to life. Working with mentors and peers challenged me to think critically, communicate more effectively, and take initiative when facing new problems. Most importantly, I leave this experience with a stronger sense of confidence in my abilities and a clearer direction for where I want to grow next."
+        "Through my three-month internship at WeKruit, I learned that design and development aren’t two separate tracks — they’re two halves of the same process. I found real excitement in discovering how powerful they are when combined!",
+        "In design, I started seeing systems differently. As I worked on the design system, I realized that every small choice — from typography scales to spacing rules — carried weight beyond the screen. Those decisions affected how engineers coded, how quickly features shipped, and how users experienced the product. I also began noticing how patterns, like error states or loading indicators, shaped user confidence just as much as layout or color. That shift helped me understand design as more than aesthetics: it was the framework that made the whole product coherent and adaptable.",
+        "In development, I grew from just experimenting in prototypes to building features people actually used. Writing React components and integrating them with Firebase gave me a sharper sense of responsibility: my code had to be maintainable and scalable, not just functional. Debugging and refactoring stopped being about “making it work” and became about ensuring others could build on top of it. Collaborating with backend engineers also taught me how much thought goes into data flow and timing, especially when handling real-time updates recruiters depended on.",
+        "What I enjoyed most was the rare chance to build features I had also designed. Sketching an idea in Figma one day and then seeing it come alive in code the next gave me a sense of accountability I hadn’t felt before. That loop of designing, coding, and refining taught me that the most powerful products emerge when design and development don’t just collaborate but actually coexist in the same hands. And that’s the kind of work I want to keep doing!"
       ]
     }
   ]

@@ -269,6 +269,9 @@ function ProjectLayout01({ projectData }) {
         <h3 className="p-title">{sections[3].title}</h3>
         <div className="section-content">
           <p className="p-body">{sections[3].paragraphs[0]}</p>
+          <p className="p-body">{sections[3].paragraphs[1]}</p>
+          <p className="p-body">{sections[3].paragraphs[2]}</p>
+          <p className="p-body">{sections[3].paragraphs[3]}</p> 
         </div>
       </section>
     </div>
