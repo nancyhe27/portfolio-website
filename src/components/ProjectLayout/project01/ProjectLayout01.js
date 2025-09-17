@@ -37,7 +37,7 @@ function ProjectLayout01({ projectData }) {
             <h4 className="p-subtitle">{sections[0].subsections[0].imageGroups[0].title}</h4>
             <p className="p-body">{sections[0].subsections[0].imageGroups[0].description}</p>
 
-            <h4 className="p-separator--short"></h4>
+            <div className="p-separator--short"></div>
 
             <div className="p-flex-split">
               {/* Left side: 2x2 grid of images */}
@@ -76,7 +76,7 @@ function ProjectLayout01({ projectData }) {
           <div>
             <h4 className="p-subtitle">{sections[0].subsections[0].imageGroups[1].title}</h4>
             <p className="p-body">{sections[0].subsections[0].imageGroups[1].description}</p>
-            <h4 className="p-separator--short"></h4>
+            <div className="p-separator--short"></div>
             <div className="p-flex-split">
               {/* Left side: 2x2 grid of images */}
               <div style={{ flex: 2 }}>
