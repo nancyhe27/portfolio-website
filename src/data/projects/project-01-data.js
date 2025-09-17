@@ -179,7 +179,7 @@ export const project01Data = {
           ],
           "images": [
             {
-              "src": "/images/projects/project-01/design_system/Upload.png",
+              "src": "/images/projects/project-01/design_system/upload_abandon.png",
               "alt": "WeKruit Upload Interface",
               "caption": "WeKruit Upload Interface"
             }
