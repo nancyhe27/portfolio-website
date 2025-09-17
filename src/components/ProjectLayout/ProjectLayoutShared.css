@@ -252,6 +252,14 @@
   flex: 1;
 }
 
+.p-flex-split--fixed-universal>*:first-child {
+  flex: 1;
+}
+
+.p-flex-split--fixed-universal>*:last-child {
+  flex: 0 0 200px;
+}
+
 /* ===========================
    NEW REUSABLE LAYOUT GRIDS
    =========================== */
