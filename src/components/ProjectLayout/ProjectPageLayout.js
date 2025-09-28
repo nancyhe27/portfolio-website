@@ -1,16 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Navigation from '../../components/Navigation/Navigation';
-import { portfolioData } from '../../data/portfolio-data';
+import { getPortfolioData, getNavigationText } from '../../utils/dataLoader';
+import { useLanguage } from '../../contexts/LanguageContext';
 import './ProjectLayoutShared.css';
 
 function ProjectPageLayout({ projectData, children }) {
   const { title, duration, task, heroImage } = projectData;
   const navigate = useNavigate();
   const location = useLocation();
+  const { currentLanguage } = useLanguage();
+  const [portfolioData, setPortfolioData] = useState(null);
+  const navText = getNavigationText(currentLanguage);
   
-  // Get current project from URL path
-  const currentRoute = location.pathname;
+  useEffect(() => {
+    const loadData = async () => {
+      const data = await getPortfolioData(currentLanguage);
+      setPortfolioData(data);
+    };
+    loadData();
+  }, [currentLanguage]);
+  
+  if (!portfolioData) return <div>Loading...</div>;
+  
+  // Extract current route without language prefix (e.g., /en/wekruit -> /wekruit)
+  const pathParts = location.pathname.split('/');
+  const currentRoute = '/' + pathParts.slice(2).join('/');
   
   // Get only available projects (not coming soon)
   const availableProjects = portfolioData.projects.filter(project => !project.comingSoon);
@@ -20,7 +35,7 @@ function ProjectPageLayout({ projectData, children }) {
     const currentIndex = availableRoutes.indexOf(currentRoute);
     const prevIndex = currentIndex === 0 ? availableRoutes.length - 1 : currentIndex - 1;
     const prevRoute = availableRoutes[prevIndex];
-    navigate(prevRoute);
+    navigate(`/${currentLanguage}${prevRoute}`);
     window.scrollTo(0, 0);
   };
   
@@ -28,7 +43,7 @@ function ProjectPageLayout({ projectData, children }) {
     const currentIndex = availableRoutes.indexOf(currentRoute);
     const nextIndex = currentIndex === availableRoutes.length - 1 ? 0 : currentIndex + 1;
     const nextRoute = availableRoutes[nextIndex];
-    navigate(nextRoute);
+    navigate(`/${currentLanguage}${nextRoute}`);
     window.scrollTo(0, 0);
   };
 
@@ -40,10 +55,10 @@ function ProjectPageLayout({ projectData, children }) {
       <section className="project-navigation-section" style={{ borderTop: 'none' }}>
         <div className="project-nav-buttons">
           <button className="nav-button" onClick={goToPreviousProject}>
-            ← &nbsp; Previous Project
+            ← &nbsp; {navText.previousProject}
           </button>
           <button className="nav-button" onClick={goToNextProject}>
-            Next Project &nbsp; →
+            {navText.nextProject} &nbsp; →
           </button>
         </div>
       </section>
@@ -77,10 +92,10 @@ function ProjectPageLayout({ projectData, children }) {
       <section className="project-navigation-section" style={{ borderBottom: 'none' }}>
         <div className="project-nav-buttons">
           <button className="nav-button" onClick={goToPreviousProject}>
-          ← &nbsp; Previous Project
+          ← &nbsp; {navText.previousProject}
           </button>
           <button className="nav-button" onClick={goToNextProject}>
-            Next Project &nbsp; →
+            {navText.nextProject} &nbsp; →
           </button>
         </div>
       </section>
