@@ -48,151 +48,189 @@ export const project02Data = {
             "alt": "ドアの利用可能性インジケーターを備えたリアルタイム建物アクセス状況を示すユーザーインターフェースモックアップ"
           },
           "question": "Q：「制限されたドアアクセスのためにキャンパスの建物や部屋へのアクセスに困難を経験したことがありますか？」",
-          "result": "結果：37人の回答者のうち32人（86%）が「はい」と回答しました。"
+          "quote": "ある夜、-30°の天候の中を静かな学習場所まで20分歩いたのに、施錠されていることがわかりました。諦めて代わりに家に帰りました。"
         },
         {
-          "title": "機能2：ライブ混雑レベル",
+          "title": "機能2：学習スポット推奨",
           "image": {
-            "src": "/images/projects/project-02/pie/pie2.PNG",
-            "alt": "様々な学習エリアのリアルタイム占有レベルを表示するインターフェース"
+            "src": "/images/projects/project-02/pie/pie2.PNG", 
+            "alt": "混雑レベルと設備情報を含む学習スペース推奨を表示するアプリインターフェース"
           },
-          "question": "Q：「キャンパスで勉強に適した場所を見つけるのに困難を経験したことがありますか？」",
-          "result": "結果：37人の回答者のうち31人（84%）が「はい」と回答しました。"
+          "question": "Q：「キャンパスで適切な学習スペースを見つけるのにどの程度困難を経験しますか？」",
+          "quote": "人気のスポットはしばしば満員で、試行錯誤で学習スペースを探してさまよい歩くことになります。"
+        }
+      ],
+      "insights": "2つの主要な問題に加えて、調査回答はキャンパス建物のナビゲーションにおける追加の詳細を浮き彫りにしました。学生の70.3%が特定の時間にどの入り口が開いているかを知らないと回答し、半数以上（54.1%）がリアルタイムドアアクセス情報の不足を挙げました。ほとんどの学生（75.7%）が開いているドアを見つけるために試行錯誤に頼っており、しばしば10〜20分を探索に費やしています。アクセス問題は、ID制限のある研究室、スタジオ、専門施設で最も頻繁に報告されました。"
+    },
+    {
+      "id": "wireframes",
+      "title": "8時間目：ワイヤーフレーム & 改良",
+      "subsections": [
+        {
+          "title": "機能マップ",
+          "images": [
+            {
+              "src": "/images/projects/project-02/mindmap/mindmap.png",
+              "alt": "機能マップ",
+            }
+          ]
+        },
+        {
+          "title": "低忠実度ワイヤーフレーム",
+          "images": [
+            {
+              "src": "/images/projects/project-02/sketch/home_sketch.png",
+              "alt": "ホーム（マップビュー）",
+            },
+            {
+              "src": "/images/projects/project-02/sketch/search_sketch.png",
+              "alt": "検索",
+            },
+            {
+              "src": "/images/projects/project-02/sketch/building_sketch.png",
+              "alt": "場所",
+            },
+            {
+              "src": "/images/projects/project-02/sketch/homelist_sketch.png",
+              "alt": "ホーム（リストビュー）",
+            },
+            {
+              "src": "/images/projects/project-02/sketch/ai_sketch.png",
+              "alt": "AIチャットボット",
+            }
+          ]
+        },
+        {
+          "title": "UI/UX改良",
+          "comparisons": [
+            {
+              "before": {
+                "src": "/images/projects/project-02/improve/home_before.png",
+                "alt": "ホーム（改良前）",
+                "caption": "ホーム（改良前）"
+              },
+              "after": {
+                "src": "/images/projects/project-02/improve/home_after.png",
+                "alt": "ホーム（改良後）",
+                "caption": "ホーム（改良後）"
+              },
+              "subtitle": "ナビゲーション統合",
+              "description": "ホームページの散らばったボタンをナビゲーションバーに置き換え、ナビゲーションを明確にし、タスクのより明確な分離により混乱を減らしました。"
+            },
+            {
+              "before": {
+                "src": "/images/projects/project-02/improve/colorcode_before.png",
+                "alt": "建物情報（改良前）",
+                "caption": "建物情報（改良前）"
+              },
+              "after": {
+                "src": "/images/projects/project-02/improve/colorcode_after.png",
+                "alt": "建物情報（改良後）",
+                "caption": "建物情報（改良後）"
+              },
+              "subtitle": "文脈データ強化",
+              "description": "以前は、建物ページは一般的なアクセス情報のみを表示していました。更新では、ドア固有のアクセスとライブ混雑詳細を追加し、ズームイン時の追加マップスペースを使用することで、ユーザーはページを開かずにすべての主要情報を表示できることが多くなります。"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "mindmap",
-      "title": "8時間目：マインドマップ",
-      "content": "ユーザーリサーチからの洞察を統合し、アプリの機能とユーザーフローを視覚化するための包括的なマインドマップを作成しました。",
-      "image": {
-        "src": "/images/projects/project-02/mindmap/mindmap.png",
-        "alt": "SwipyCampusアプリの機能、ユーザーフロー、機能接続を示すマインドマップ図"
+      "id": "mascot_design",
+      "title": "16時間目：ブランディング",
+      "quote": "正直に言うと、必要でない限り、しばらくするとそれを使うのを忘れてしまうでしょう。",
+      "content": "テスト中、ある学生がユーザーが定期的にアプリを使用することを忘れる可能性があることを指摘しました。エンゲージメントを高め、より強い感情的つながりを築くため、アプリのパーソナリティとアシスタントとしてマスコットを導入しました。",
+      "mascot": {
+        "name": "Swipy the Agent",
+        "description": "Swipyは建物にスワイプして入るのに使用される学生IDカードからインスピレーションを得ており、4つのカラーコード化された状態があります：開放、現在アクセス不可、禁止、不明。これらのアイコンは各場所とドアの横に表示され、迅速なアクセスチェックが可能で、Swipyはアプリの仮想エージェントとしても機能し、ユーザーのニーズに基づいて学習スポットを推奨します。",
+        "states": [
+          {
+            "name": "開放",
+            "src": "/images/projects/project-02/swipy/green_swipy.PNG",
+            "alt": "開放",
+            "caption": "開放"
+          },
+          {
+            "name": "現在アクセス不可",
+            "src": "/images/projects/project-02/swipy/yellow_swipy.PNG",
+            "alt": "現在アクセス不可",
+            "caption": "現在アクセス不可"
+          },
+          {
+            "name": "禁止",
+            "src": "/images/projects/project-02/swipy/red_swipy.PNG",
+            "alt": "禁止",
+            "caption": "禁止"
+          },
+          {
+            "name": "不明",
+            "src": "/images/projects/project-02/swipy/gray_swipy.PNG",
+            "alt": "不明",
+            "caption": "不明"
+          }
+        ]
       }
     },
     {
-      "id": "sketches",
-      "title": "12時間目：初期スケッチ",
-      "content": "主要な画面とユーザーフローの手描きスケッチを作成し、アプリの基本構造とナビゲーションパターンを探索しました。",
-      "images": [
+      "id": "prototype",
+      "title": "18時間目：プロトタイプ",
+      "cta": "プロトタイプを体験してください！",
+      "flows": [
         {
-          "src": "/images/projects/project-02/sketch/home_sketch.png",
-          "alt": "メイン建物リストビューを示すホーム画面スケッチ"
-        },
-        {
-          "src": "/images/projects/project-02/sketch/search_sketch.png",
-          "alt": "フィルターとカテゴリーオプションを備えた検索機能スケッチ"
-        },
-        {
-          "src": "/images/projects/project-02/sketch/building_sketch.png",
-          "alt": "詳細なアクセス情報を示す個別建物ビュースケッチ"
-        },
-        {
-          "src": "/images/projects/project-02/sketch/homelist_sketch.png",
-          "alt": "スケジュールされた場所の保存されたリストスケッチ"
-        },
-        {
-          "src": "/images/projects/project-02/sketch/ai_sketch.png",
-          "alt": "パーソナライズされた推奨のためのAI機能スケッチ"
-        }
-      ]
-    },
-    {
-      "id": "prototypes",
-      "title": "20時間目：高忠実度プロトタイプ",
-      "content": "スケッチをインタラクティブな高忠実度プロトタイプに変換し、アプリの最終的なルック＆フィールとユーザーエクスペリエンスを実証しました。",
-      "prototypeSections": [
-        {
-          "title": "プロトタイプセクション1",
+          "title": "サインイン/アップ + ID認証",
           "images": [
-            "/images/projects/project-02/prototype/1/proto1_1.png",
-            "/images/projects/project-02/prototype/1/proto1_2.png",
-            "/images/projects/project-02/prototype/1/proto1_3.png",
-            "/images/projects/project-02/prototype/1/proto1_4.png"
+            "/images/projects/project-02/prototype/1/welcome.png",
+            "/images/projects/project-02/prototype/1/sign_up.png",
+            "/images/projects/project-02/prototype/1/student_id.png",
+            "/images/projects/project-02/prototype/1/sign_in.png"
           ]
         },
         {
-          "title": "プロトタイプセクション2", 
+          "title": "オンボーディング",
           "images": [
-            "/images/projects/project-02/prototype/2/proto2_1.png",
-            "/images/projects/project-02/prototype/2/proto2_2.png",
-            "/images/projects/project-02/prototype/2/proto2_3.png"
+            "/images/projects/project-02/prototype/2/onboarding1.png",
+            "/images/projects/project-02/prototype/2/onboarding2.png",
+            "/images/projects/project-02/prototype/2/onboarding3.png"
           ]
         },
         {
-          "title": "プロトタイプセクション3",
+          "title": "ホーム（リストビュー） + ステータス更新",
           "images": [
-            "/images/projects/project-02/prototype/3/proto3_1.png",
-            "/images/projects/project-02/prototype/3/proto3_2.png",
-            "/images/projects/project-02/prototype/3/proto3_3.png",
-            "/images/projects/project-02/prototype/3/proto3_4.png"
+            "/images/projects/project-02/prototype/3/home.png",
+            "/images/projects/project-02/prototype/3/kraft_hall.png",
+            "/images/projects/project-02/prototype/3/update_status1.png",
+            "/images/projects/project-02/prototype/3/update_status2.png"
           ]
         },
         {
-          "title": "プロトタイプセクション4",
+          "title": "ホーム（マップビュー） + 検索",
           "images": [
-            "/images/projects/project-02/prototype/4/proto4_1.png",
-            "/images/projects/project-02/prototype/4/proto4_2.png",
-            "/images/projects/project-02/prototype/4/proto4_3.png",
-            "/images/projects/project-02/prototype/4/proto4_4.png"
+            "/images/projects/project-02/prototype/4/map.png",
+            "/images/projects/project-02/prototype/4/filter.png",
+            "/images/projects/project-02/prototype/4/search.png",
+            "/images/projects/project-02/prototype/4/map_kraft_hall.png"
           ]
         },
         {
-          "title": "プロトタイプセクション5",
+          "title": "AIエージェント + プロフィール",
           "images": [
-            "/images/projects/project-02/prototype/5/proto5_1.png",
-            "/images/projects/project-02/prototype/5/proto5_2.png",
-            "/images/projects/project-02/prototype/5/proto5_3.png",
-            "/images/projects/project-02/prototype/5/proto5_4.png"
+            "/images/projects/project-02/prototype/5/ai1.png",
+            "/images/projects/project-02/prototype/5/ai2.png",
+            "/images/projects/project-02/prototype/5/ai3.png",
+            "/images/projects/project-02/prototype/5/profile.png"
           ]
         }
       ]
     },
     {
-      "id": "improvements",
-      "title": "28時間目：デザイン改良",
-      "content": "ユーザビリティテストとチームフィードバックに基づいて、アプリのビジュアルデザインと機能性を向上させるための戦略的改良を実装しました。",
-      "improvements": [
-        {
-          "title": "ホーム画面の改良",
-          "before": "/images/projects/project-02/improve/home_before.png",
-          "after": "/images/projects/project-02/improve/home_after.png",
-          "description": "情報階層を改善し、アクセス状況を明確にし、ナビゲーションを簡素化しました。"
-        },
-        {
-          "title": "カラーコーディングシステム",
-          "before": "/images/projects/project-02/improve/colorcode_before.png", 
-          "after": "/images/projects/project-02/improve/colorcode_after.png",
-          "description": "アクセス可能性とアクセス不可能性を示すより直感的なカラーコーディングシステムを実装しました。"
-        }
-      ]
-    },
-    {
-      "id": "mascot",
-      "title": "32時間目：マスコットデザイン",
-      "content": "SwipyCampusアプリにフレンドリーで親しみやすい個性を与えるため、「Swipy」マスコットキャラクターを作成しました。",
-      "mascotVariations": [
-        {
-          "color": "グレー",
-          "image": "/images/projects/project-02/swipy/gray_swipy.PNG",
-          "description": "デフォルトのニュートラル状態"
-        },
-        {
-          "color": "グリーン", 
-          "image": "/images/projects/project-02/swipy/green_swipy.PNG",
-          "description": "アクセス可能/利用可能状態"
-        },
-        {
-          "color": "レッド",
-          "image": "/images/projects/project-02/swipy/red_swipy.PNG", 
-          "description": "アクセス不可/利用不可状態"
-        },
-        {
-          "color": "イエロー",
-          "image": "/images/projects/project-02/swipy/yellow_swipy.PNG",
-          "description": "制限付き/部分アクセス状態"
-        }
-      ]
+      "id": "promotion",
+      "title": "30時間目：プロモーション",
+      "video": {
+        "url": "https://www.youtube.com/watch?v=L9rcY-laK-w",
+        "title": null
+      }
     }
-  ]
-};
+  ],
+  "route": "/project-02",
+  "thumbnail": "project-thumb-02.png"
+}
