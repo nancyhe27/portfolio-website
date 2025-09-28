@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './About.css';
-import { portfolioData } from '../../data/portfolio-data';
+import { getPortfolioData } from '../../utils/dataLoader';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 function About() {
+  const { currentLanguage } = useLanguage();
+  const [portfolioData, setPortfolioData] = useState(null);
+  
+  useEffect(() => {
+    const loadData = async () => {
+      const data = await getPortfolioData(currentLanguage);
+      setPortfolioData(data);
+    };
+    loadData();
+  }, [currentLanguage]);
+  
+  if (!portfolioData) {
+    return <div>Loading...</div>;
+  }
+  
   const { about } = portfolioData;
 
   return (
@@ -17,9 +33,7 @@ function About() {
           <div className="personal-images">
             {about.personalImages.map((image, index) => (
               <div key={index} className="personal-image polaroid">
-                <div className="placeholder-image">
-                  <span>Personal Photo {index + 1}</span>
-                </div>
+                <img src={`${process.env.PUBLIC_URL}${image.src}`} alt={image.alt} />
               </div>
             ))}
           </div>
@@ -27,9 +41,7 @@ function About() {
           <div className="description-section">
             <p className="personal-description">{about.description}</p>
             <div className="additional-image polaroid">
-              <div className="placeholder-image">
-                <span>Personal Photo 6</span>
-              </div>
+              <img src={`${process.env.PUBLIC_URL}/images/about/physics4.jpg`} alt="Comphosics (Acrylic)" />
             </div>
           </div>
         </div>
@@ -39,9 +51,7 @@ function About() {
           <div className="art-images">
             {about.artImages.map((image, index) => (
               <div key={index} className="art-image">
-                <div className="placeholder-image">
-                  <span>Artwork {index + 1}</span>
-                </div>
+                <img src={`${process.env.PUBLIC_URL}${image.src}`} alt={image.alt} />
               </div>
             ))}
           </div>
