@@ -99,38 +99,29 @@ function ProjectLayout01({ projectData }) {
           {/* Flow 1: Interview Dashboard */}
           <div id="flow1-interview-dashboard">
             <h4 className="p-subtitle">{sections[2].subsections[0].imageGroups[0].title}</h4>
-            <p className="p-body">{sections[2].subsections[0].imageGroups[0].description}</p>
 
-            <div className="p-flex-split">
-              {/* Left side: 2x2 grid of images */}
-              <div style={{ flex: 2 }}>
-                <div className="p-grid" style={{ '--grid-cols': 2, gap: 'var(--spacing-md)' }}>
-                  {/* Top center: Step 1 spanning both columns */}
-                  <figure style={{ margin: 0, gridColumn: '1 / -1', justifySelf: 'center', maxWidth: '50%' }}>
-                    <img src={`${process.env.PUBLIC_URL}${sections[2].subsections[0].imageGroups[0].images[0].src}`} alt={sections[2].subsections[0].imageGroups[0].images[0].alt} className="p-image" />
-                    <figcaption className="p-caption">{sections[2].subsections[0].imageGroups[0].images[0].caption}</figcaption>
-                  </figure>
-                  {/* Bottom left: Step 2.1 */}
-                  <figure style={{ margin: 0 }}>
-                    <img src={`${process.env.PUBLIC_URL}${sections[2].subsections[0].imageGroups[0].images[1].src}`} alt={sections[2].subsections[0].imageGroups[0].images[1].alt} className="p-image" />
-                    <figcaption className="p-caption">{sections[2].subsections[0].imageGroups[0].images[1].caption}</figcaption>
-                  </figure>
-                  {/* Bottom right: Step 2.2 */}
-                  <figure style={{ margin: 0 }}>
-                    <img src={`${process.env.PUBLIC_URL}${sections[2].subsections[0].imageGroups[0].images[2].src}`} alt={sections[2].subsections[0].imageGroups[0].images[2].alt} className="p-image" />
-                    <figcaption className="p-caption">{sections[2].subsections[0].imageGroups[0].images[2].caption}</figcaption>
-                  </figure>
-                </div>
-              </div>
-              {/* Right side: Steps text */}
-              <div style={{ flex: 1 }}>
-                {sections[2].subsections[0].imageGroups[0].steps.map((step, stepIndex) => (
-                  <div key={stepIndex} style={{ marginBottom: 'var(--spacing-sm)' }}>
-                    <p className="p-body--bold">{step.title}</p>
-                    <p className="p-body">{step.description}</p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-md)' }}>
+              {/* Each image paired with its corresponding text */}
+              {sections[2].subsections[0].imageGroups[0].images.map((image, imageIndex) => (
+                <div key={imageIndex} className="p-flex-split" style={{ alignItems: 'center' }}>
+                  {/* Left: Image */}
+                  <div style={{ flex: 2 }}>
+                    <figure style={{ margin: 0 }}>
+                      <img src={`${process.env.PUBLIC_URL}${image.src}`} alt={image.alt} className="p-image" />
+                      <figcaption className="p-caption">{image.caption}</figcaption>
+                    </figure>
                   </div>
-                ))}
-              </div>
+                  {/* Right: Corresponding step text */}
+                  <div style={{ flex: 1 }}>
+                    {sections[2].subsections[0].imageGroups[0].steps[imageIndex] && (
+                      <div>
+                        <p className="p-body--bold">{sections[2].subsections[0].imageGroups[0].steps[imageIndex].title}</p>
+                        <p className="p-body">{sections[2].subsections[0].imageGroups[0].steps[imageIndex].description}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -138,27 +129,29 @@ function ProjectLayout01({ projectData }) {
           <div id="flow2-candidate-onboarding">
             <h4 className="p-subtitle">{sections[2].subsections[0].imageGroups[1].title}</h4>
             <p className="p-body">{sections[2].subsections[0].imageGroups[1].description}</p>
-            <div className="p-flex-split">
-              {/* Left side: 2x2 grid of images */}
-              <div style={{ flex: 2 }}>
-                <div className="p-grid" style={{ '--grid-cols': 2, gap: 'var(--spacing-md)' }}>
-                  {sections[2].subsections[0].imageGroups[1].images.map((img, imgIndex) => (
-                    <figure key={imgIndex} style={{ margin: 0 }}>
-                      <img src={`${process.env.PUBLIC_URL}${img.src}`} alt={img.alt} className="p-image" />
-                      <figcaption className="p-caption">{img.caption}</figcaption>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-md)' }}>
+              {/* Each image paired with its corresponding text */}
+              {sections[2].subsections[0].imageGroups[1].images.map((image, imageIndex) => (
+                <div key={imageIndex} className="p-flex-split" style={{ alignItems: 'center' }}>
+                  {/* Left: Image */}
+                  <div style={{ flex: 2 }}>
+                    <figure style={{ margin: 0 }}>
+                      <img src={`${process.env.PUBLIC_URL}${image.src}`} alt={image.alt} className="p-image" />
+                      <figcaption className="p-caption">{image.caption}</figcaption>
                     </figure>
-                  ))}
-                </div>
-              </div>
-              {/* Right side: Steps text */}
-              <div style={{ flex: 1 }}>
-                {sections[2].subsections[0].imageGroups[1].steps.map((step, stepIndex) => (
-                  <div key={stepIndex} style={{ marginBottom: 'var(--spacing-sm)' }}>
-                    <p className="p-body--bold">{step.title}</p>
-                    <p className="p-body">{step.description}</p>
                   </div>
-                ))}
-              </div>
+                  {/* Right: Corresponding step text */}
+                  <div style={{ flex: 1 }}>
+                    {sections[2].subsections[0].imageGroups[1].steps[imageIndex] && (
+                      <div>
+                        <p className="p-body--bold">{sections[2].subsections[0].imageGroups[1].steps[imageIndex].title}</p>
+                        <p className="p-body">{sections[2].subsections[0].imageGroups[1].steps[imageIndex].description}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
