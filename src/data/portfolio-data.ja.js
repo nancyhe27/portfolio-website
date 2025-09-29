@@ -12,7 +12,7 @@ export const portfolioData = {
       id: 1,
       title: "WeKruit",
       subtitle: "2025年5月 - 2025年8月",
-      task: "インターンシップ（UI/UX + フルスタック開発）",
+      task: "インターンシップ（UI/UX + 開発）",
       thumbnail: "/images/projects/project-01/thumbnails/wekruit_thumbnail.png",
       hoverThumbnail: "/images/projects/project-01/thumbnails/wekruit_thumbnail_hover.png",
       route: "/wekruit",

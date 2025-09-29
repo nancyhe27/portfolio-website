@@ -29,30 +29,26 @@ export const project01Data = {
       "subsections": [
         {
           "id": 1,
-          "subtitle": "The Company",
           "paragraphs": [
-            "WeKruit is a B2B SaaS startup aiming to streamline the interview process for both recruiters and candidates through AI-driven tools."
+            "<strong>The Company:</strong> WeKruit is a B2B SaaS startup aiming to streamline the interview process for both recruiters and candidates through AI-driven tools."
           ]
         },
         {
           "id": 2,
-          "subtitle": "The Product",
           "paragraphs": [
-            "I worked on WeKruit's interview management dashboard, a core product that centralizes scheduling, interviews, and reviews. It combines recordings, transcripts, and AI-generated scores to make evaluation faster and clearer."
+            "<strong>The Product:</strong> I worked on WeKruit's interview management dashboard, a core product that centralizes scheduling, interviews, and reviews. It combines recordings, transcripts, and AI-generated scores to make evaluation faster and clearer."
           ]
         },
         {
           "id": 3,
-          "subtitle": "The Users",
           "paragraphs": [
-            "The dashboard is built for recruiters and hiring managers who run dozens of interviews each day and need simple, action-driven workflows."
+            "<strong>The Users:</strong> The dashboard is built for recruiters and hiring managers who run dozens of interviews each day and need simple, action-driven workflows."
           ]
         },
         {
           "id": 4,
-          "subtitle": "The Impact",
           "paragraphs": [
-            "Streamlined 1,000+ interviews for 3 client companies; enabled 100+ students to run smoother mock sessions."
+            "<strong>The Impact:</strong> The system supported over 1,000 interviews for 3 client companies, simplifying workflows and accelerating the recruiting process."
           ]
         }
       ]
@@ -61,17 +57,17 @@ export const project01Data = {
       "id": 2,
       "title": "What I Did",
       "paragraphs": [
-        "Product UI Design & Prototype – took features from wireframes through to coded prototypes",
-        "• Interview Dashboard (Prototype)",
-        "• AI Interview Process (Prototype)",
+        "1. <strong>Product UI Design & Prototype:</strong> took features from wireframes through to coded prototypes",
+        "&nbsp;&nbsp;&nbsp;&nbsp;• Interview Dashboard (Prototype)",
+        "&nbsp;&nbsp;&nbsp;&nbsp;• AI Interview Process (Prototype)",
         "",
-        "Design System – created scalable tokens and reusable design components",
+        "2. <strong>Design System:</strong> created scalable tokens and reusable design components",
         "",
-        "New UI Designs – redesigned existing interfaces with the design system",
-        "• Interview Dashboard (New)",
-        "• AI Interview Process (New)",
+        "3. <strong>New UI Designs:</strong> redesigned existing interfaces with the design system",
+        "&nbsp;&nbsp;&nbsp;&nbsp;• Interview Dashboard (New)",
+        "&nbsp;&nbsp;&nbsp;&nbsp;• AI Interview Process (New)",
         "",
-        "Product Delivery – integrated redesigned UIs into the codebase"
+        "4. <strong>Product Delivery:</strong> integrated redesigned UIs into the codebase"
       ]
     },
     {

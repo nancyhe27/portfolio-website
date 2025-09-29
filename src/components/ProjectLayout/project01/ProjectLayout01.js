@@ -19,20 +19,26 @@ function ProjectLayout01({ projectData }) {
         </div>
       </section>
 
-      <div className="p-separator"></div>
-
       {/* Section 1: Background */}
       <section>
         <h3 className="p-title">{sections[0].title}</h3>
         <div className="section-content">
-          {sections[0].subsections.map((subsection, subsectionIndex) => (
-            <section key={subsectionIndex}>
-              <h4 className="p-subtitle">{subsection.subtitle}</h4>
-              {subsection.paragraphs.map((paragraph, paragraphIndex) => (
-                <p key={paragraphIndex} className="p-body">{paragraph}</p>
+          <div style={{ display: 'flex', gap: 'var(--spacing-md)', alignItems: 'center' }}>
+            <img 
+              src={`${process.env.PUBLIC_URL}/images/projects/project-01/wekruit_logo.png`} 
+              alt="WeKruit Logo" 
+              style={{ width: '120px', height: 'auto', flexShrink: 0 }}
+            />
+            <div style={{ flex: 1 }}>
+              {sections[0].subsections.map((subsection, subsectionIndex) => (
+                <section key={subsectionIndex}>
+                  {subsection.paragraphs.map((paragraph, paragraphIndex) => (
+                    <p key={paragraphIndex} className="p-body" dangerouslySetInnerHTML={{ __html: paragraph }}></p>
+                  ))}
+                </section>
               ))}
-            </section>
-          ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -41,7 +47,7 @@ function ProjectLayout01({ projectData }) {
         <h3 className="p-title">{sections[1].title}</h3>
         <div className="section-content">
           {sections[1].paragraphs.map((paragraph, index) => (
-            <p key={index} className="p-body">{paragraph}</p>
+            <p key={index} className="p-body" dangerouslySetInnerHTML={{ __html: paragraph }}></p>
           ))}
         </div>
       </section>
