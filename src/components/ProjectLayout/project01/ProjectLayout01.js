@@ -46,42 +46,72 @@ function ProjectLayout01({ projectData }) {
       <section>
         <h3 className="p-title">{sections[1].title}</h3>
         <div className="section-content">
-          {sections[1].paragraphs.map((paragraph, index) => {
-            const handleClick = () => {
-              if (paragraph.link) {
-                const element = document.querySelector(paragraph.link);
-                if (element) {
-                  const navHeight = 80; // Approximate nav bar height
-                  const elementPosition = element.offsetTop - navHeight;
-                  window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+          <p className="p-body" style={{ color: 'var(--text-secondary)', fontStyle: 'italic', marginBottom: '16px' }}>
+            Click the bold text to see the corresponding sections!
+          </p>
+          <p className="p-body" style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
+            {(() => {
+              const text = sections[1].paragraphText;
+              const linkMap = sections[1].linkMap;
+              const parts = [];
+              let lastIndex = 0;
+              
+              // Find all phrases between curly braces
+              const regex = /\{([^}]+)\}/g;
+              let match;
+              
+              while ((match = regex.exec(text)) !== null) {
+                // Add text before the match
+                if (match.index > lastIndex) {
+                  parts.push(text.slice(lastIndex, match.index));
                 }
+                
+                // Add the clickable phrase
+                const phrase = match[1];
+                const link = linkMap[phrase];
+                
+                parts.push(
+                  <span
+                    key={match.index}
+                    onClick={() => {
+                      if (link) {
+                        const element = document.querySelector(link);
+                        if (element) {
+                          const navHeight = 80;
+                          const elementPosition = element.offsetTop - navHeight;
+                          window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+                        }
+                      }
+                    }}
+                    style={{
+                      fontWeight: 'bold',
+                      cursor: 'pointer',
+                      transition: 'color 0.2s ease, text-decoration 0.2s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.color = 'var(--sage-green)';
+                      e.target.style.textDecoration = 'underline';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.color = 'inherit';
+                      e.target.style.textDecoration = 'none';
+                    }}
+                  >
+                    {phrase}
+                  </span>
+                );
+                
+                lastIndex = regex.lastIndex;
               }
-            };
-
-            return (
-              <p 
-                key={index} 
-                className="p-body" 
-                dangerouslySetInnerHTML={{ __html: paragraph.text }}
-                onClick={handleClick}
-                style={{ 
-                  cursor: paragraph.link ? 'pointer' : 'default',
-                  color: 'var(--text-secondary)',
-                  transition: 'color 0.2s ease'
-                }}
-                onMouseEnter={(e) => {
-                  if (paragraph.link) {
-                    e.target.style.color = 'var(--sage-green)';
-                  }
-                }}
-                onMouseLeave={(e) => {
-                  if (paragraph.link) {
-                    e.target.style.color = 'var(--text-secondary)';
-                  }
-                }}
-              />
-            );
-          })}
+              
+              // Add remaining text
+              if (lastIndex < text.length) {
+                parts.push(text.slice(lastIndex));
+              }
+              
+              return parts;
+            })()}
+          </p>
         </div>
       </section>
 
@@ -100,14 +130,14 @@ function ProjectLayout01({ projectData }) {
           <div id="flow1-interview-dashboard">
             <h4 className="p-subtitle">{sections[2].subsections[0].imageGroups[0].title}</h4>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-md)' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
               {/* Each image paired with its corresponding text */}
               {sections[2].subsections[0].imageGroups[0].images.map((image, imageIndex) => (
                 <div key={imageIndex} className="p-flex-split" style={{ alignItems: 'center' }}>
                   {/* Left: Image */}
                   <div style={{ flex: 2 }}>
                     <figure style={{ margin: 0 }}>
-                      <img src={`${process.env.PUBLIC_URL}${image.src}`} alt={image.alt} className="p-image" />
+                      <img src={`${process.env.PUBLIC_URL}${image.src}`} alt={image.alt} className="p-image" style={{ border: '1px solid var(--brown-light)', borderRadius: '2px'}} />
                       <figcaption className="p-caption">{image.caption}</figcaption>
                     </figure>
                   </div>
@@ -128,16 +158,15 @@ function ProjectLayout01({ projectData }) {
           {/* Flow 2: Candidate Onboarding */}
           <div id="flow2-candidate-onboarding">
             <h4 className="p-subtitle">{sections[2].subsections[0].imageGroups[1].title}</h4>
-            <p className="p-body">{sections[2].subsections[0].imageGroups[1].description}</p>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-md)' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
               {/* Each image paired with its corresponding text */}
               {sections[2].subsections[0].imageGroups[1].images.map((image, imageIndex) => (
                 <div key={imageIndex} className="p-flex-split" style={{ alignItems: 'center' }}>
                   {/* Left: Image */}
                   <div style={{ flex: 2 }}>
                     <figure style={{ margin: 0 }}>
-                      <img src={`${process.env.PUBLIC_URL}${image.src}`} alt={image.alt} className="p-image" />
+                      <img src={`${process.env.PUBLIC_URL}${image.src}`} alt={image.alt} className="p-image" style={{ border: '1px solid var(--brown-light)', borderRadius: '2px' }} />
                       <figcaption className="p-caption">{image.caption}</figcaption>
                     </figure>
                   </div>
