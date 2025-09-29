@@ -10,8 +10,8 @@ function MainContent() {
   const [portfolioData, setPortfolioData] = useState(null);
   
   useEffect(() => {
-    const loadData = async () => {
-      const data = await getPortfolioData(currentLanguage);
+    const loadData = () => {
+      const data = getPortfolioData(currentLanguage);
       setPortfolioData(data);
     };
     loadData();

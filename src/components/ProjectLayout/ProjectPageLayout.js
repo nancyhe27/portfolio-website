@@ -14,8 +14,8 @@ function ProjectPageLayout({ projectData, children }) {
   const navText = getNavigationText(currentLanguage);
   
   useEffect(() => {
-    const loadData = async () => {
-      const data = await getPortfolioData(currentLanguage);
+    const loadData = () => {
+      const data = getPortfolioData(currentLanguage);
       setPortfolioData(data);
     };
     loadData();

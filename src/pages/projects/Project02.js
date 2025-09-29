@@ -9,8 +9,8 @@ function Project02() {
   const [projectData, setProjectData] = useState(null);
   
   useEffect(() => {
-    const loadData = async () => {
-      const data = await getProjectData(2, currentLanguage);
+    const loadData = () => {
+      const data = getProjectData(2, currentLanguage);
       setProjectData(data);
     };
     loadData();
