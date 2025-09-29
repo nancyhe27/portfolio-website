@@ -57,17 +57,50 @@ export const project01Data = {
       "id": 2,
       "title": "私が行ったこと",
       "paragraphs": [
-        "1. <strong>プロダクトUI設計とプロトタイプ：</strong> ワイヤーフレームからコード化されたプロトタイプまで機能を開発",
-        "&nbsp;&nbsp;&nbsp;&nbsp;• 面接ダッシュボード（プロトタイプ）",
-        "&nbsp;&nbsp;&nbsp;&nbsp;• AI面接プロセス（プロトタイプ）",
-        "",
-        "2. <strong>デザインシステム：</strong> スケーラブルなトークンと再利用可能なデザインコンポーネントを作成",
-        "",
-        "3. <strong>新しいUIデザイン：</strong> デザインシステムで既存のインターフェースを再設計",
-        "&nbsp;&nbsp;&nbsp;&nbsp;• 面接ダッシュボード（新規）",
-        "&nbsp;&nbsp;&nbsp;&nbsp;• AI面接プロセス（新規）",
-        "",
-        "4. <strong>製品デリバリー：</strong> 再設計されたUIをコードベースに統合"
+        {
+          "text": "1. <strong>プロダクトUI設計とプロトタイプ：</strong> ワイヤーフレームからコード化されたプロトタイプまで機能を開発",
+          "link": "#main-product"
+        },
+        {
+          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ 面接ダッシュボード（プロトタイプ）",
+          "link": "#flow1-interview-dashboard"
+        },
+        {
+          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ AI面接プロセス（プロトタイプ）",
+          "link": "#flow2-candidate-onboarding"
+        },
+        {
+          "text": "",
+          "link": null
+        },
+        {
+          "text": "2. <strong>デザインシステム：</strong> スケーラブルなトークンと再利用可能なデザインコンポーネントを作成",
+          "link": "#design-system"
+        },
+        {
+          "text": "",
+          "link": null
+        },
+        {
+          "text": "3. <strong>新しいUIデザイン：</strong> デザインシステムで既存のインターフェースを再設計",
+          "link": "#uiux-refinement"
+        },
+        {
+          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ 面接ダッシュボード（新規）",
+          "link": "#interview-management-dashboard"
+        },
+        {
+          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ AI面接プロセス（新規）",
+          "link": "#interview-creation-flow"
+        },
+        {
+          "text": "",
+          "link": null
+        },
+        {
+          "text": "4. <strong>製品デリバリー：</strong> 再設計されたUIをコードベースに統合",
+          "link": "#reflections"
+        }
       ]
     },
     {

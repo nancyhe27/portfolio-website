@@ -57,17 +57,50 @@ export const project01Data = {
       "id": 2,
       "title": "What I Did",
       "paragraphs": [
-        "1. <strong>Product UI Design & Prototype:</strong> took features from wireframes through to coded prototypes",
-        "&nbsp;&nbsp;&nbsp;&nbsp;• Interview Dashboard (Prototype)",
-        "&nbsp;&nbsp;&nbsp;&nbsp;• AI Interview Process (Prototype)",
-        "",
-        "2. <strong>Design System:</strong> created scalable tokens and reusable design components",
-        "",
-        "3. <strong>New UI Designs:</strong> redesigned existing interfaces with the design system",
-        "&nbsp;&nbsp;&nbsp;&nbsp;• Interview Dashboard (New)",
-        "&nbsp;&nbsp;&nbsp;&nbsp;• AI Interview Process (New)",
-        "",
-        "4. <strong>Product Delivery:</strong> integrated redesigned UIs into the codebase"
+        {
+          "text": "1. <strong>Product UI Design & Prototype:</strong> took features from wireframes through to coded prototypes",
+          "link": "#main-product"
+        },
+        {
+          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ Interview Dashboard (Prototype)",
+          "link": "#flow1-interview-dashboard"
+        },
+        {
+          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ AI Interview Process (Prototype)",
+          "link": "#flow2-candidate-onboarding"
+        },
+        {
+          "text": "",
+          "link": null
+        },
+        {
+          "text": "2. <strong>Design System:</strong> created scalable tokens and reusable design components",
+          "link": "#design-system"
+        },
+        {
+          "text": "",
+          "link": null
+        },
+        {
+          "text": "3. <strong>New UI Designs:</strong> redesigned existing interfaces with the design system",
+          "link": "#uiux-refinement"
+        },
+        {
+          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ Interview Dashboard (New)",
+          "link": "#interview-management-dashboard"
+        },
+        {
+          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ AI Interview Process (New)",
+          "link": "#interview-creation-flow"
+        },
+        {
+          "text": "",
+          "link": null
+        },
+        {
+          "text": "4. <strong>Product Delivery:</strong> integrated redesigned UIs into the codebase",
+          "link": "#reflections"
+        }
       ]
     },
     {

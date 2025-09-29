@@ -46,14 +46,47 @@ function ProjectLayout01({ projectData }) {
       <section>
         <h3 className="p-title">{sections[1].title}</h3>
         <div className="section-content">
-          {sections[1].paragraphs.map((paragraph, index) => (
-            <p key={index} className="p-body" dangerouslySetInnerHTML={{ __html: paragraph }}></p>
-          ))}
+          {sections[1].paragraphs.map((paragraph, index) => {
+            const handleClick = () => {
+              if (paragraph.link) {
+                const element = document.querySelector(paragraph.link);
+                if (element) {
+                  const navHeight = 80; // Approximate nav bar height
+                  const elementPosition = element.offsetTop - navHeight;
+                  window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+                }
+              }
+            };
+
+            return (
+              <p 
+                key={index} 
+                className="p-body" 
+                dangerouslySetInnerHTML={{ __html: paragraph.text }}
+                onClick={handleClick}
+                style={{ 
+                  cursor: paragraph.link ? 'pointer' : 'default',
+                  color: paragraph.link ? 'var(--brown-dark)' : 'inherit',
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => {
+                  if (paragraph.link) {
+                    e.target.style.color = 'var(--sage-green)';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (paragraph.link) {
+                    e.target.style.color = 'var(--brown-dark)';
+                  }
+                }}
+              />
+            );
+          })}
         </div>
       </section>
 
       {/* Section 3: Main Product */}
-      <section>
+      <section id="main-product">
         <h3 className="p-title">{sections[2].title}</h3>
 
         {/* Prototype Design Subsection */}
@@ -64,7 +97,7 @@ function ProjectLayout01({ projectData }) {
           ))}
 
           {/* Flow 1: Interview Dashboard */}
-          <div>
+          <div id="flow1-interview-dashboard">
             <h4 className="p-subtitle">{sections[2].subsections[0].imageGroups[0].title}</h4>
             <p className="p-body">{sections[2].subsections[0].imageGroups[0].description}</p>
 
@@ -104,7 +137,7 @@ function ProjectLayout01({ projectData }) {
           </div>
 
           {/* Flow 2: Candidate Onboarding */}
-          <div>
+          <div id="flow2-candidate-onboarding">
             <h4 className="p-subtitle">{sections[2].subsections[0].imageGroups[1].title}</h4>
             <p className="p-body">{sections[2].subsections[0].imageGroups[1].description}</p>
             <div className="p-separator--short"></div>
@@ -143,7 +176,7 @@ function ProjectLayout01({ projectData }) {
       </section>
 
       {/* Section 4: Design System */}
-      <section>
+      <section id="design-system">
         <h3 className="p-title">{sections[3].title}</h3>
         <div className="section-content">
           {sections[3].paragraphs.map((paragraph, index) => (
@@ -227,12 +260,12 @@ function ProjectLayout01({ projectData }) {
       </section>
 
       {/* Section 5: UI/UX Refinement */}
-      <section>
+      <section id="uiux-refinement">
         <h3 className="p-title">{sections[4].title}</h3>
         <div className="section-content">
           <p className="p-body">{sections[4].paragraphs[0]}</p>
 
-          <h4 className="p-subtitle">{sections[4].subtitles[0]}</h4>
+          <h4 className="p-subtitle" id="interview-management-dashboard">{sections[4].subtitles[0]}</h4>
 
           {/* Comparison 1 */}
           <div className="p-flex-split">
@@ -272,7 +305,7 @@ function ProjectLayout01({ projectData }) {
             </div>
           </div>
 
-          <h4 className="p-subtitle">{sections[4].subtitles[2]}</h4>
+          <h4 className="p-subtitle" id="interview-creation-flow">{sections[4].subtitles[2]}</h4>
 
           {/* Comparison 3 */}
           <div>
@@ -296,7 +329,7 @@ function ProjectLayout01({ projectData }) {
       </section>
 
       {/* Section 6: Reflections */}
-      <section>
+      <section id="reflections">
         <h3 className="p-title">{sections[5].title}</h3>
         <div className="section-content">
           <p className="p-body">{sections[5].paragraphs[0]}</p>
