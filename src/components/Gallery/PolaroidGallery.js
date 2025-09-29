@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './PolaroidGallery.css';
 import PolaroidCard from './PolaroidCard';
-import { portfolioData } from '../../data/portfolio-data';
+import { getPortfolioData } from '../../utils/dataLoader';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 function PolaroidGallery() {
+  const { currentLanguage } = useLanguage();
+  const [portfolioData, setPortfolioData] = useState(null);
+  
+  useEffect(() => {
+    const loadData = async () => {
+      const data = await getPortfolioData(currentLanguage);
+      setPortfolioData(data);
+    };
+    loadData();
+  }, [currentLanguage]);
+  
+  if (!portfolioData) {
+    return <div>Loading...</div>;
+  }
+  
   const { projects } = portfolioData;
 
   return (

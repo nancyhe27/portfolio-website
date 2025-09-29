@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useLanguage } from '../../contexts/LanguageContext';
 import './PolaroidCard.css';
 import '../ProjectLayout/ProjectLayoutShared.css';
 
 function PolaroidCard({ project }) {
   const navigate = useNavigate();
+  const { currentLanguage } = useLanguage();
   const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = () => {
     if (!project.comingSoon) {
-      navigate(project.route);
+      navigate(`/${currentLanguage}${project.route}`);
       // Scroll to top of the page
       window.scrollTo(0, 0);
     }

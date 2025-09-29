@@ -1,8 +1,24 @@
-/* ===========================
+/* ==========================================
    SHARED PROJECT LAYOUT STYLES
-   =========================== */
+   ==========================================
+   
+   Table of Contents:
+   1. Base Layout & Structure
+   2. Typography System  
+   3. Layout Components (Flex, Grid, Containers)
+   4. Reusable UI Components
+   5. Image & Media Handling
+   6. Navigation Components
+   7. Language Support
+   8. Responsive Design
+   
+   ========================================== */
 
-/* Base Layout */
+
+/* ==========================================
+   1. BASE LAYOUT & STRUCTURE
+   ========================================== */
+
 .project-layout {
   min-height: 100vh;
   background-color: #ffffff;
@@ -11,22 +27,22 @@
   padding-right: 240px;
 }
 
-/* Shared Content Styles */
 .section-content {
   margin-top: 40px;
   margin-bottom: 40px;
   line-height: 1.6;
 }
 
-/* Shared Image Constraints */
+/* Base image constraints */
 .project-layout img {
   max-width: 100%;
   height: auto;
 }
 
-/* ===========================
-   NEW UNIFIED TYPOGRAPHY SYSTEM
-   =========================== */
+
+/* ==========================================
+   2. TYPOGRAPHY SYSTEM
+   ========================================== */
 
 .p-title {
   font-family: var(--font-display);
@@ -83,11 +99,6 @@
   color: var(--brown-medium);
 } 
 
-/* This new rule overrides the max-width for p-body inside a flex container */
-.p-flex-split>.p-body {
-  max-width: none;
-}
-
 .p-caption {
   font-size: var(--text-sm);
   color: var(--text-secondary);
@@ -141,54 +152,12 @@
   margin-bottom: var(--spacing-xs); /* Reduced margin */
 }
 
-/* ===========================
-   NEW REUSABLE COMPONENTS
-   =========================== */
 
-.p-separator {
-  border: none;
-  height: 1px;
-  background-color: var(--brown-dark);
-  margin: var(--spacing-xl) 0;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
+/* ==========================================
+   3. LAYOUT COMPONENTS (FLEX, GRID, CONTAINERS)
+   ========================================== */
 
-.p-separator--short {
-  border: none;
-  height: 1px;
-  background-color: var(--brown-dark);
-  margin: var(--spacing-lg) 0;
-  width: 100%;
-  position: relative;
-}
-
-.p-container-box {
-  padding: var(--spacing-md);
-  border: 1px solid var(--brown-dark);
-  border-radius: 20px;
-  background-color: var(--bg-primary);
-}
-
-.p-container-box--green {
-  background-color: var(--bg-green);
-}
-
-.p-quote-box {
-  padding: var(--spacing-sm);
-  border: 1px solid var(--brown-dark);
-  border-radius: 20px;
-  background-color: var(--bg-primary);
-}
-
-.p-grid {
-  display: grid;
-  gap: var(--spacing-md);
-  grid-template-columns: repeat(var(--grid-cols, 4), 1fr);
-}
-
+/* Flexible Split Layouts */
 .p-flex-split {
   display: flex;
   gap: 80px;
@@ -205,6 +174,12 @@
   flex: 1;
 }
 
+/* This rule overrides the max-width for p-body inside a flex container */
+.p-flex-split>.p-body {
+  max-width: none;
+}
+
+/* Flex Split Variations */
 .p-flex-split--1-2>*:first-child {
   flex: 1;
 }
@@ -260,9 +235,12 @@
   flex: 0 0 200px;
 }
 
-/* ===========================
-   NEW REUSABLE LAYOUT GRIDS
-   =========================== */
+/* Grid Systems */
+.p-grid {
+  display: grid;
+  gap: var(--spacing-md);
+  grid-template-columns: repeat(var(--grid-cols, 4), 1fr);
+}
 
 .p-layout-grid--sidebar-left {
   display: grid;
@@ -278,17 +256,7 @@
   height: fit-content;
 }
 
-/* ===========================
-   NEW STANDARDIZED IMAGE & MEDIA STYLES
-   =========================== */
-
-.p-image {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Fixed size image containers for About section */
+/* About Section Special Layouts */
 .p-flex-about-single {
   display: flex;
   gap: 60px;
@@ -324,6 +292,62 @@
   object-fit: cover;
 }
 
+
+/* ==========================================
+   4. REUSABLE UI COMPONENTS
+   ========================================== */
+
+/* Separators */
+.p-separator {
+  border: none;
+  height: 1px;
+  background-color: var(--brown-dark);
+  margin: var(--spacing-xl) 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.p-separator--short {
+  border: none;
+  height: 1px;
+  background-color: var(--brown-dark);
+  margin: var(--spacing-lg) 0;
+  width: 100%;
+  position: relative;
+}
+
+/* Container Boxes */
+.p-container-box {
+  padding: var(--spacing-md);
+  border: 1px solid var(--brown-dark);
+  border-radius: 20px;
+  background-color: var(--bg-primary);
+}
+
+.p-container-box--green {
+  background-color: var(--bg-green);
+}
+
+.p-quote-box {
+  padding: var(--spacing-sm);
+  border: 1px solid var(--brown-dark);
+  border-radius: 20px;
+  background-color: var(--bg-primary);
+}
+
+
+/* ==========================================
+   5. IMAGE & MEDIA HANDLING
+   ========================================== */
+
+.p-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .p-image-prototype {
   border-radius: 20px;
   border: 1px solid var(--brown-dark);
@@ -351,11 +375,11 @@
 }
 
 
-/* ===========================
-   SHARED COMPONENTS (Existing)
-   =========================== */
+/* ==========================================
+   6. NAVIGATION COMPONENTS
+   ========================================== */
 
-/* Shared Navigation */
+/* Project Navigation Sections */
 .project-navigation-section {
   padding: 40px 80px;
   border-top: 1px solid var(--brown-dark);
@@ -385,7 +409,7 @@
   border-color: var(--accent-color);
 }
 
-/* Shared Header Image */
+/* Header Image Components */
 .header-image-container {
   width: 100%;
   height: auto;
@@ -398,7 +422,7 @@
   display: block;
 }
 
-/* Shared Project Description */
+/* Project Description */
 .project-description {
   margin-bottom: 50px;
   display: flex;
@@ -412,69 +436,41 @@
   margin: 0;
 }
 
-/* Shared Responsive Design */
-@media (max-width: 1400px) {
-  .project-layout {
-    padding-left: 180px;
-    padding-right: 180px;
-  }
+
+/* ==========================================
+   7. LANGUAGE SUPPORT
+   ========================================== */
+
+/* Japanese Typography Enhancements */
+:lang(ja) .p-body {
+  line-height: 1.8; /* Increased line spacing for better Japanese readability */
+  letter-spacing: 0.02em; /* Slight character spacing for clarity */
 }
 
-@media (max-width: 1000px) {
-  .project-layout {
-    padding-left: 120px;
-    padding-right: 120px;
-  }
+:lang(ja) .p-title {
+  letter-spacing: 0.05em; /* Spacing for Japanese titles */
 }
 
-@media (max-width: 940px) {
-
-  .p-flex-split {
-    flex-direction: column;
-    gap: var(--spacing-md);
-  }
-
-  .p-flex-split--fixed-logo {
-    flex-direction: row;
-  }
-
-  .p-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+:lang(ja) .p-subtitle {
+  letter-spacing: 0.03em; /* Spacing for Japanese subtitles */
 }
 
-@media (max-width: 767px) {
-
-  .project-nav-buttons {
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .project-layout {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
+/* Better paragraph spacing for Japanese text */
+:lang(ja) .p-body + .p-body {
+  margin-top: 1.2em;
 }
 
-@media (max-width: 479px) {
-  .project-layout {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
+/* Japanese button text improvements */
+:lang(ja) .nav-button {
+  letter-spacing: 0.02em;
 }
 
-@media (max-width: 374px) {
-  .project-layout {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
 
-/* ===========================
-   PROJECT HEADER RESPONSIVE STYLES
-   =========================== */
+/* ==========================================
+   8. RESPONSIVE DESIGN
+   ========================================== */
 
-/* Base desktop styles - automatic scaling with clamp() */
+/* Desktop Responsive Scaling */
 .project-header-info {
   padding-left: clamp(30px, 5vw, 60px); /* Scales automatically from 30px to 60px */
   padding-right: max(30px, 4vw); /* At least 30px OR 4% of viewport width */
@@ -492,15 +488,73 @@
   gap: clamp(0px, 4vw, 80px); /* Scales automatically from 0px to 80px */
 }
 
-/* Remove gap at intermediate width to prevent text wrapping */
-@media (max-width: 1100px) {
-  .project-header-content {
-    gap: 0;
+/* Large Screens */
+@media (max-width: 1400px) {
+  .project-layout {
+    padding-left: 180px;
+    padding-right: 180px;
   }
 }
 
-/* Only mobile breakpoint needed - for layout change */
+/* Medium-Large Screens */
+@media (max-width: 1100px) {
+  .project-header-content {
+    gap: 0; /* Remove gap at intermediate width to prevent text wrapping */
+  }
+}
+
+/* Medium Screens */
+@media (max-width: 1000px) {
+  .project-layout {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  /* About section responsive adjustments */
+  .p-flex-about-single {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .p-flex-about-single .p-image {
+    width: 100%;
+    max-width: 600px;
+    align-self: center;
+  }
+
+  .p-flex-about-double {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .p-flex-about-double .p-images-row {
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .p-flex-about-double .p-images-row .p-image {
+    height: 360px;
+  }
+}
+
+/* Small-Medium Screens (Tablet) */
 @media (max-width: 940px) {
+  .p-flex-split {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .p-flex-split--fixed-logo {
+    flex-direction: row;
+  }
+
+  .p-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Project header mobile layout */
   .project-header-content {
     flex-direction: column; /* Stack vertically */
     gap: 0;
@@ -529,49 +583,43 @@
   .p-subtitle {
     font-size: 20px;
   }
-
 }
 
-@media (max-width: 1000px) {
-  /* p-flex-about-single: image goes below paragraph */
-  .p-flex-about-single {
+/* Small Screens (Mobile) */
+@media (max-width: 767px) {
+  .project-nav-buttons {
     flex-direction: column;
-    gap: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    gap: 16px;
+  }
+  
+  .project-layout {
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
-  .p-flex-about-single .p-image {
-    width: 100%;
-    max-width: 600px;
-    align-self: center;
+  .p-title {
+    font-size: var(--text-xl);
   }
 
-  /* p-flex-about-double: images go below paragraph in same row */
-  .p-flex-about-double {
-    flex-direction: column;
-    gap: 30px;
+  .p-subtitle {
+    font-size: 20px;
   }
 
-  .p-flex-about-double .p-images-row {
-    justify-content: center;
-    gap: 40px;
-  }
-
-  .p-flex-about-double .p-images-row .p-image {
-    height: 360px;
+  /* Specific smaller subtitles */
+  .p-subtitle:nth-of-type(2),
+  .p-subtitle:nth-of-type(3) {
+    font-size: 16px;
   }
 }
 
+/* Very Small Screens */
 @media (max-width: 600px) {
-
   .p-flex-about-single {
     gap: 20px;
     padding-top: 0px;
     padding-bottom: 0px;
   }
 
-  /* p-flex-about-double: images go below paragraph in same row */
   .p-flex-about-double {
     flex-direction: column;
     gap: 20px;
@@ -590,9 +638,15 @@
   }
 }
 
-@media (max-width: 460px) {
-  /* p-flex-about-double: images stack in separate rows */
+@media (max-width: 479px) {
+  .project-layout {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
 
+@media (max-width: 460px) {
+  /* Images stack in separate rows on very small screens */
   .p-flex-about-double {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -610,19 +664,9 @@
   }
 }
 
-@media (max-width: 767px) {
-  .p-title {
-    font-size: var(--text-xl);
+@media (max-width: 374px) {
+  .project-layout {
+    padding-left: 16px;
+    padding-right: 16px;
   }
-
-  .p-subtitle {
-    font-size: 20px;
-  }
-
-  /* Specific smaller subtitles: "Navigation Consolidation" and "Contextual Data Enhancement" */
-  .p-subtitle:nth-of-type(2),
-  .p-subtitle:nth-of-type(3) {
-    font-size: 16px;
-  }
-
 }

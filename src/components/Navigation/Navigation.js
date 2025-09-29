@@ -115,7 +115,7 @@ function Navigation() {
                         onClick={() => handleLanguageSwitch('ja')}
                         aria-label="日本語に切り替え"
                     >
-                        JA
+                        JP
                     </button>
                 </div>
 
