@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './MainContent.css';
 import '../ProjectLayout/ProjectLayoutShared.css';
-import { portfolioData } from '../../data/portfolio-data';
+import { getPortfolioData } from '../../utils/dataLoader';
+import { useLanguage } from '../../contexts/LanguageContext';
 import PolaroidGallery from '../Gallery/PolaroidGallery';
 
 function MainContent() {
-  const { hero, skills } = portfolioData;
+  const { currentLanguage } = useLanguage();
+  const [portfolioData, setPortfolioData] = useState(null);
+  
+  useEffect(() => {
+    const loadData = async () => {
+      const data = await getPortfolioData(currentLanguage);
+      setPortfolioData(data);
+    };
+    loadData();
+  }, [currentLanguage]);
+  
+  if (!portfolioData) {
+    return <div>Loading...</div>;
+  }
+  
+  const { hero, skills, about } = portfolioData;
 
   // Hero data
   const name = hero?.name;
@@ -29,7 +45,7 @@ function MainContent() {
         <section id="hero">
           <div className="hero">
             <div>
-              <h1>I'm {name},</h1>
+              <h1>{name}</h1>
               <p>{title}</p>
               <p>{subtitle}</p>
               <p>{description}</p>
@@ -45,13 +61,13 @@ function MainContent() {
 
         {/* Work Section */}
         <section id="work" className="work-subsection">
-          <h2 className="all-title" style={{ marginBottom: '40px' }}>WORK</h2>
+          <h2 className="all-title" style={{ marginBottom: '40px' }}>{currentLanguage === 'ja' ? 'ワーク' : 'WORK'}</h2>
           <PolaroidGallery />
         </section>
 
         {/* Skills Section */}
         <section id="skills">
-          <h2 className="all-title">SKILLS</h2>
+          <h2 className="all-title">{currentLanguage === 'ja' ? 'スキル' : 'SKILLS'}</h2>
           <div>
             {Object.entries(skillsData).map(([category, skillsText]) => (
               <div key={category}>
@@ -65,16 +81,16 @@ function MainContent() {
 
         {/* About Section */}
         <section id="about" className="about-subsection">
-          <h2 className="all-title">ABOUT</h2>
+          <h2 className="all-title">{currentLanguage === 'ja' ? '私について' : 'ABOUT'}</h2>
 
           {/* First paragraph: text left, 1 image right - fixed size */}
           <div className="p-flex-about-single" style={{ marginTop: '40px'}}>
             <p className="p-body">
-              Born in Shanghai and based in Houston, I split my time between design and development. I'm drawn to projects that live at the intersection of logic and aesthetics, from prototyping in Figma to building responsive interfaces to experimenting with AI-powered browser tools.
+              {about.description}
             </p>
             <div>
-              <img src={`${process.env.PUBLIC_URL}/images/about/campanile1.jpg`} alt="Cover of RiceU Yearbook Campanile (Digital)" className="p-image" style={{ borderRadius: '2px'}}/>
-              <p className="p-caption">Cover of RiceU Yearbook Campanile (Digital)</p>
+              <img src={`${process.env.PUBLIC_URL}/images/about/campanile1.jpg`} alt={about.personalImages.find(img => img.src.includes('campanile1'))?.alt || "Cover of RiceU Yearbook Campanile (Digital)"} className="p-image" style={{ borderRadius: '2px'}}/>
+              <p className="p-caption">{about.personalImages.find(img => img.src.includes('campanile1'))?.alt || "Cover of RiceU Yearbook Campanile (Digital)"}</p>
             </div>
           </div>
 
@@ -84,16 +100,16 @@ function MainContent() {
           <div className="p-flex-about-double">
             <div className="p-images-row">
               <div>
-                <img src={`${process.env.PUBLIC_URL}/images/about/food2.jpg`} alt="Recipes in Dogmatism (Oil)" className="p-image" style={{ borderRadius: '2px'}}/>
-                <p className="p-caption">"Recipes in Dogmatism" (Oil)</p>
+                <img src={`${process.env.PUBLIC_URL}/images/about/food2.jpg`} alt={about.personalImages.find(img => img.src.includes('food2'))?.alt || "Recipes in Dogmatism (Oil)"} className="p-image" style={{ borderRadius: '2px'}}/>
+                <p className="p-caption">{about.personalImages.find(img => img.src.includes('food2'))?.alt || "\"Recipes in Dogmatism\" (Oil)"}</p>
               </div>
               <div>
-                <img src={`${process.env.PUBLIC_URL}/images/about/wordplay3.jpg`} alt="Wordplay (Mixed Media)" className="p-image" style={{ borderRadius: '2px'}}/>
-                <p className="p-caption">"Wordplay" (Mixed Media)</p>
+                <img src={`${process.env.PUBLIC_URL}/images/about/wordplay3.jpg`} alt={about.personalImages.find(img => img.src.includes('wordplay3'))?.alt || "Wordplay (Mixed Media)"} className="p-image" style={{ borderRadius: '2px'}}/>
+                <p className="p-caption">{about.personalImages.find(img => img.src.includes('wordplay3'))?.alt || "\"Wordplay\" (Mixed Media)"}</p>
               </div>
             </div>
             <p className="p-body">
-              Growing up, I made art across mediums — oils, pastels, collage, digital illustration, some of which are shown here. Later on, I studied computer science and realized programming gave me a creative structure more powerful than ever before. It expanded how I think about creation in a modern context, where visuals, logic, and systems all shape the experience.
+              {about.artDescription}
             </p>
           </div>
           <div className="about-separator" />
@@ -101,7 +117,7 @@ function MainContent() {
           {/* Third paragraph*/}
           <div>
             <p className="p-body" style={{ marginTop: '40px', marginBottom: '40px'}}>
-              Now, I work fluidly across Figma and IDEs, thinking about how things behave, how they scale, and how people experience them from the first interaction to the last. I care equally about how things look, how they work, and why they exist.
+              {about.workDescription}
             </p>
           </div>
 
@@ -110,11 +126,11 @@ function MainContent() {
           {/* Fourth paragraph: text left, image right - fixed size */}
           <div className="p-flex-about-single">
             <p className="p-body">
-              Outside of class and work, I love learning languages. I speak Mandarin, English, Japanese, Shanghainese, and a bit of Korean. Language learning made me naturally curious about linguistic structure and connecting with people, which has been a nice side kick to casual user experience thinking. Music helps the process, too (a big fan of Jpop and Kpop).
+              {about.languageDescription}
             </p>
             <div>
-              <img src={`${process.env.PUBLIC_URL}/images/about/physics4.jpg`} alt="Comphosics (Acrylic)" className="p-image" style={{ borderRadius: '2px'}}/>
-              <p className="p-caption">"Comphosics" (Acrylic)</p>
+              <img src={`${process.env.PUBLIC_URL}/images/about/physics4.jpg`} alt={about.personalImages.find(img => img.src.includes('physics4'))?.alt || "Comphosics (Acrylic)"} className="p-image" style={{ borderRadius: '2px'}}/>
+              <p className="p-caption">{about.personalImages.find(img => img.src.includes('physics4'))?.alt || "\"Comphosics\" (Acrylic)"}</p>
             </div>
           </div>
         </section>

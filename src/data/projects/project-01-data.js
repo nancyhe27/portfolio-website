@@ -20,11 +20,91 @@ export const project01Data = {
     "GitHub",
     "ClickUp"
   ],
-  "overview": "In summer 2025, I interned as a UI/UX full stack developer intern at WeKruit, a SaaS startup building an AI-powered interview platform for enterprises and students. My role combined design and engineering, from mapping user flows to implementing full-stack features. Over 10 weeks, I contributed to the client-facing interview dashboard, the AI agent interview process, the WeKruit design system, and UI/UX refinements that transformed prototypes into a polished product. These efforts streamlined the review and preparation process for 1,000+ interviews across 3 client companies and enabled 100+ students to run mock sessions more smoothly.",
+  "overview": "In summer 2025, I joined WeKruit as a UI/UX full-stack developer intern, stepping into a fast-paced startup where I worked across both design and engineering. Over 10 weeks, I learned to move quickly between sketching ideas and coding them into the product, gaining a sharper sense of how design decisions play out in real implementation.",
   "heroImage": "/images/projects/project-01/header/hero.png",
   "sections": [
     {
       "id": 1,
+      "title": "Background",
+      "subsections": [
+        {
+          "id": 1,
+          "paragraphs": [
+            "<strong>The Company:</strong> WeKruit is a B2B SaaS startup aiming to streamline the interview process for both recruiters and candidates through AI-driven tools."
+          ]
+        },
+        {
+          "id": 2,
+          "paragraphs": [
+            "<strong>The Product:</strong> I worked on WeKruit's interview management dashboard, a core product that centralizes scheduling, interviews, and reviews. It combines recordings, transcripts, and AI-generated scores to make evaluation faster and clearer."
+          ]
+        },
+        {
+          "id": 3,
+          "paragraphs": [
+            "<strong>The Users:</strong> The dashboard is built for recruiters and hiring managers who run dozens of interviews each day and need simple, action-driven workflows."
+          ]
+        },
+        {
+          "id": 4,
+          "paragraphs": [
+            "<strong>The Impact:</strong> The system supported over 1,000 interviews for 3 client companies, simplifying workflows and accelerating the recruiting process."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "What I Did",
+      "paragraphs": [
+        {
+          "text": "1. <strong>Product UI Design & Prototype:</strong> took features from wireframes through to coded prototypes",
+          "link": "#main-product"
+        },
+        {
+          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ Interview Dashboard (Prototype)",
+          "link": "#flow1-interview-dashboard"
+        },
+        {
+          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ AI Interview Process (Prototype)",
+          "link": "#flow2-candidate-onboarding"
+        },
+        {
+          "text": "",
+          "link": null
+        },
+        {
+          "text": "2. <strong>Design System:</strong> created scalable tokens and reusable design components",
+          "link": "#design-system"
+        },
+        {
+          "text": "",
+          "link": null
+        },
+        {
+          "text": "3. <strong>New UI Designs:</strong> redesigned existing interfaces with the design system",
+          "link": "#uiux-refinement"
+        },
+        {
+          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ Interview Dashboard (New)",
+          "link": "#interview-management-dashboard"
+        },
+        {
+          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ AI Interview Process (New)",
+          "link": "#interview-creation-flow"
+        },
+        {
+          "text": "",
+          "link": null
+        },
+        {
+          "text": "4. <strong>Product Delivery:</strong> integrated redesigned UIs into the codebase",
+          "link": "#reflections"
+        }
+      ]
+    },
+    {
+      "id": 3,
       "title": "Main Product: Client-facing Dashboard",
       "subsections": [
         {
@@ -127,7 +207,7 @@ export const project01Data = {
       ]
     },
     {
-      "id": 2,
+      "id": 4,
       "title": "WeKruit Design System",
       "paragraphs": [
         "Over a week, I worked with two teammates on the UI/UX team to define universal guidelines for typography, spacing, and color. Before, every frontend developer (including me!) styled components differently, causing inconsistencies and slowing development. After we built the system, all components followed the same baseline, making handoff smoother, ensuring accessibility, and giving the product a cohesive identity. I realized how much faster it became to switch between design work and frontend coding once everything followed the same system."
@@ -202,7 +282,7 @@ export const project01Data = {
       ]
     },
     {
-      "id": 3,
+      "id": 5,
       "title": "UI/UX Refinement",
       "paragraphs": [
         "In the final phase of my internship, I transitioned the B2C student portal from prototype to production-ready product. I replaced legacy CSS with modular components, improved visual hierarchy, clarified task flows based on usability feedback. These refinements created a smoother, more intuitive experience, enabling students to set up and complete mock interviews with less friction and greater confidence.",
@@ -249,7 +329,7 @@ export const project01Data = {
       ]
     },
     {
-      "id": 4,
+      "id": 6,
       "title": "Reflections",
       "paragraphs": [
         "Through my three-month internship at WeKruit, I learned that design and development aren’t two separate tracks — they’re two halves of the same process. I found real excitement in discovering how powerful they are when combined!",

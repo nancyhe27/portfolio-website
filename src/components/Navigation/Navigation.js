@@ -1,19 +1,23 @@
 import React, { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './Navigation.css';
+import { useLanguage } from '../../contexts/LanguageContext';
+import { getNavigationText } from '../../utils/dataLoader';
 
 function Navigation() {
     const navigate = useNavigate();
     const location = useLocation();
+    const { currentLanguage, switchLanguage } = useLanguage();
+    const navText = getNavigationText(currentLanguage);
     
     // Handle hash-based navigation when landing on home page
     useEffect(() => {
-        if (location.pathname === '/' && location.hash) {
+        if (location.pathname.endsWith('/') && location.hash) {
             const sectionId = location.hash.substring(1);
             setTimeout(() => {
                 const element = document.getElementById(sectionId);
                 if (element) {
-                    const navHeight = 80; // Navigation bar height
+                    const navHeight = 80;
                     const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
                     const offsetPosition = elementPosition - navHeight;
                     
@@ -22,34 +26,58 @@ function Navigation() {
                         behavior: 'smooth'
                     });
                 }
-            }, 100); // Small delay to ensure page is loaded
+            }, 100);
         }
     }, [location]);
 
     const handleSectionNavigation = (sectionId) => {
         if (sectionId === 'hero') {
-            navigate('/');
+            navigate(`/${currentLanguage}/`);
         } else {
-            // Navigate to proper routes for work and skills
-            navigate(`/${sectionId}`);
+            // Check if we're on the home page
+            if (location.pathname === `/${currentLanguage}/` || location.pathname === `/${currentLanguage}`) {
+                // We're on home page, scroll to section
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    const navHeight = 80;
+                    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - navHeight;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            } else {
+                // We're not on home page, navigate to home with hash
+                navigate(`/${currentLanguage}/#${sectionId}`);
+            }
         }
+    };
+
+    const handleLanguageSwitch = (newLang) => {
+        // Extract current path without language prefix
+        const pathParts = location.pathname.split('/').filter(Boolean);
+        const currentPath = pathParts.length > 1 ? '/' + pathParts.slice(1).join('/') : '/';
+        
+        // Navigate to same path with new language
+        navigate(`/${newLang}${currentPath}`);
+        switchLanguage(newLang);
     };
 
     return (
         <nav className="navigation page-section">
             <a 
-                href="/" 
+                href={`/${currentLanguage}/`}
                 className="nav-brand"
                 onClick={(e) => {
                     e.preventDefault();
-                    if (location.pathname === '/') {
-                        // If already on home page, scroll to top
+                    if (location.pathname === `/${currentLanguage}/`) {
                         window.scrollTo({
                             top: 0,
                             behavior: 'smooth'
                         });
                     } else {
-                        // Navigate to home page
                         handleSectionNavigation('hero');
                     }
                 }}
@@ -59,41 +87,61 @@ function Navigation() {
 
             <div className="nav-links">
                 <a
-                    href="/work"
+                    href={`/${currentLanguage}/work`}
                     className="nav-link"
                     onClick={(e) => {
                         e.preventDefault();
                         handleSectionNavigation('work');
                     }}
                 >
-                    work
+                    {navText.work}
                 </a>
                 <a
-                    href="/skills"
+                    href={`/${currentLanguage}/skills`}
                     className="nav-link"
                     onClick={(e) => {
                         e.preventDefault();
                         handleSectionNavigation('skills');
                     }}
                 >
-                    skills
+                    {navText.skills}
                 </a>
                 <a
-                    href="/about"
+                    href={`/${currentLanguage}/about`}
                     className="nav-link"
                     onClick={(e) => {
                         e.preventDefault();
                         handleSectionNavigation('about');
                     }}
                 >
-                    about
+                    {navText.about}
                 </a>
+                
+                {/* Language Switcher */}
+                <div className="language-switcher">
+                    <button 
+                        className={`lang-btn ${currentLanguage === 'en' ? 'active' : ''}`}
+                        onClick={() => handleLanguageSwitch('en')}
+                        aria-label="Switch to English"
+                    >
+                        EN
+                    </button>
+                    <span className="lang-divider">|</span>
+                    <button 
+                        className={`lang-btn ${currentLanguage === 'ja' ? 'active' : ''}`}
+                        onClick={() => handleLanguageSwitch('ja')}
+                        aria-label="日本語に切り替え"
+                    >
+                        JP
+                    </button>
+                </div>
+
                 <a
                     href={`${process.env.PUBLIC_URL}/resume.pdf`}
                     className="resume-btn"
                     download="Nancy_He_Resume.pdf"
                 >
-                    resume
+                    {navText.resume}
                 </a>
             </div>
         </nav>

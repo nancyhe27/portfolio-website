@@ -3,7 +3,7 @@
    =========================================== */
 
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Varela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Varela&family=Tsukuhou+Shogo+Mincho&display=swap');
 
 /* ===========================
    CSS VARIABLES (SIMPLIFIED)
@@ -181,6 +181,26 @@ a:hover {
     right: calc(-1 * var(--spacing-xs));
   }
 }
+
+/* Japanese Font Override */
+html[lang="ja"] .section-heading,
+html[lang="ja"] .p-title,
+html[lang="ja"] .p-subtitle,
+html[lang="ja"] .p-header-title,
+html[lang="ja"] .p-header-body,
+html[lang="ja"] .nav-brand,
+html[lang="ja"] .all-title,
+html[lang="ja"] .hero h1,
+html[lang="ja"] .skills-category h3,
+html[lang="ja"] .polaroid-title {
+  font-family: 'Tsukuhou Shogo Mincho', serif;
+}
+
+/* Keep nav brand in Fredericka the Great for Japanese */
+html[lang="ja"] .nav-brand {
+  font-family: 'Fredericka the Great', cursive;
+}
+
 
 /* ===========================
    FOCUS STATES & ACCESSIBILITY
