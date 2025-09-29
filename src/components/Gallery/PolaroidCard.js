@@ -37,7 +37,7 @@ function PolaroidCard({ project }) {
         <div className="polaroid-image">
           {project.comingSoon ? (
             <div className="placeholder-thumb">
-              <span>Coming Soon...</span>
+              <span>{currentLanguage === 'ja' ? '近日公開…' : 'Coming Soon...'}</span>
             </div>
           ) : (
             <div className="image-container">

@@ -34,7 +34,24 @@ function Navigation() {
         if (sectionId === 'hero') {
             navigate(`/${currentLanguage}/`);
         } else {
-            navigate(`/${currentLanguage}/${sectionId}`);
+            // Check if we're on the home page
+            if (location.pathname === `/${currentLanguage}/` || location.pathname === `/${currentLanguage}`) {
+                // We're on home page, scroll to section
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    const navHeight = 80;
+                    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - navHeight;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            } else {
+                // We're not on home page, navigate to home with hash
+                navigate(`/${currentLanguage}/#${sectionId}`);
+            }
         }
     };
 

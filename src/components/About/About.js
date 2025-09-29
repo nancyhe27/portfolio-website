@@ -41,7 +41,7 @@ function About() {
           <div className="description-section">
             <p className="personal-description">{about.description}</p>
             <div className="additional-image polaroid">
-              <img src={`${process.env.PUBLIC_URL}/images/about/physics4.jpg`} alt="Comphosics (Acrylic)" />
+              <img src={`${process.env.PUBLIC_URL}/images/about/physics4.jpg`} alt={about.personalImages.find(img => img.src.includes('physics4'))?.alt || "Comphosics (Acrylic)"} />
             </div>
           </div>
         </div>

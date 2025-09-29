@@ -1,6 +1,6 @@
 export const portfolioData = {
   hero: {
-    name: "Nancy",
+    name: "I'm Nancy,",
     title: "A Programmer, Designer, and Full-Stack Builder",
     subtitle: "Computer Science and Asian Studies junior @ Rice University",
     description: "Creates thoughtful, end-to-end products that blend clean code with intuitive design.",

@@ -66,7 +66,7 @@ function ProjectLayout01({ projectData }) {
                 onClick={handleClick}
                 style={{ 
                   cursor: paragraph.link ? 'pointer' : 'default',
-                  color: paragraph.link ? 'var(--brown-dark)' : 'inherit',
+                  color: 'var(--text-secondary)',
                   transition: 'color 0.2s ease'
                 }}
                 onMouseEnter={(e) => {
@@ -76,7 +76,7 @@ function ProjectLayout01({ projectData }) {
                 }}
                 onMouseLeave={(e) => {
                   if (paragraph.link) {
-                    e.target.style.color = 'var(--brown-dark)';
+                    e.target.style.color = 'var(--text-secondary)';
                   }
                 }}
               />

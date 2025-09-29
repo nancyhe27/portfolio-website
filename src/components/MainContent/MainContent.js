@@ -45,7 +45,7 @@ function MainContent() {
         <section id="hero">
           <div className="hero">
             <div>
-              <h1>I'm {name},</h1>
+              <h1>{name}</h1>
               <p>{title}</p>
               <p>{subtitle}</p>
               <p>{description}</p>
@@ -61,13 +61,13 @@ function MainContent() {
 
         {/* Work Section */}
         <section id="work" className="work-subsection">
-          <h2 className="all-title" style={{ marginBottom: '40px' }}>WORK</h2>
+          <h2 className="all-title" style={{ marginBottom: '40px' }}>{currentLanguage === 'ja' ? 'ワーク' : 'WORK'}</h2>
           <PolaroidGallery />
         </section>
 
         {/* Skills Section */}
         <section id="skills">
-          <h2 className="all-title">SKILLS</h2>
+          <h2 className="all-title">{currentLanguage === 'ja' ? 'スキル' : 'SKILLS'}</h2>
           <div>
             {Object.entries(skillsData).map(([category, skillsText]) => (
               <div key={category}>
@@ -81,7 +81,7 @@ function MainContent() {
 
         {/* About Section */}
         <section id="about" className="about-subsection">
-          <h2 className="all-title">ABOUT</h2>
+          <h2 className="all-title">{currentLanguage === 'ja' ? '私について' : 'ABOUT'}</h2>
 
           {/* First paragraph: text left, 1 image right - fixed size */}
           <div className="p-flex-about-single" style={{ marginTop: '40px'}}>
@@ -89,8 +89,8 @@ function MainContent() {
               {about.description}
             </p>
             <div>
-              <img src={`${process.env.PUBLIC_URL}/images/about/campanile1.jpg`} alt="Cover of RiceU Yearbook Campanile (Digital)" className="p-image" style={{ borderRadius: '2px'}}/>
-              <p className="p-caption">Cover of RiceU Yearbook Campanile (Digital)</p>
+              <img src={`${process.env.PUBLIC_URL}/images/about/campanile1.jpg`} alt={about.personalImages.find(img => img.src.includes('campanile1'))?.alt || "Cover of RiceU Yearbook Campanile (Digital)"} className="p-image" style={{ borderRadius: '2px'}}/>
+              <p className="p-caption">{about.personalImages.find(img => img.src.includes('campanile1'))?.alt || "Cover of RiceU Yearbook Campanile (Digital)"}</p>
             </div>
           </div>
 
@@ -100,12 +100,12 @@ function MainContent() {
           <div className="p-flex-about-double">
             <div className="p-images-row">
               <div>
-                <img src={`${process.env.PUBLIC_URL}/images/about/food2.jpg`} alt="Recipes in Dogmatism (Oil)" className="p-image" style={{ borderRadius: '2px'}}/>
-                <p className="p-caption">"Recipes in Dogmatism" (Oil)</p>
+                <img src={`${process.env.PUBLIC_URL}/images/about/food2.jpg`} alt={about.personalImages.find(img => img.src.includes('food2'))?.alt || "Recipes in Dogmatism (Oil)"} className="p-image" style={{ borderRadius: '2px'}}/>
+                <p className="p-caption">{about.personalImages.find(img => img.src.includes('food2'))?.alt || "\"Recipes in Dogmatism\" (Oil)"}</p>
               </div>
               <div>
-                <img src={`${process.env.PUBLIC_URL}/images/about/wordplay3.jpg`} alt="Wordplay (Mixed Media)" className="p-image" style={{ borderRadius: '2px'}}/>
-                <p className="p-caption">"Wordplay" (Mixed Media)</p>
+                <img src={`${process.env.PUBLIC_URL}/images/about/wordplay3.jpg`} alt={about.personalImages.find(img => img.src.includes('wordplay3'))?.alt || "Wordplay (Mixed Media)"} className="p-image" style={{ borderRadius: '2px'}}/>
+                <p className="p-caption">{about.personalImages.find(img => img.src.includes('wordplay3'))?.alt || "\"Wordplay\" (Mixed Media)"}</p>
               </div>
             </div>
             <p className="p-body">
@@ -129,8 +129,8 @@ function MainContent() {
               {about.languageDescription}
             </p>
             <div>
-              <img src={`${process.env.PUBLIC_URL}/images/about/physics4.jpg`} alt="Comphosics (Acrylic)" className="p-image" style={{ borderRadius: '2px'}}/>
-              <p className="p-caption">"Comphosics" (Acrylic)</p>
+              <img src={`${process.env.PUBLIC_URL}/images/about/physics4.jpg`} alt={about.personalImages.find(img => img.src.includes('physics4'))?.alt || "Comphosics (Acrylic)"} className="p-image" style={{ borderRadius: '2px'}}/>
+              <p className="p-caption">{about.personalImages.find(img => img.src.includes('physics4'))?.alt || "\"Comphosics\" (Acrylic)"}</p>
             </div>
           </div>
         </section>
