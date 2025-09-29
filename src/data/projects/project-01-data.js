@@ -6,7 +6,7 @@ export const project01Data = {
   "task": "UI/UX Engineering & SDE Internship",
   "collaborators": [
     "Adam Yang (mentor)",
-    "Noah Liu", 
+    "Noah Liu",
     "Brandon Saunders",
     "Shenyu Zhang",
     "Bingxi Liu"
@@ -14,7 +14,7 @@ export const project01Data = {
   "programming": ["JavaScript", "TypeScript", "HTML/CSS", "Python"],
   "tools": [
     "Figma",
-    "React", 
+    "React",
     "Tailwind CSS",
     "Firebase",
     "GitHub",
@@ -56,79 +56,43 @@ export const project01Data = {
     {
       "id": 2,
       "title": "What I Did",
-      "paragraphs": [
-        {
-          "text": "1. <strong>Product UI Design & Prototype:</strong> took features from wireframes through to coded prototypes",
-          "link": "#main-product"
-        },
-        {
-          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ Interview Dashboard (Prototype)",
-          "link": "#flow1-interview-dashboard"
-        },
-        {
-          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ AI Interview Process (Prototype)",
-          "link": "#flow2-candidate-onboarding"
-        },
-        {
-          "text": "",
-          "link": null
-        },
-        {
-          "text": "2. <strong>Design System:</strong> created scalable tokens and reusable design components",
-          "link": "#design-system"
-        },
-        {
-          "text": "",
-          "link": null
-        },
-        {
-          "text": "3. <strong>New UI Designs:</strong> redesigned existing interfaces with the design system",
-          "link": "#uiux-refinement"
-        },
-        {
-          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ Interview Dashboard (New)",
-          "link": "#interview-management-dashboard"
-        },
-        {
-          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ AI Interview Process (New)",
-          "link": "#interview-creation-flow"
-        },
-        {
-          "text": "",
-          "link": null
-        },
-        {
-          "text": "4. <strong>Product Delivery:</strong> integrated redesigned UIs into the codebase",
-          "link": "#reflections"
-        }
-      ]
+      "paragraphText": "At the start of my internship, I worked on {Product UI/UX Design & Prototype}. I took features from wireframes through to coded prototypes, focusing on two main user flows: {Interview Dashboard (Prototype)} and {Candidate Workflow Automation (Prototype)}. After that, I created a {Design System} with scalable tokens and reusable components. I applied it to build {New UI Designs} for the {Interview Dashboard (New)} and {Candidate Workflow Automation (New)}. Finally, I contributed to {Product Delivery} by integrating these redesigned UIs directly into the codebase.",
+      "linkMap": {
+        "Product UI/UX Design & Prototype": "#main-product",
+        "Interview Dashboard (Prototype)": "#flow1-interview-dashboard", 
+        "Candidate Workflow Automation (Prototype)": "#flow2-candidate-onboarding",
+        "Design System": "#design-system",
+        "New UI Designs": "#uiux-refinement",
+        "Interview Dashboard (New)": "#interview-management-dashboard",
+        "Candidate Workflow Automation (New)": "#interview-creation-flow",
+        "Product Delivery": "#reflections"
+      }
     },
     {
       "id": 3,
-      "title": "Main Product: Client-facing Dashboard",
+      "title": "Product UI/UX Design & Prototype",
       "subsections": [
         {
           "id": 1,
-          "subtitle": "Prototype Design",
+          "subtitle": "Product UI/UX Design",
           "paragraphs": [
-            "I began by clarifying feature requirements with the team manager. I mapped key user flows, created low-fidelity wireframes, and iterated on interactive prototypes to define how screens and features connect. Multiple rounds of feedback refined the prototypes into a clear, testable design.",
-            "Due to confidentiality, I cannot share the full workflow diagram. Instead, I've included representative UI flows and component refinements to illustrate my contributions."
+            "I started by sitting down with our team manager to really pin down what this feature needed to achieve. From there, I sketched out the main user flows, drafted rough wireframes, and gradually turned them into interactive prototypes that showed how each screen and feature fit together. Every round of feedback sharpened the design, until it grew into something clear, testable, and ready to guide development.",
+            "Because of confidentiality, I can’t show the full workflow diagram. But I’ve shared selected UI flows and component refinements here, which capture the kind of design decisions and problem-solving I was responsible for."
           ],
           "imageGroups": [
             {
-              "title": "Flow 1: Interview Dashboard",
-              "description": "I designed this flow to guide recruiters from the dashboard overview into individual interviews. The design centralizes candidate data, transcripts, and recordings, reducing context switching and streamlining review for 1,000+ interviews.",
+              "title": "Feature 1: Interview Dashboard (Prototype)",
               "steps": [
                 {
-                  "title": "Step 1: Interview Dashboard",
-                  "description": "Recruiters see a candidate list with interview time, duration, and direct links to recordings."
+                  "title": "Homepage: Interview Dashboard",
+                  "description": "Recruiters access a centralized view showing candidate lists with interview times and durations, along with direct links to candidate data, transcripts, and recordings. By clicking on a candidate, they can open the interview recording for detailed review."
                 },
                 {
-                  "title": "Step 2.1: View Audio Interview",
+                  "title": "Subpage: Audio Interviews",
                   "description": "For audio-only interviews, recruiters see a time-stamped transcript synced with playback for quick review."
                 },
                 {
-                  "title": "Step 2.2: Video Interview",
+                  "title": "Subpage: Video Interviews",
                   "description": "For video interviews, recruiters see a time-stamped transcript displayed alongside the recording for combined verbal and non-verbal review."
                 }
               ],
@@ -136,61 +100,60 @@ export const project01Data = {
                 {
                   "src": "/images/projects/project-01/main_product/flow1/1.png",
                   "alt": "WeKruit prototype design wireframe",
-                  "caption": "Step 1: Interview Dashboard"
+                  "caption": "Homepage: Interview Dashboard (React Coded Prototype)"
                 },
                 {
                   "src": "/images/projects/project-01/main_product/flow1/2.png",
                   "alt": "WeKruit prototype design wireframe",
-                  "caption": "Step 2.1: View Audio Interview"
+                  "caption": "Subpage: Audio Interviews (React Coded Prototype)"
                 },
                 {
                   "src": "/images/projects/project-01/main_product/flow1/3.png",
                   "alt": "WeKruit prototype design wireframe",
-                  "caption": "Step 2.2: View Video Interview"
+                  "caption": "Subpage: Video Interviews (React Coded Prototype)"
                 }
               ]
             },
             {
-              "title": "Flow 2: Candidate Onboarding",
-              "description": "I designed and implemented this flow to simplify how recruiters add candidates to the system. The flow brings together resume parsing, question generation, and built-in invitations, cutting down on manual steps and making sure interviewers have tailored materials ready ahead of time. This system has already been adopted by 3 companies and used to onboard 100+ candidates and students.",
+              "title": "Feature 2: Candidate Workflow Automation (Prototype)",
               "steps": [
                 {
+                  "title": "Main Page: Candidate Dashboard",
+                  "description": "The Candidate Dashboard is the main page where recruiters manage all candidates. From here, they can click 'Upload Resume' to add a new candidate to the system and start the process of inviting them to an interview."
+                },
+                {
                   "title": "Step 1: Upload & Parse Resume",
-                  "description": "Recruiters upload a candidate's resume, which is automatically parsed and confirmed in the system."
+                  "description": "Once a resume is uploaded, the system automatically parses the candidate’s information. After parsing, the recruiter can confirm the details and prepare to invite the candidate to an interview."
                 },
                 {
                   "title": "Step 2: Generate Interview Questions",
-                  "description": "Interview questions are generated from the parsed resume for interviewers to reference."
+                  "description": "Before sending the invitation, recruiters can use the system’s AI to generate interview questions based on the parsed resume. These questions help interviewers prepare and can be directly referenced during the interview."
                 },
                 {
-                  "title": "Step 3: Candidate Dashboard",
-                  "description": "The new candidate–resume pair appears on the dashboard for easy tracking."
-                },
-                {
-                  "title": "Step 4: Send Interview Invitation",
-                  "description": "Recruiters send the interview invitation email directly from the dashboard."
+                  "title": "Step 3: Send Interview Invitation",
+                  "description": "After completing the previous steps, recruiters send the official interview invitation to the candidate. This final step transitions the process from preparation to the actual interviewing stage."
                 }
               ],
               "images": [
                 {
-                  "src": "/images/projects/project-01/main_product/flow2/1.png",
+                  "src": "/images/projects/project-01/main_product/flow2/3.png",
                   "alt": "WeKruit prototype design wireframe",
-                  "caption": "Step 1: Upload & Parse Resume"
+                  "caption": "Main Page: Candidate Dashboard (React Coded Prototype)"
+                },
+                {
+                  "src": "/images/projects/project-01/main_product/flow2/1.png",
+                  "alt": "Interactive prototype screens",
+                  "caption": "Step 1: Upload & Parse Resume (React Coded Prototype)"
                 },
                 {
                   "src": "/images/projects/project-01/main_product/flow2/2.png",
-                  "alt": "Interactive prototype screens",
-                  "caption": "Step 2: Generate Interview Questions"
-                },
-                {
-                  "src": "/images/projects/project-01/main_product/flow2/3.png",
                   "alt": "Component refinement process",
-                  "caption": "Step 3: Candidate Dashboard"
+                  "caption": "Step 2: Generate Interview Questions (React Coded Prototype)"
                 },
                 {
                   "src": "/images/projects/project-01/main_product/flow2/4.png",
                   "alt": "Final prototype mockup",
-                  "caption": "Step 4: Send Interview Invitation"
+                  "caption": "Step 3: Send Interview Invitation (React Coded Prototype)"
                 }
               ]
             }
@@ -200,15 +163,14 @@ export const project01Data = {
           "id": 2,
           "subtitle": "Prototype Development",
           "paragraphs": [
-            "I brought these flows to life in a working React prototype, structuring the architecture around user and product requirements. I built key features such as candidate profile search and filtering, real-time transcript synchronization, and dynamic status updates to reflect interview progress.",
-            "The prototype served as a validation tool, a way to check whether the flows we had brainstormed were technically feasible and usable at a minimum level. I integrated AI-driven resume parsing and question generation to explore how intelligent features could fit into the process, and I worked with backend developers to ensure smooth API connections and realistic data handling. Building the prototype made abstract workflows tangible, helping the team refine both the design and the technical direction moving forward."
+            "After mapping the user flows and wireframes, I built a working prototype in React to bring them to life and test how they worked in practice. The prototype included features like profile search, transcript sync, and status updates, and I linked AI-driven resume parsing and question generation with backend APIs to handle real data. This helped the team check technical feasibility and refine design directions.",
           ]
         }
       ]
     },
     {
       "id": 4,
-      "title": "WeKruit Design System",
+      "title": "Design System",
       "paragraphs": [
         "Over a week, I worked with two teammates on the UI/UX team to define universal guidelines for typography, spacing, and color. Before, every frontend developer (including me!) styled components differently, causing inconsistencies and slowing development. After we built the system, all components followed the same baseline, making handoff smoother, ensuring accessibility, and giving the product a cohesive identity. I realized how much faster it became to switch between design work and frontend coding once everything followed the same system."
       ],
@@ -226,7 +188,7 @@ export const project01Data = {
               "caption": "WeKruit Colors"
             },
             {
-              "src": "/images/projects/project-01/design_system/fonts.png", 
+              "src": "/images/projects/project-01/design_system/fonts.png",
               "alt": "WeKruit Typography",
               "caption": "WeKruit Fonts"
             }
@@ -287,7 +249,7 @@ export const project01Data = {
       "paragraphs": [
         "In the final phase of my internship, I transitioned the B2C student portal from prototype to production-ready product. I replaced legacy CSS with modular components, improved visual hierarchy, clarified task flows based on usability feedback. These refinements created a smoother, more intuitive experience, enabling students to set up and complete mock interviews with less friction and greater confidence.",
         "The redesigned dashboard shifts from static, data-heavy tables to an action-oriented layout that improves clarity, consistency, and recruiter efficiency.",
-        "The redesigned Interview Review page shifts from cluttered layouts and redundant feedback to a streamlined, content-led design that improves navigation clarity, reduces excess scrolling, and streamlines reviewer insight.", 
+        "The redesigned Interview Review page shifts from cluttered layouts and redundant feedback to a streamlined, content-led design that improves navigation clarity, reduces excess scrolling, and streamlines reviewer insight.",
         "The redesigned Interview Creation flow shifts from a disorganized, space-heavy layout to a structured workflow that reduces excess scrolling, adds customizable fields, and improves clarity with a refined step graph."
       ],
       "subtitles": [

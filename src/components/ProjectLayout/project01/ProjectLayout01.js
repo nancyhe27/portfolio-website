@@ -46,42 +46,72 @@ function ProjectLayout01({ projectData }) {
       <section>
         <h3 className="p-title">{sections[1].title}</h3>
         <div className="section-content">
-          {sections[1].paragraphs.map((paragraph, index) => {
-            const handleClick = () => {
-              if (paragraph.link) {
-                const element = document.querySelector(paragraph.link);
-                if (element) {
-                  const navHeight = 80; // Approximate nav bar height
-                  const elementPosition = element.offsetTop - navHeight;
-                  window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+          <p className="p-body" style={{ color: 'var(--text-secondary)', fontStyle: 'italic', marginBottom: '16px' }}>
+            {sections[1].title === '担当したこと' ? '太字をクリックすると、対応するセクションへ移動できます！' : 'Click the bold text to see the corresponding sections!'}
+          </p>
+          <p className="p-body" style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
+            {(() => {
+              const text = sections[1].paragraphText;
+              const linkMap = sections[1].linkMap;
+              const parts = [];
+              let lastIndex = 0;
+              
+              // Find all phrases between curly braces
+              const regex = /\{([^}]+)\}/g;
+              let match;
+              
+              while ((match = regex.exec(text)) !== null) {
+                // Add text before the match
+                if (match.index > lastIndex) {
+                  parts.push(text.slice(lastIndex, match.index));
                 }
+                
+                // Add the clickable phrase
+                const phrase = match[1];
+                const link = linkMap[phrase];
+                
+                parts.push(
+                  <span
+                    key={match.index}
+                    onClick={() => {
+                      if (link) {
+                        const element = document.querySelector(link);
+                        if (element) {
+                          const navHeight = 80;
+                          const elementPosition = element.offsetTop - navHeight;
+                          window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+                        }
+                      }
+                    }}
+                    style={{
+                      fontWeight: 'bold',
+                      cursor: 'pointer',
+                      transition: 'color 0.2s ease, text-decoration 0.2s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.color = 'var(--sage-green)';
+                      e.target.style.textDecoration = 'underline';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.color = 'inherit';
+                      e.target.style.textDecoration = 'none';
+                    }}
+                  >
+                    {phrase}
+                  </span>
+                );
+                
+                lastIndex = regex.lastIndex;
               }
-            };
-
-            return (
-              <p 
-                key={index} 
-                className="p-body" 
-                dangerouslySetInnerHTML={{ __html: paragraph.text }}
-                onClick={handleClick}
-                style={{ 
-                  cursor: paragraph.link ? 'pointer' : 'default',
-                  color: 'var(--text-secondary)',
-                  transition: 'color 0.2s ease'
-                }}
-                onMouseEnter={(e) => {
-                  if (paragraph.link) {
-                    e.target.style.color = 'var(--sage-green)';
-                  }
-                }}
-                onMouseLeave={(e) => {
-                  if (paragraph.link) {
-                    e.target.style.color = 'var(--text-secondary)';
-                  }
-                }}
-              />
-            );
-          })}
+              
+              // Add remaining text
+              if (lastIndex < text.length) {
+                parts.push(text.slice(lastIndex));
+              }
+              
+              return parts;
+            })()}
+          </p>
         </div>
       </section>
 
@@ -99,69 +129,58 @@ function ProjectLayout01({ projectData }) {
           {/* Flow 1: Interview Dashboard */}
           <div id="flow1-interview-dashboard">
             <h4 className="p-subtitle">{sections[2].subsections[0].imageGroups[0].title}</h4>
-            <p className="p-body">{sections[2].subsections[0].imageGroups[0].description}</p>
 
-            <div className="p-separator--short"></div>
-
-            <div className="p-flex-split">
-              {/* Left side: 2x2 grid of images */}
-              <div style={{ flex: 2 }}>
-                <div className="p-grid" style={{ '--grid-cols': 2, gap: 'var(--spacing-md)' }}>
-                  {/* Top center: Step 1 spanning both columns */}
-                  <figure style={{ margin: 0, gridColumn: '1 / -1', justifySelf: 'center', maxWidth: '50%' }}>
-                    <img src={`${process.env.PUBLIC_URL}${sections[2].subsections[0].imageGroups[0].images[0].src}`} alt={sections[2].subsections[0].imageGroups[0].images[0].alt} className="p-image" />
-                    <figcaption className="p-caption">{sections[2].subsections[0].imageGroups[0].images[0].caption}</figcaption>
-                  </figure>
-                  {/* Bottom left: Step 2.1 */}
-                  <figure style={{ margin: 0 }}>
-                    <img src={`${process.env.PUBLIC_URL}${sections[2].subsections[0].imageGroups[0].images[1].src}`} alt={sections[2].subsections[0].imageGroups[0].images[1].alt} className="p-image" />
-                    <figcaption className="p-caption">{sections[2].subsections[0].imageGroups[0].images[1].caption}</figcaption>
-                  </figure>
-                  {/* Bottom right: Step 2.2 */}
-                  <figure style={{ margin: 0 }}>
-                    <img src={`${process.env.PUBLIC_URL}${sections[2].subsections[0].imageGroups[0].images[2].src}`} alt={sections[2].subsections[0].imageGroups[0].images[2].alt} className="p-image" />
-                    <figcaption className="p-caption">{sections[2].subsections[0].imageGroups[0].images[2].caption}</figcaption>
-                  </figure>
-                </div>
-              </div>
-              {/* Right side: Steps text */}
-              <div style={{ flex: 1 }}>
-                {sections[2].subsections[0].imageGroups[0].steps.map((step, stepIndex) => (
-                  <div key={stepIndex} style={{ marginBottom: 'var(--spacing-sm)' }}>
-                    <p className="p-body--bold">{step.title}</p>
-                    <p className="p-body">{step.description}</p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
+              {/* Each image paired with its corresponding text */}
+              {sections[2].subsections[0].imageGroups[0].images.map((image, imageIndex) => (
+                <div key={imageIndex} className="p-flex-split" style={{ alignItems: 'center' }}>
+                  {/* Left: Image */}
+                  <div style={{ flex: 2 }}>
+                    <figure style={{ margin: 0 }}>
+                      <img src={`${process.env.PUBLIC_URL}${image.src}`} alt={image.alt} className="p-image" style={{ border: '1px solid var(--brown-light)', borderRadius: '2px'}} />
+                      <figcaption className="p-caption">{image.caption}</figcaption>
+                    </figure>
                   </div>
-                ))}
-              </div>
+                  {/* Right: Corresponding step text */}
+                  <div style={{ flex: 1 }}>
+                    {sections[2].subsections[0].imageGroups[0].steps[imageIndex] && (
+                      <div>
+                        <p className="p-body--bold">{sections[2].subsections[0].imageGroups[0].steps[imageIndex].title}</p>
+                        <p className="p-body">{sections[2].subsections[0].imageGroups[0].steps[imageIndex].description}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Flow 2: Candidate Onboarding */}
           <div id="flow2-candidate-onboarding">
             <h4 className="p-subtitle">{sections[2].subsections[0].imageGroups[1].title}</h4>
-            <p className="p-body">{sections[2].subsections[0].imageGroups[1].description}</p>
-            <div className="p-separator--short"></div>
-            <div className="p-flex-split">
-              {/* Left side: 2x2 grid of images */}
-              <div style={{ flex: 2 }}>
-                <div className="p-grid" style={{ '--grid-cols': 2, gap: 'var(--spacing-md)' }}>
-                  {sections[2].subsections[0].imageGroups[1].images.map((img, imgIndex) => (
-                    <figure key={imgIndex} style={{ margin: 0 }}>
-                      <img src={`${process.env.PUBLIC_URL}${img.src}`} alt={img.alt} className="p-image" />
-                      <figcaption className="p-caption">{img.caption}</figcaption>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
+              {/* Each image paired with its corresponding text */}
+              {sections[2].subsections[0].imageGroups[1].images.map((image, imageIndex) => (
+                <div key={imageIndex} className="p-flex-split" style={{ alignItems: 'center' }}>
+                  {/* Left: Image */}
+                  <div style={{ flex: 2 }}>
+                    <figure style={{ margin: 0 }}>
+                      <img src={`${process.env.PUBLIC_URL}${image.src}`} alt={image.alt} className="p-image" style={{ border: '1px solid var(--brown-light)', borderRadius: '2px' }} />
+                      <figcaption className="p-caption">{image.caption}</figcaption>
                     </figure>
-                  ))}
-                </div>
-              </div>
-              {/* Right side: Steps text */}
-              <div style={{ flex: 1 }}>
-                {sections[2].subsections[0].imageGroups[1].steps.map((step, stepIndex) => (
-                  <div key={stepIndex} style={{ marginBottom: 'var(--spacing-sm)' }}>
-                    <p className="p-body--bold">{step.title}</p>
-                    <p className="p-body">{step.description}</p>
                   </div>
-                ))}
-              </div>
+                  {/* Right: Corresponding step text */}
+                  <div style={{ flex: 1 }}>
+                    {sections[2].subsections[0].imageGroups[1].steps[imageIndex] && (
+                      <div>
+                        <p className="p-body--bold">{sections[2].subsections[0].imageGroups[1].steps[imageIndex].title}</p>
+                        <p className="p-body">{sections[2].subsections[0].imageGroups[1].steps[imageIndex].description}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
