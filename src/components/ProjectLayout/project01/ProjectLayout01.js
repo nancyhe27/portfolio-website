@@ -225,7 +225,8 @@ function ProjectLayout01({ projectData }) {
           {/* Button Component */}
           <section>
             <h4 className="p-subtitle">{sections[3].subsections[1].subtitle}</h4>
-            <div className="p-flex-split">
+            <p className="p-body">{sections[3].subsections[1].paragraphs[0]}</p>
+            <div className="p-flex-split" style={{ justifyContent: 'center' }}>
               <div style={{ flex: '0 0 auto' }}>
                 <figure style={{ margin: 0 }}>
                 <img src={`${process.env.PUBLIC_URL}${sections[3].subsections[1].images[0].src}`} alt={sections[3].subsections[1].images[0].alt} className="p-image" style={{ height: '300px', width: 'auto' }} />
@@ -237,9 +238,6 @@ function ProjectLayout01({ projectData }) {
                   <img src={`${process.env.PUBLIC_URL}${sections[3].subsections[1].images[1].src}`} alt={sections[3].subsections[1].images[1].alt} className="p-image" style={{ height: '300px', width: 'auto' }} />
                   <figcaption className="p-caption">{sections[3].subsections[1].images[1].caption}</figcaption>
                 </figure>
-              </div>
-              <div style={{ flex: 1 }}>
-                <p className="p-body">{sections[3].subsections[1].paragraphs[0]}</p>
               </div>
             </div>
           </section>
