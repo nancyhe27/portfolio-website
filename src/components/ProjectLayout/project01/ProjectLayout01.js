@@ -101,8 +101,6 @@ function ProjectLayout01({ projectData }) {
             <h4 className="p-subtitle">{sections[2].subsections[0].imageGroups[0].title}</h4>
             <p className="p-body">{sections[2].subsections[0].imageGroups[0].description}</p>
 
-            <div className="p-separator--short"></div>
-
             <div className="p-flex-split">
               {/* Left side: 2x2 grid of images */}
               <div style={{ flex: 2 }}>
@@ -140,7 +138,6 @@ function ProjectLayout01({ projectData }) {
           <div id="flow2-candidate-onboarding">
             <h4 className="p-subtitle">{sections[2].subsections[0].imageGroups[1].title}</h4>
             <p className="p-body">{sections[2].subsections[0].imageGroups[1].description}</p>
-            <div className="p-separator--short"></div>
             <div className="p-flex-split">
               {/* Left side: 2x2 grid of images */}
               <div style={{ flex: 2 }}>

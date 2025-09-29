@@ -1,13 +1,13 @@
 export const project01Data = {
   "id": 1,
-  "title": "WeKruit", 
+  "title": "WeKruit",
   "duration": "2025年4月 – 2025年8月",
   "platform": "デスクトップ",
   "task": "UI/UXエンジニアリング・SDE インターンシップ",
   "collaborators": [
     "Adam Yang（メンター）",
     "Noah Liu",
-    "Brandon Saunders", 
+    "Brandon Saunders",
     "Shenyu Zhang",
     "Bingxi Liu"
   ],
@@ -15,12 +15,12 @@ export const project01Data = {
   "tools": [
     "Figma",
     "React",
-    "Tailwind CSS", 
+    "Tailwind CSS",
     "Firebase",
     "GitHub",
     "ClickUp"
   ],
-  "overview": "2025年夏、WeKruitでUI/UXフルスタック開発者インターンとして勤務しました。WeKruitは企業と学生向けのAI面接プラットフォームを構築するSaaSスタートアップです。私の役割はデザインとエンジニアリングを組み合わせ、ユーザーフローのマッピングからフルスタック機能の実装まで行いました。10週間で、クライアント向け面接ダッシュボード、AIエージェント面接プロセス、WeKruitデザインシステム、プロトタイプを洗練された製品に変換するUI/UX改良に貢献しました。これらの取り組みにより、3つのクライアント企業で1,000件以上の面接のレビューと準備プロセスが合理化され、100人以上の学生がモック セッションをよりスムーズに実行できるようになりました。",
+  "overview": "2025年の夏、私はWeKruitでUI/UXとフルスタック開発を担うインターンとして働きました。スピード感のあるスタートアップの現場で、デザインとエンジニアリングの両方を行き来しながら取り組みました。10週間の間に、アイデアをスケッチする段階から実際のコードとしてプロダクトに落とし込むまでを素早く繰り返し、デザインの判断が実装の中でどう作用するのかをより鮮明に学ぶことができました。",
   "heroImage": "/images/projects/project-01/header/hero.png",
   "sections": [
     {
@@ -30,35 +30,35 @@ export const project01Data = {
         {
           "id": 1,
           "paragraphs": [
-            "<strong>会社について：</strong> WeKruitは、AI駆動ツールを通じて採用担当者と候補者の両方の面接プロセスを合理化することを目指すB2B SaaSスタートアップです。"
+            "<strong>The Company:</strong> WeKruitは、AIを使って面接プロセスをもっとスマートにしようとしているB2B SaaS系のスタートアップです。採用する側にも受ける側にも、なるべくストレスのない体験をつくることを目指しています。"
           ]
         },
         {
           "id": 2,
           "paragraphs": [
-            "<strong>製品について：</strong> WeKruitの面接管理ダッシュボードに取り組みました。これは、スケジューリング、面接、レビューを一元化するコア製品です。録画、トランスクリプト、AI生成スコアを組み合わせて、評価をより迅速かつ明確にします。"
+            "<strong>The Product:</strong> 私が携わったのは、面接管理ダッシュボードという中核的なプロダクトです。スケジュール、面接、レビューを一元化し、録画や文字起こし、AIによるスコアリングを組み合わせることで、評価をより早く、より明確に行えるようにしています。"
           ]
         },
         {
           "id": 3,
           "paragraphs": [
-            "<strong>ユーザーについて：</strong> ダッシュボードは、毎日数十回の面接を実施し、シンプルでアクション駆動のワークフローを必要とする採用担当者と採用マネージャー向けに構築されています。"
+            "<strong>The Users:</strong> 使うのは毎日何十件も面接を回しているリクルーターや採用マネージャー。とにかく「すぐ動ける」仕組みが必要な人たちです。"
           ]
         },
         {
           "id": 4,
           "paragraphs": [
-            "<strong>インパクト：</strong> 3つのクライアント企業で1,000件以上の面接を合理化し、100人以上の学生がよりスムーズなモックセッションを実行できるようになりました。"
+            "<strong>The Impact:</strong> このシステムは、3社のクライアント企業で延べ1,000件以上の面接を支え、面接の流れをぐっとわかりやすくし、採用スピードを上げることができました。"
           ]
         }
       ]
     },
     {
       "id": 2,
-      "title": "私が行ったこと",
+      "title": "担当したこと",
       "paragraphs": [
         {
-          "text": "1. <strong>プロダクトUI設計とプロトタイプ：</strong> ワイヤーフレームからコード化されたプロトタイプまで機能を開発",
+          "text": "<strong>1. プロダクトUIデザイン＆プロトタイプ:</strong> ワイヤーフレームから実際のコード化までを担当",
           "link": "#main-product"
         },
         {
@@ -74,7 +74,7 @@ export const project01Data = {
           "link": null
         },
         {
-          "text": "2. <strong>デザインシステム：</strong> スケーラブルなトークンと再利用可能なデザインコンポーネントを作成",
+          "text": "<strong>2. デザインシステム:</strong> スケーラブルなトークンと再利用可能なコンポーネントを構築",
           "link": "#design-system"
         },
         {
@@ -82,15 +82,15 @@ export const project01Data = {
           "link": null
         },
         {
-          "text": "3. <strong>新しいUIデザイン：</strong> デザインシステムで既存のインターフェースを再設計",
+          "text": "<strong>3. 新しいUIデザイン:</strong> 既存の画面をデザインシステムでリデザイン",
           "link": "#uiux-refinement"
         },
         {
-          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ 面接ダッシュボード（新規）",
+          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ 面接ダッシュボード（新）",
           "link": "#interview-management-dashboard"
         },
         {
-          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ AI面接プロセス（新規）",
+          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ AI面接プロセス（新）",
           "link": "#interview-creation-flow"
         },
         {
@@ -98,25 +98,26 @@ export const project01Data = {
           "link": null
         },
         {
-          "text": "4. <strong>製品デリバリー：</strong> 再設計されたUIをコードベースに統合",
+          "text": "<strong>4. プロダクト実装:</strong> リデザインしたUIをコードベースに統合",
           "link": "#reflections"
         }
       ]
+
     },
     {
       "id": 3,
-      "title": "メイン製品：クライアント向けダッシュボード",
+      "title": "プロダクトUIデザイン＆プロトタイプ",
       "subsections": [
         {
           "id": 1,
-          "subtitle": "プロトタイプデザイン",
+          "subtitle": "プロダクトUIデザイン",
           "paragraphs": [
             "チームマネージャーと機能要件を明確にすることから始めました。主要なユーザーフローをマッピングし、低忠実度ワイヤーフレームを作成し、インタラクティブプロトタイプを反復して、画面と機能の接続方法を定義しました。複数回のフィードバックにより、プロトタイプを明確でテスト可能なデザインに改良しました。",
             "機密性により、完全なワークフロー図を共有することはできません。代わりに、私の貢献を説明するために、代表的なUIフローとコンポーネントの改良を含めました。"
           ],
           "imageGroups": [
             {
-              "title": "フロー1：面接ダッシュボード",
+              "title": "機能１：面接ダッシュボード（プロトタイプ）",
               "description": "このフローを設計して、リクルーターをダッシュボード概要から個別の面接に導きます。デザインは候補者データ、トランスクリプト、録画を一元化し、コンテキストスイッチを減らし、1,000件以上の面接のレビューを合理化します。",
               "steps": [
                 {
@@ -124,7 +125,7 @@ export const project01Data = {
                   "description": "リクルーターは面接時間、期間、録画への直接リンクを含む候補者リストを見ます。"
                 },
                 {
-                  "title": "ステップ2.1：音声面接を表示", 
+                  "title": "ステップ2.1：音声面接を表示",
                   "description": "音声のみの面接では、リクルーターは迅速なレビューのために再生と同期されたタイムスタンプ付きトランスクリプトを見ます。"
                 },
                 {
@@ -139,19 +140,19 @@ export const project01Data = {
                   "caption": "ステップ1：面接ダッシュボード"
                 },
                 {
-                  "src": "/images/projects/project-01/main_product/flow1/2.png", 
+                  "src": "/images/projects/project-01/main_product/flow1/2.png",
                   "alt": "WeKruit プロトタイプデザインワイヤーフレーム",
                   "caption": "ステップ2.1：音声面接を表示"
                 },
                 {
                   "src": "/images/projects/project-01/main_product/flow1/3.png",
-                  "alt": "WeKruit プロトタイプデザインワイヤーフレーム", 
+                  "alt": "WeKruit プロトタイプデザインワイヤーフレーム",
                   "caption": "ステップ2.2：ビデオ面接を表示"
                 }
               ]
             },
             {
-              "title": "フロー2：候補者オンボーディング",
+              "title": "機能２：AI面接プロセス（プロトタイプ）",
               "description": "学生が面接の準備をするためのダッシュボードを設計しました。このフローは、モック面接の実行から詳細な結果とフィードバックの確認まで、学生をガイドします。",
               "steps": [
                 {
@@ -183,7 +184,7 @@ export const project01Data = {
                   "caption": "ステップ2：面接質問を生成"
                 },
                 {
-                  "src": "/images/projects/project-01/main_product/flow2/3.png", 
+                  "src": "/images/projects/project-01/main_product/flow2/3.png",
                   "alt": "コンポーネントリファインメントプロセス",
                   "caption": "ステップ3：候補者ダッシュボード"
                 },
@@ -317,7 +318,7 @@ export const project01Data = {
         },
         {
           "src": "/images/projects/project-01/refinement/after3.png",
-          "alt": "リデザイン後の面接作成フロー", 
+          "alt": "リデザイン後の面接作成フロー",
           "caption": "後：最適化された構造化ワークフロー"
         }
       ]
