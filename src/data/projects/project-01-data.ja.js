@@ -56,52 +56,17 @@ export const project01Data = {
     {
       "id": 2,
       "title": "担当したこと",
-      "paragraphs": [
-        {
-          "text": "<strong>1. プロダクトUI/UXデザイン＆プロトタイプ:</strong> ワイヤーフレームから実際のコード化までを担当",
-          "link": "#main-product"
-        },
-        {
-          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ 面接ダッシュボード（プロトタイプ）",
-          "link": "#flow1-interview-dashboard"
-        },
-        {
-          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ AI面接プロセス（プロトタイプ）",
-          "link": "#flow2-candidate-onboarding"
-        },
-        {
-          "text": "",
-          "link": null
-        },
-        {
-          "text": "<strong>2. デザインシステム:</strong> スケーラブルなトークンと再利用可能なコンポーネントを構築",
-          "link": "#design-system"
-        },
-        {
-          "text": "",
-          "link": null
-        },
-        {
-          "text": "<strong>3. 新しいUIデザイン:</strong> 既存の画面をデザインシステムでリデザイン",
-          "link": "#uiux-refinement"
-        },
-        {
-          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ 面接ダッシュボード（新）",
-          "link": "#interview-management-dashboard"
-        },
-        {
-          "text": "&nbsp;&nbsp;&nbsp;&nbsp;■ AI面接プロセス（新）",
-          "link": "#interview-creation-flow"
-        },
-        {
-          "text": "",
-          "link": null
-        },
-        {
-          "text": "<strong>4. プロダクト実装:</strong> リデザインしたUIをコードベースに統合",
-          "link": "#reflections"
-        }
-      ]
+      "paragraphText": "インターンシップの最初には、{プロダクトUI/UXデザイン＆プロトタイプ}に取り組みました。ワイヤーフレームから実際のコード化までを担当し、特に{面接ダッシュボード（プロトタイプ）}と{AI面接プロセス（プロトタイプ）}という2つの主要なユーザーフローに注力しました。その後、{デザインシステム}を構築し、スケーラブルなトークンや再利用可能なコンポーネントを整備しました。これを活用して{新しいUIデザイン}を行い、{面接ダッシュボード（新）}や{AI面接プロセス（新）}をリデザインしました。最後に、{プロダクト実装}として、リデザインしたUIをコードベースに統合しました。",
+      "linkMap": {
+        "プロダクトUI/UXデザイン＆プロトタイプ": "#main-product",
+        "面接ダッシュボード（プロトタイプ）": "#flow1-interview-dashboard", 
+        "AI面接プロセス（プロトタイプ）": "#flow2-candidate-onboarding",
+        "デザインシステム": "#design-system",
+        "新しいUIデザイン": "#uiux-refinement",
+        "面接ダッシュボード（新）": "#interview-management-dashboard",
+        "AI面接プロセス（新）": "#interview-creation-flow",
+        "プロダクト実装": "#reflections"
+      }
 
     },
     {

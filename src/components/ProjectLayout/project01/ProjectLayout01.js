@@ -47,7 +47,7 @@ function ProjectLayout01({ projectData }) {
         <h3 className="p-title">{sections[1].title}</h3>
         <div className="section-content">
           <p className="p-body" style={{ color: 'var(--text-secondary)', fontStyle: 'italic', marginBottom: '16px' }}>
-            Click the bold text to see the corresponding sections!
+            {sections[1].title === '担当したこと' ? '太字をクリックすると、対応するセクションへ移動できます！' : 'Click the bold text to see the corresponding sections!'}
           </p>
           <p className="p-body" style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
             {(() => {
