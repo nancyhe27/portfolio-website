@@ -60,13 +60,13 @@ export const portfolioData = {
 
   skills: {
     programming_languages: [
-      "Python、Java、JavaScript、TypeScript、HTML/CSS、SQL"
+      "Python、Java、JavaScript、TypeScript、Go、C、HTML/CSS、SQL"
     ],
     frameworks_and_tools: [
       "React、Node.js、Express.js、Firebase、GitHub、Tailwind CSS、\nFigma、Adobe Creative Suite（Illustrator、Photoshop、InDesign）、Procreate、Canva"
     ],
     specialties: [
-      "フルスタック開発、REST API・データベース設計、レスポンシブUI工学、UX主導のフロントエンド設計、クラウドデプロイ・Git協力"
+      "UXリサーチとヒューマン・コンピュータ・インタラクション手法、ユーザーエクスペリエンスデザイン、インタラクティブなWeb・モバイルアプリの設計、レスポンシブUI設計とフロントエンド実装、フルスタック開発と情報設計、クラウド環境でのデプロイとチーム共同開発"
     ]
   },
 

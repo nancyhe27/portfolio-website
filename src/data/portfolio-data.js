@@ -60,7 +60,7 @@ export const portfolioData = {
 
   skills: {
     programming_languages: [
-      "Python, Java, JavaScript, TypeScript, HTML/CSS, SQL"
+      "Python, Java, JavaScript, TypeScript, Go, C, HTML/CSS, SQL"
     ],
     frameworks_and_tools: [
       "React, Node.js, Express.js, Firebase, GitHub, Tailwind CSS, \nFigma, Adobe Creative Suite (Illustrator, Photoshop, InDesign), Procreate, Canva"
