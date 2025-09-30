@@ -15,6 +15,7 @@ function Project02Content({ projectData }) {
             <div><span className="p-label">Platforms:</span> {projectData.platform}</div>
             <div><span className="p-label">Methods:</span> {projectData.methods.join(', ')}</div>
             <div><span className="p-label">Tools:</span> {projectData.tools.join(', ')}</div>
+            <div><span className="p-label">Collaborators:</span> {projectData.collaborators.join(', ')}</div>
           </div>
           <p className="p-body" style={{ flex: 2 }}>{overview}</p>
         </div>
