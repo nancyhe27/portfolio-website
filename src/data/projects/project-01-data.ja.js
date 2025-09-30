@@ -1,7 +1,7 @@
 export const project01Data = {
   "id": 1,
   "title": "WeKruit",
-  "duration": "2025年4月 – 2025年8月",
+  "duration": "2025年5月 – 2025年8月",
   "platform": "デスクトップ",
   "task": "UI/UXエンジニアリング・SDE インターンシップ",
   "collaborators": [
