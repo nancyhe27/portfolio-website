@@ -245,9 +245,9 @@ export const project01Data = {
     },
     {
       "id": 5,
-      "title": "UI/UX Refinement",
+      "title": "New UI Designs",
       "paragraphs": [
-        "In the final phase of my internship, I transitioned the B2C student portal from prototype to production-ready product. I replaced legacy CSS with modular components, improved visual hierarchy, clarified task flows based on usability feedback. These refinements created a smoother, more intuitive experience, enabling students to set up and complete mock interviews with less friction and greater confidence.",
+        "In the final phase of my internship, I refined the interview dashboard from prototype to production-ready. I replaced legacy CSS with modular components, improved hierarchy, and streamlined task flows, making it easier for recruiters to manage interviews and candidates efficiently.",
         "The redesigned dashboard shifts from static, data-heavy tables to an action-oriented layout that improves clarity, consistency, and recruiter efficiency.",
         "The redesigned Interview Review page shifts from cluttered layouts and redundant feedback to a streamlined, content-led design that improves navigation clarity, reduces excess scrolling, and streamlines reviewer insight.",
         "The redesigned Interview Creation flow shifts from a disorganized, space-heavy layout to a structured workflow that reduces excess scrolling, adds customizable fields, and improves clarity with a refined step graph."
