@@ -229,13 +229,13 @@ function ProjectLayout01({ projectData }) {
             <div className="p-flex-split" style={{ justifyContent: 'center' }}>
               <div style={{ flex: '0 0 auto' }}>
                 <figure style={{ margin: 0 }}>
-                <img src={`${process.env.PUBLIC_URL}${sections[3].subsections[1].images[0].src}`} alt={sections[3].subsections[1].images[0].alt} className="p-image" style={{ height: '300px', width: 'auto' }} />
+                 <img src={`${process.env.PUBLIC_URL}${sections[3].subsections[1].images[0].src}`} alt={sections[3].subsections[1].images[0].alt} className="p-image" style={{ width: '30vw', height: 'auto', maxWidth: '100%' }} />
                   <figcaption className="p-caption">{sections[3].subsections[1].images[0].caption}</figcaption>
                 </figure>
               </div>
               <div style={{ flex: '0 0 auto' }}>
                 <figure style={{ margin: 0 }}>
-                  <img src={`${process.env.PUBLIC_URL}${sections[3].subsections[1].images[1].src}`} alt={sections[3].subsections[1].images[1].alt} className="p-image" style={{ height: '300px', width: 'auto' }} />
+                   <img src={`${process.env.PUBLIC_URL}${sections[3].subsections[1].images[1].src}`} alt={sections[3].subsections[1].images[1].alt} className="p-image" style={{ width: '20vw', height: 'auto', maxWidth: '100%' }} />
                   <figcaption className="p-caption">{sections[3].subsections[1].images[1].caption}</figcaption>
                 </figure>
               </div>
@@ -306,14 +306,14 @@ function ProjectLayout01({ projectData }) {
           {/* Comparison 2 */}
           <div>
           <p className="p-body">{sections[4].paragraphs[2]}</p>
-            <div className="p-flex-split">
-              <div style={{ flex: 1 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-md)', width: '60%', margin: '0 auto', marginTop: 'var(--spacing-lg)' }}>
+              <div>
                 <figure style={{ margin: 0 }}>
                   <img src={`${process.env.PUBLIC_URL}${sections[4].images[2].src}`} alt={sections[4].images[2].alt} className="p-image" />
                   <figcaption className="p-caption">{sections[4].images[2].caption}</figcaption>
                 </figure>
               </div>
-              <div style={{ flex: 1 }}>
+              <div>
                 <figure style={{ margin: 0 }}>
                   <img src={`${process.env.PUBLIC_URL}${sections[4].images[3].src}`} alt={sections[4].images[3].alt} className="p-image" />
                   <figcaption className="p-caption">{sections[4].images[3].caption}</figcaption>
@@ -327,14 +327,14 @@ function ProjectLayout01({ projectData }) {
           {/* Comparison 3 */}
           <div>
           <p className="p-body">{sections[4].paragraphs[3]}</p>
-            <div className="p-flex-split">
-              <div style={{ flex: 1 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-md)', width: '60%', margin: '0 auto', marginTop: 'var(--spacing-lg)' }}>
+              <div>
                 <figure style={{ margin: 0 }}>
                   <img src={`${process.env.PUBLIC_URL}${sections[4].images[4].src}`} alt={sections[4].images[4].alt} className="p-image" />
                   <figcaption className="p-caption">{sections[4].images[4].caption}</figcaption>
                 </figure>
               </div>
-              <div style={{ flex: 1 }}>
+              <div>
                 <figure style={{ margin: 0 }}>
                   <img src={`${process.env.PUBLIC_URL}${sections[4].images[5].src}`} alt={sections[4].images[5].alt} className="p-image" />
                   <figcaption className="p-caption">{sections[4].images[5].caption}</figcaption>
