@@ -87,7 +87,7 @@ function Project02Content({ projectData }) {
                 <h4 className="p-subtitle">{subsection.title}</h4>
 
                 {/* Feature Map - standalone container */}
-                {subsection.title === "Feature Map" && subsection.images && (
+                {(subsection.title === "Feature Map" || subsection.title === "機能マップ") && subsection.images && (
                   <div style={{ textAlign: 'center', marginBottom: 'var(--spacing-lg)', marginTop: 'var(--spacing-md)' }}>
                     <img
                       src={`${process.env.PUBLIC_URL}${subsection.images[0].src}`}
@@ -99,7 +99,7 @@ function Project02Content({ projectData }) {
                 )}
 
                 {/* Low-fidelity Wireframes - 1x5 grid layout */}
-                {subsection.title === "Low-fidelity Wireframes" && subsection.images && (
+                {(subsection.title === "Low-fidelity Wireframes" || subsection.title === "低忠実度ワイヤーフレーム") && subsection.images && (
                   <div className="p-grid" style={{ '--grid-cols': 5, gap: 'var(--spacing-md)', marginTop: 'var(--spacing-md)', marginBottom: 'var(--spacing-lg)' }}>
                     {subsection.images.map((img, imgIndex) => (
                       <figure key={imgIndex} style={{ margin: 0 }}>
