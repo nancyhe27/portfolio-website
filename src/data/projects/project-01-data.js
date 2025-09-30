@@ -198,7 +198,7 @@ export const project01Data = {
           "id": 2,
           "subtitle": "Single Components: Button & Margins",
           "paragraphs": [
-            "We documented button states, spacing, and alignment, unifying variations into a single reusable model. Input fields, tags, and other core elements were standardized in Figma with the same rules. We also introduced a shared spacing scale for commonly used composite components, keeping layouts consistent and easy to extend with Tailwind CSS."
+            "We unified button states, spacing, and alignments into one reusable model. Input fields, tags, and other elements were standardized in Figma, while a shared spacing scale kept layouts consistent and easy to extend with Tailwind CSS."
           ],
           "images": [
             {
@@ -217,7 +217,7 @@ export const project01Data = {
           "id": 3,
           "subtitle": "Composite Components: Upload Interface",
           "paragraphs": [
-            "After defining single elements, we moved on to composite ones like the upload interface used across the site. We added drag-and-drop, progress indicators, and error states, and documented lists and other complex components with the same standards. I enjoyed this lego-like process because it showed how simple elements fit together and clarified their usage and constraints."
+            "Next, we tackled composite elements like the upload interface, adding drag-and-drop, progress indicators, and error states. I liked this step because it showed how simple elements fit together and clarified their usage."
           ],
           "images": [
             {
